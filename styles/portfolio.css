@@ -1,0 +1,330 @@
+.hero {
+  height: 40vh;
+}
+
+.video-call {
+  background-image: url("/images/call%20background%20image.jpg"); /* Fixed escape sequence */
+  background-size: cover;
+  background-position: center;
+  padding-top: 160px;
+  padding-bottom: 120px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.fitness{
+    background-image: url("/images/fitness-background.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;  
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.Fieldwire{
+    background-image: url("/images/fieldwire-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left; 
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.invoice{
+    background-image: url("/images/invoice-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;   
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.Friends{
+    background-image: url("/images/friend\'s\ bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;  
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.lazy{
+    background-image: url("/images/lazy-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;  
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.sign{
+    background-image: url("/images/sign-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;  
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.mango{
+    background-image: url("/images/mango-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left;   
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.delivery{
+    background-image: url("/images/delivery-bg.jpg"); /* Fixed escape sequence */
+    background-size: cover;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: left; 
+    position: relative;
+    z-index: 1;
+    /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.rover{
+  background-image: url("/images/rover-bg.jpg"); /* Fixed escape sequence */
+  background-size: cover;
+  background-position: center;
+  padding-top: 160px;
+  padding-bottom: 120px;
+  text-align: left; 
+  position: relative;
+  z-index: 1;
+  /* animation: slideInFromTop 0.8s ease forwards; */
+}
+.chef{
+  background-image: url("/images/chef-bg.jpg"); /* Fixed escape sequence */
+  background-size: cover;
+  background-position: center;
+  padding-top: 160px;
+  padding-bottom: 120px;
+  text-align: left; 
+  position: relative;
+  z-index: 1;
+  /* animation: slideInFromTop 0.8s ease forwards; */
+}
+#logo {
+  width: 142.5px;
+  height: 142.5px;
+  border-radius: 20px;
+    animation: slideInFromTop 0.8s ease forwards;
+
+}
+
+.heading {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+    animation: slideInFromTop 0.8s ease forwards;
+
+}
+
+p {
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+    animation: slideInFromTop 0.8s ease forwards;
+
+}
+.social{
+    animation: slideInFromTop 0.8s ease forwards;
+
+}
+
+.side-image {
+  width: 400px;
+  animation: slideInFromBottom 0.8s ease forwards, floatUpDown 3s ease-in-out infinite;
+  margin-top: 20px; /* Added top margin */
+  margin-bottom: 20px; /* Added bottom margin */
+}
+
+.video-call::before,
+.fitness::before,
+.Fieldwire::before,
+.invoice::before,
+.Friends::before,
+.lazy::before,
+.sign::before,
+.mango::before,
+.delivery::before,
+.rover::before,
+.chef::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: -1;
+}
+
+/* Animation on scroll styles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation on load styles */
+.animate-on-load {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-load.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Keyframes for animations */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 30vh;
+  }
+
+  .video-call,
+  .fitness,
+  .Fieldwire,
+  .invoice,
+  .Friends,
+  .lazy,
+  .sign,
+  .mango,
+  .delivery {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  #logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .side-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 25vh;
+  }
+
+  .video-call,
+  .fitness,
+  .Fieldwire,
+  .invoice,
+  .Friends,
+  .lazy,
+  .sign,
+  .mango,
+  .delivery {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  #logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .side-image {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Add portfolio-specific styles here */

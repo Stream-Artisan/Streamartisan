@@ -1,0 +1,72 @@
+/* ...existing code... */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the section takes full viewport height */
+}
+
+.hero-content h1 {
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: 700;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 700;
+  margin: 20px 0 0;
+  /* margin-left: 180px; */
+  animation: slideUp 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 50px;
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .hero-content h1 {
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* Add contact-specific styles here */
+/* ...existing code... */

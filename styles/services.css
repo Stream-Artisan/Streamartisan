@@ -1,0 +1,247 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 650px;
+  padding: 50px 20px;
+  
+  /* background: radial-gradient(
+    circle at top left,
+    rgb(24, 23, 23) 0%,
+    #d84676 100%
+  );  color: white; */
+}
+
+.hero h1 {
+  font-size: 5rem!important;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.hero .btn {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px!important;
+  color: white;
+  border: 2px solid white!important;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0f0f0f;
+}
+
+.custom-tabs-container {
+  margin-top: 50px;
+  background-color: transparent; /* Fallback background color */
+  /* background-image: transparent; */
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-tabs {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.custom-tab-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-tab-button.active,
+.custom-tab-button:hover {
+  background-color: white;
+  color: #d84676;
+}
+
+.custom-tab-content {
+  margin-top: 30px;
+}
+
+.custom-tab-pane {
+  display: none;
+}
+
+.custom-tab-pane.active {
+  display: block;
+}
+
+.custom-tab-pane h2 {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.custom-tab-pane p {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.tab-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tab-images .img {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-images .img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.mobile-app {
+  /* background-image: url('/images/tabs-bg.jpg'); */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+}
+.process{
+    /* background-image: url('/images/process-bg.jpg'); */
+    background-position: center;
+    background-size: cover;
+    padding: 50px 20px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.process-item {
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.7);  */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white; /* Ensure text is visible */
+}
+
+.process-item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.process-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white; /* Ensure text is visible */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.trust {
+  position: relative;
+  text-align: center;
+  height: 500px;
+  padding: 50px 50px;
+  /* background-color: rgba(0, 0, 0, 0.7);  */
+  color: white;
+}
+
+.trust h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.trust-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.trust .hero-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.trust .hero-button:hover {
+  background-color: white;
+  color: #d84676;
+}
+
+.trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trust-logos img {
+  width: 150px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Ensure logos are visible on dark background */
+}
+.why{
+  background-color: transparent!important;
+}
+/* Add services-specific styles here */

@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAS Navigation</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <script src="/scripts/home.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="navbar">
+        <a href="home.html">
+          <img src="images/logoa.png" alt="Logo" class="logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="hero-content">
+        <h1>StreamArtisan Services</h1>
+        <p>
+          Digital solutions blend unique apps, back-end technologies, immersive
+          experiences, clear, expressive design, and more. Codment manages this
+          equilibrium to broaden the range of possibilities for your company.
+        </p>
+        <div class="btn" style="display: flex; align-items: center">
+          <a href="/portfolio.html" class="hero-button text-center"
+            >See Our Work</a
+          >
+          <a href="/contact.html" class="hero-button text-center"
+            >Talk To An Expert</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
+      <div class="overlay-content">
+        <div class="overlay-left">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="overlay-right">
+          <h2 class="services-title">Services</h2>
+          <div class="service-category">
+            <h3>Digital Development</h3>
+            <ul>
+              <li>Mobile app developers</li>
+              <li>Chatbots</li>
+              <li>Web developers</li>
+              <li>Web-app developers</li>
+              <li>Intranet/sharepoints developers</li>
+              <li>IOT developers</li>
+              <li>Blockchain developers</li>
+              <li>AI/ML solutions</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Graphic Designing</h3>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity</li>
+              <li>UI/UX design</li>
+              <li>Illustrations</li>
+              <li>3D modeling</li>
+              <li>Motion graphics</li>
+              <li>Print design</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>SEO optimization</li>
+              <li>Social media marketing</li>
+              <li>Email campaigns</li>
+              <li>Content creation</li>
+              <li>Pay-per-click advertising</li>
+              <li>Analytics and reporting</li>
+              <li>Influencer marketing</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Ebook</h3>
+            <ul>
+              <li>Ebook writing</li>
+              <li>Ebook editing</li>
+              <li>Ebook formatting</li>
+              <li>Cover design</li>
+              <li>Publishing assistance</li>
+              <li>Marketing for ebooks</li>
+              <li>Distribution strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel">
+      <h1 class="section-title">Our Achievements</h1>
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <img src="/images/webfirm.svg" alt="Web firm achievement badge" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/web-design-agencies-2023-9f3c56be082a087f33cb29dd2ecdffd5a6f0d48dfc8bcd5b0c0d2467f432d73e.png"
+            alt="Web design agencies 2023 badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/app-development-companies.webp"
+            alt="App development companies badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/Champion-Badge-2023-Fall-3-2-svg.webp"
+            alt="Champion badge 2023 Fall"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/upcity.png" alt="UpCity badge" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/research-partner-badge-svg.png"
+            alt="Research partner badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software-dev-usa.png"
+            alt="Software development USA badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software-dev-nyc.png"
+            alt="Software development NYC badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software_suggest.png"
+            alt="Software Suggest badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/Verified-Agency-v2-1.png"
+            alt="Verified agency badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/selected-firms.webp" alt="Selected firms badge" />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/selected-firms.webp" alt="Selected firms badge" />
+        </div>
+      </div>
+      <button class="carousel-button prev" onclick="scrollCarousel(-1)">
+        &#10094;
+      </button>
+      <button class="carousel-button next" onclick="scrollCarousel(1)">
+        &#10095;
+      </button>
+    </div>
+    <!-- Floating Buttons -->
+    <div class="floating-button">
+      <div class="main-fab">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/552/552489.png"
+          alt="Contact Icon"
+          style="width: 30px; height: 30px"
+        />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+
+    <style>
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .scroll-to-top img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .floating-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .floating-button:hover {
+        transform: scale(1.1);
+      }
+
+      .floating-button img {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+    <!-- WHAT WE OFFER SECTION -->
+    <div
+      class="mobile-app"
+      style="
+        
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <h1 class="section-title">What We Offer?</h1>
+      <div class="custom-tabs-container">
+        <div class="custom-tabs">
+          <button
+            class="custom-tab-button active"
+            onclick="showTabContent('tab1')"
+          >
+            CMS Web Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab2')">
+            Custom Web Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab3')">
+            E-Commerce Web Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab4')">
+            Mobile App Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab5')">
+            UI/UX Design
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab6')">
+            Software Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab7')">
+            Blockchain Development
+          </button>
+          <button class="custom-tab-button" onclick="showTabContent('tab8')">
+            QA
+          </button>
+        </div>
+        <div class="custom-tab-content" style="background: transparent">
+          <div id="tab1" class="custom-tab-pane active">
+            <h2>CMS Web Development</h2>
+            <p>
+              Following a result-driven model for easing the curation and <br />
+              management of content-based sites, our experts offer CMS <br />
+              development solutions that are best suited to the client’s <br />
+              business and goals.
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/WordPress.png" alt="WordPress logo" />
+              </div>
+              <div class="img">
+                <img src="/images/joomla.webp" alt="Joomla logo" />
+              </div>
+              <div class="img">
+                <img src="/images/hubspot.png" alt="HubSpot logo" />
+              </div>
+              <div class="img">
+                <img src="/images/wix.png" alt="Wix logo" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab2" class="custom-tab-pane">
+            <h2>Custom Web Development</h2>
+            <p>
+              We have an expert development team that creates web solutions
+              <br />
+              tailored exclusively to your business goals, so you can code your
+              <br />
+              vision faster and retain customers for a lifetime. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/react.png" alt="React logo" />
+              </div>
+              <div class="img">
+                <img src="/images/vue.png" alt="Vue.js logo" />
+              </div>
+              <div class="img">
+                <img src="/images/Angular.png" alt="Angular logo" />
+              </div>
+              <div class="img">
+                <img src="/images/php.png" alt="PHP logo" />
+              </div>
+              <div class="img">
+                <img src="/images/Laravel.png" alt="Laravel logo" />
+              </div>
+              <div class="img">
+                <img
+                  src="/images/Group-3-1.webp"
+                  alt="Custom web development tools"
+                />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab3" class="custom-tab-pane">
+            <h2>ECommerce Web Development</h2>
+            <p>
+              Using the ideal e-business strategies, we develop high-functioning
+              <br />
+              eCommerce websites that drive sales quickly and efficiently. Put
+              <br />
+              simply; we incline your smart shop with your vision and mission!
+              <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/woocommerce.png" alt="WooCommerce logo" />
+              </div>
+              <div class="img">
+                <img src="/images/shopify.png" alt="Shopify logo" />
+              </div>
+              <div class="img">
+                <img src="/images/Magento.png" alt="Magento logo" />
+              </div>
+              <div class="img">
+                <img src="/images/opencart-1.png" alt="OpenCart logo" />
+              </div>
+              <div class="img">
+                <img
+                  src="/images/Mirakl-Development.webp"
+                  alt="Mirakl Development logo"
+                />
+              </div>
+              <div class="img">
+                <img src="/images/Vector-1-1.webp" alt="E-commerce tools" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab4" class="custom-tab-pane">
+            <h2>Mobile App Development</h2>
+            <p>
+              We work with you to create secure, scalable, fully functional, and
+              <br />
+              future-proof mobile apps that stand the test of time – centered
+              <br />
+              around getting your business noticed. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/react.png" alt="React logo" />
+              </div>
+              <div class="img">
+                <img src="/images/kotlin.webp" alt="Kotlin logo" />
+              </div>
+              <div class="img">
+                <img src="/images/java.png" alt="Java logo" />
+              </div>
+              <div class="img">
+                <img src="/images/swift.png" alt="Swift logo" />
+              </div>
+              <div class="img">
+                <img src="/images/flutter.png" alt="Flutter logo" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab5" class="custom-tab-pane">
+            <h2>UI/UX Design</h2>
+            <p>
+              Our creative UI/UX experts design websites and apps with your
+              <br />
+              customer’s experience in mind. With a modern approach and <br />
+              cutting-edge tools, we create beauty pixel-by-pixel. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/figma.png" alt="Figma logo" />
+              </div>
+              <div class="img">
+                <img src="/images/adobe-xd.png" alt="Adobe XD logo" />
+              </div>
+              <div class="img">
+                <img src="/images/Invision.png" alt="InVision logo" />
+              </div>
+              <div class="img">
+                <img src="/images/photoshop-1.png" alt="Photoshop logo" />
+              </div>
+              <div class="img">
+                <img src="/images/Zeplin.png" alt="Zeplin logo" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab6" class="custom-tab-pane">
+            <h2>Software Development</h2>
+            <p>
+              Leveraging their tech expertise, our developers work with <br />
+              companies of all sizes and across every industry to develop and
+              <br />
+              deliver unparalleled and impactful software products. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/python.webp" alt="Python logo" />
+              </div>
+              <div class="img">
+                <img src="/images/framework.webp" alt="Framework tools" />
+              </div>
+              <div class="img">
+                <img src="/images/java.png" alt="Java logo" />
+              </div>
+              <div class="img">
+                <img
+                  src="/images/diamond.webp"
+                  alt="Software development tools"
+                />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab7" class="custom-tab-pane">
+            <h2>Blockchain Development</h2>
+            <p>
+              Our blockchain development solutions are best for startups or
+              <br />
+              enterprises searching for optimum scalability by making the most
+              <br />
+              out of existing technology and industry-leading tools. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/polygon.png" alt="Polygon logo" />
+              </div>
+              <div class="img">
+                <img src="/images/ethereum.webp" alt="Ethereum logo" />
+              </div>
+              <div class="img">
+                <img src="/images/bitcoin.png" alt="Bitcoin logo" />
+              </div>
+              <div class="img">
+                <img src="/images/binance.png" alt="Binance logo" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+          <div id="tab8" class="custom-tab-pane">
+            <h2>QA</h2>
+            <p>
+              The software can break; our QA testing ensures they don’t. We put
+              <br />
+              your solutions through vigorous testing processes, resulting in
+              <br />
+              faster turnaround times and quick delivery. <br />
+            </p>
+            <div class="tab-images" style="display: flex; gap: 30px">
+              <div class="img">
+                <img src="/images/selenium-1.webp" alt="Selenium logo" />
+              </div>
+              <div class="img">
+                <img
+                  src="/images/TestRail_Logo_Square-1.png"
+                  alt="TestRail logo"
+                />
+              </div>
+              <div class="img">
+                <img src="/images/Watir-1.png" alt="Watir logo" />
+              </div>
+              <div class="img">
+                <img src="/images/jira.png" alt="Jira logo" />
+              </div>
+              <div class="img">
+                <img
+                  src="/images/asf.png"
+                  alt="Apache Software Foundation logo"
+                />
+              </div>
+              <div class="img">
+                <img src="/images/helium.png" alt="Helium logo" />
+              </div>
+              <div class="img">
+                <img src="/images/postman.png" alt="Postman logo" />
+              </div>
+            </div>
+            <a
+              href="/contact.html"
+              class="hero-button text-center"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 150px;
+                border: white solid 2px;
+                margin-top: 30px;
+                justify-content: center; /* Center horizontally */
+              "
+              >Explore More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="process">
+      <h1 class="section-title">Our Process</h1>
+      <div
+        class="process-grid"
+        style="
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-top: 20px;
+        "
+      >
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=80&id=FrkiTdFiuKeB&format=png"
+            alt="Strategy Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Strategy</h3>
+          <p>
+            We constantly use different approaches to get you the best outcomes.
+            Our specialists consider what you aim to accomplish through a
+            well-thought-out plan. Important factors to take into account
+            include a sitemap, wireframe, content structure, layout, and UI/UX
+            design aspects. Codment ensures to help you stay ahead using
+            ground-breaking strategies.
+          </p>
+        </div>
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=64&id=42907&format=png"
+            alt="Design Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Design</h3>
+          <p>
+            We design with the intention of bridging the gap between the brand
+            and the digital world. We work on color, typography, images,
+            animations, buttons, menus, and more to provide a pleasant user
+            experience while keeping your target demographic in mind. The user's
+            path is thoroughly examined, and the project's aesthetic direction
+            is developed at this stage.
+          </p>
+        </div>
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=80&id=ZeddwdjIdgmj&format=png"
+            alt="Implementation Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Implementation</h3>
+          <p>
+            Development starts as soon as the design is approved. Our frontend
+            and backend developers are experts at running the programs, ensuring
+            the website runs appropriately and professionally, and catering to
+            all technical issues. Throughout this stage, we guarantee to give
+            the best using top-notch features. We provide specialized web
+            solutions to keep you in front of the digital world!
+          </p>
+        </div>
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=80&id=RsDpdNGGsXOv&format=png"
+            alt="Quality Assurance Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Quality Assurance</h3>
+          <p>
+            Our QA engineers take control and thoroughly evaluate everything,
+            including functionality, usability, and performance. This stage aims
+            to ensure that the finished product fulfills the client's
+            requirements. To avoid any failures, we identify underlying errors
+            using the best practices. After this, Codment proceeds to the launch
+            process.
+          </p>
+        </div>
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=64&id=wh2djijxoGnG&format=png"
+            alt="Launch Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Launch</h3>
+          <p>
+            This stage looks into the product's official release onto the
+            market. Our experts can give your audience a fantastic experience
+            through the finished result. Additionally, if any potential errors
+            are found while the launch is underway, our staff takes care to
+            correct them immediately.
+          </p>
+        </div>
+        <div class="process-item">
+          <img
+            src="https://img.icons8.com/?size=80&id=JUIHhduGG4aI&format=png"
+            alt="Support Icon"
+            style="width: 150px; height: 150px; margin-bottom: 10px"
+          />
+          <h3>Support and Maintenance</h3>
+          <p>
+            The process doesn’t end at the launch stage. Even after going live,
+            we prioritize post-launch work, identifying issues in the virtual
+            environment and creating workable solutions. Upkeep, updates, and
+            new features/versions are the main priorities of our digital
+            solution business. Codment provides the general upkeep necessary to
+            keep everything operating efficiently.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="trust">
+      <!-- <video autoplay muted loop playsinline class="trust-bg-video">
+        <source
+          src="videos/Software House International - Hybrid Workforce.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video> -->
+      <h1 class="section-title">We Are Trusted by Industry Giants Worldwide</h1>
+      <a
+        href="/contact.html"
+        class="hero-button text-center"
+        style="
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: 200px;
+          border: white solid 2px;
+          margin-top: 30px;
+          justify-content: center; /* Center horizontally */
+        "
+        >Talk to an Expert</a
+      >
+    </div>
+    <div class="why">
+      <h1 class="section-title">What We Bring</h1>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="https://img.icons8.com/?size=80&id=uy9KLoyEjkBX&format=png"
+            alt="Flexibility Icon"
+          />
+          <h3>Build Credibility</h3>
+          <p>
+            Using our tech-savvy services extensively, you can build your
+            company’s reputation and integrity over time, lending credibility to
+            your offerings
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.icons8.com/?size=80&id=w0BwP69kxHCc&format=png"
+            alt="Budget-Friendly Icon"
+          />
+          <h3>Promote Recognition</h3>
+          <p>
+            The web and app appearance gets your brand desired recognition. The
+            skilled crew of Codment strategizes first, then execute accordingly
+            to help you stand out from the crowd.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://img.icons8.com/?size=80&id=XGrOoFkxLqlH&format=png"
+            alt="Easy Integration Icon"
+          />
+          <h3>Ensure Consistency</h3>
+          <p>
+            Our tech solutions can create consistency within your brand and help
+            you resonate with your potential audience. We help you achieve the
+            best.
+          </p>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.icons8.com/?size=50&id=24761&format=png"
+            alt="Promotes Business Icon"
+          />
+          <h3>Gain Trust</h3>
+          <p>
+            You receive unparalleled digital exposure using our services. The
+            more well-known you are, the more likely it is that others will
+            remember and trust you.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .trust {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .trust-bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .trust .section-title {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="home.html">
+                <img
+                  src="images/logoa.png"
+                  alt="Logo"
+                  class="logo"
+                  width="500px"
+                />
+              </a>
+            </li>
+            <li>447716487602</li>
+            <li>support@streamartisian.com</li>
+            <li>
+              Office No.50A, 5 The Shires Old <br />
+              Bedford Road Luton, England LU27QA
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Digital Development</h4>
+          <ul>
+            <li>Mobile app developers</li>
+            <li>Chatbots</li>
+            <li>Web developers</li>
+            <li>Web-app developers</li>
+            <li>Intranet/Sharepoint Developers</li>
+            <li>IOT Developers</li>
+            <li>BlockChain Developers</li>
+            <li>AI/ML Solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Ebook</h4>
+          <ul>
+            <li>E-Book Writing</li>
+            <li>E-Book Editing</li>
+            <li>E-Book Formatting</li>
+            <li>Cover Design</li>
+            <li>Publishing Assistance</li>
+            <li>Marketing for E-Books</li>
+            <li>Distribution Strategies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="/images/arrival.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/trust.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/reviews.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/B-teck.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/site.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a href="" style="color: white">Privacy Policy</a>
+        </div>
+        <div class="col">
+          <a href="" style="color: white"> Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("load", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        navbar.style.top = scrollTop > 0 ? "-150px" : "0";
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        navbar.style.top = scrollTop > lastScrollTop ? "-150px" : "0";
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      const scrollToTopButton = document.getElementById("scrollToTop");
+      window.addEventListener("scroll", () => {
+        scrollToTopButton.classList.toggle("show", window.scrollY > 200);
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+        };
+
+        try {
+          const response = await fetch("http://localhost:5000/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            alert("Message sent successfully!");
+            form.reset();
+          } else {
+            alert("Failed to send message.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      });
+
+      const floatingButtons = document.querySelector(".floating-buttons");
+      floatingButtons.addEventListener("click", () => {
+        floatingButtons.classList.toggle("expanded");
+      });
+
+      function showTabContent(tabId) {
+        document
+          .querySelectorAll(".custom-tab-pane")
+          .forEach((pane) => pane.classList.remove("active"));
+        document
+          .querySelectorAll(".custom-tab-button")
+          .forEach((button) => button.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+        document
+          .querySelector(
+            `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
+          )
+          .classList.add("active");
+      }
+    </script>
+    <!-- Floating button to scroll to top -->
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+      />
+    </div>
+  </body>
+</html>

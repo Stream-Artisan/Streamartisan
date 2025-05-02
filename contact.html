@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAS Navigation</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="/scripts/home.js"></script>
+    <link rel="stylesheet" href="styles/contact.css">
+    <!-- <link rel="stylesheet" href="styles/about.css" /> -->
+    <!-- <script src="/scripts/"></script> -->
+  </head>
+  <body>
+    <section class="hero" >
+      <header class="navbar">
+        <a href="home.html">
+          <img src="images/logoa.png" alt="Logo" class="logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="hero-content" >
+        <h1>Contact Us</h1>
+        <p>Get in touch with us</p>
+      </div>
+    </section>
+
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
+      <div class="overlay-content">
+        <div class="overlay-left">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="overlay-right">
+          <h2 class="services-title">Services</h2>
+          <div class="service-category">
+            <h3>Digital Development</h3>
+            <ul>
+              <li>Mobile app developers</li>
+              <li>Chatbots</li>
+              <li>Web developers</li>
+              <li>Web-app developers</li>
+              <li>Intranet/sharepoints developers</li>
+              <li>IOT developers</li>
+              <li>Blockchain developers</li>
+              <li>AI/ML solutions</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Graphic Designing</h3>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity</li>
+              <li>UI/UX design</li>
+              <li>Illustrations</li>
+              <li>3D modeling</li>
+              <li>Motion graphics</li>
+              <li>Print design</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>SEO optimization</li>
+              <li>Social media marketing</li>
+              <li>Email campaigns</li>
+              <li>Content creation</li>
+              <li>Pay-per-click advertising</li>
+              <li>Analytics and reporting</li>
+              <li>Influencer marketing</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Ebook</h3>
+            <ul>
+              <li>Ebook writing</li>
+              <li>Ebook editing</li>
+              <li>Ebook formatting</li>
+              <li>Cover design</li>
+              <li>Publishing assistance</li>
+              <li>Marketing for ebooks</li>
+              <li>Distribution strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="contact" style="background: linear-gradient(135deg, #3d3c3b, #da934c);">
+      <div class="contact-container">
+        <!-- <img src="/images/logo.png" alt="Logo" class="contact-left-image" /> -->
+        <img src="/images/phone.png" alt="Phone" class="contact-right-image" />
+      </div>
+      <!-- New bottom-left image -->
+      <!-- <img src="https://lottiefiles.com/free-animation/contact-us-UrbpLxaagd" alt="Phone" class="contact-bottom-left-image" /> -->
+      <div class="contact-header">
+        <h2 class="contact-title">Let's Talk</h2>
+        <p class="contact-description">
+          Want to chat with us about your mobile, web, or digital ideas? <br />
+          Call us on <a href="tel:+14092454910">(409) 245-4910</a> or fill in
+          the contact form below.
+        </p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="form-input"
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="form-input"
+        />
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="form-textarea"
+        ></textarea>
+        <button type="submit" class="form-button">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Floating Buttons -->
+    <div class="floating-button">
+      <div class="main-fab">
+        <img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contact Icon" style="width: 30px; height: 30px;" />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+    
+
+    <style>
+      .contact-container {
+        background-color: transparent!important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .contact-left-image {
+        width: 150px;
+        height: auto;
+      }
+
+      .contact-right-image {
+        width: 200px;
+        height: auto;
+        animation: moveLeftRight 1.5s infinite alternate; /* Reduced duration */
+      }
+
+      /* New bottom-left image styles */
+      .contact-bottom-left-image {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 200px;
+        height: auto;
+        animation: moveLeftRight 1.5s infinite alternate;
+      }
+
+      @keyframes moveLeftRight {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(20px);
+        }
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* Move to the left */
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+
+      .scroll-to-top img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .floating-buttons {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .floating-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .floating-button:hover {
+        transform: scale(1.1);
+      }
+
+      .floating-button img {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="home.html">
+                <img
+                  src="images/logoa.png"
+                  alt="Logo"
+                  class="logo"
+                  width="500px"
+                />
+              </a>
+            </li>
+            <li>447716487602</li>
+            <li>support@streamartisian.com</li>
+            <li>
+              Office No.50A, 5 The Shires Old <br />
+              Bedford Road Luton, England LU27QA
+            </li>
+            <!-- <li><img src="/images/semi-logo.png" alt="" width="150px" /></li> -->
+          </ul>
+          <!-- <p style="color: white">447716487602</p>
+          <p style="color: white">support@streamartisian.com</p>
+          <address>
+            Office No.50A, 5 The Shires Old <br />
+            Bedford Road Luton, England LU27QA
+          </address> -->
+          <br />
+        </div>
+        <div class="col">
+          <h4>Digital Development</h4>
+          <ul>
+            <li>Mobile app developers</li>
+            <li>Chatbots</li>
+            <li>Web developers</li>
+            <li>Web-app developers</li>
+            <li>Intranet/Sharepoint Developers</li>
+            <li>IOT Developers</li>
+            <li>BlockChain Developers</li>
+            <li>AI/ML Solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Ebook</h4>
+          <ul>
+            <li>E-Book Writting</li>
+            <li>E-Book Writting</li>
+            <li>E-Book Formatting</li>
+            <li>Cover Design</li>
+            <li>Publishing Assistance</li>
+            <li>Marketing for E-Books</li>
+            <li>Distribution Strategies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="/images/arrival.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/trust.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/reviews.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/B-teck.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/site.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a href="" style="color: white">Privacy Policy</a>
+        </div>
+        <div class="col">
+          <a href="" style="color: white"> Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      // Hide navbar on page load if not at the top
+      window.addEventListener("load", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 0) {
+          navbar.style.top = "-150px";
+        } else {
+          navbar.style.top = "0";
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scroll down
+          navbar.style.top = "-150px";
+        } else {
+          // Scroll up
+          navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      const scrollToTopButton = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollToTopButton.classList.add("show");
+        } else {
+          scrollToTopButton.classList.remove("show");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
+
+        try {
+          const response = await fetch('http://localhost:5000/send', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          if (response.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+          } else {
+            alert('Failed to send message.');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Error sending message.');
+        }
+      });
+
+      const floatingButtons = document.querySelector(".floating-buttons");
+      floatingButtons.addEventListener("click", () => {
+        floatingButtons.classList.toggle("expanded");
+      });
+
+      function toggleFloatingButtons() {
+        document.querySelector(".floating-buttons").classList.toggle("expanded");
+      }
+    </script>
+    <!-- Floating button to scroll to top -->
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to Top" />
+    </div>
+  </body>
+</html>

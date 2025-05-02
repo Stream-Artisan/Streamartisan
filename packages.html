@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAS Navigation</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="/scripts/home.js"></script>
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/packages.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="styles/about.css" /> -->
+    <!-- <script src="/scripts/"></script> -->
+  </head>
+  <body>
+    <section class="hero">
+      <header class="navbar">
+        <a href="home.html">
+          <img src="images/logoa.png" alt="Logo" class="logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="hero-content">
+        <h1>OUR PACKAGES</h1>
+        <p>
+          We offer a range of digital packages designed to meet the unique needs
+          of businesses of all sizes.
+        </p>
+        <a href="/contact.html" class="hero-button">
+          Contact Us
+          <img
+            src="https://img.icons8.com/?size=64&id=49411&format=png"
+            alt="Arrow pointing to contact us"
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
+      <div class="overlay-content">
+        <div class="overlay-left">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="overlay-right">
+          <h2 class="services-title">Services</h2>
+          <div class="service-category">
+            <h3>Digital Development</h3>
+            <ul>
+              <li>Mobile app developers</li>
+              <li>Chatbots</li>
+              <li>Web developers</li>
+              <li>Web-app developers</li>
+              <li>Intranet/sharepoints developers</li>
+              <li>IOT developers</li>
+              <li>Blockchain developers</li>
+              <li>AI/ML solutions</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Graphic Designing</h3>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity</li>
+              <li>UI/UX design</li>
+              <li>Illustrations</li>
+              <li>3D modeling</li>
+              <li>Motion graphics</li>
+              <li>Print design</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>SEO optimization</li>
+              <li>Social media marketing</li>
+              <li>Email campaigns</li>
+              <li>Content creation</li>
+              <li>Pay-per-click advertising</li>
+              <li>Analytics and reporting</li>
+              <li>Influencer marketing</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Ebook</h3>
+            <ul>
+              <li>Ebook writing</li>
+              <li>Ebook editing</li>
+              <li>Ebook formatting</li>
+              <li>Cover design</li>
+              <li>Publishing assistance</li>
+              <li>Marketing for ebooks</li>
+              <li>Distribution strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <div class="floating-button">
+      <div class="main-fab">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/552/552489.png"
+          alt="Contact Icon"
+          style="width: 30px; height: 30px"
+        />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+    <div class="mobile-app" style="background-size: cover; background-position: center">
+      <div class="custom-tabs-container">
+        <div class="custom-tabs">
+          <button class="custom-tab-button" onclick="showTabContent('Logo')">Logo</button>
+
+          <button class="custom-tab-button active" onclick="showTabContent('CMS')">Web Development</button>
+          <button class="custom-tab-button" onclick="showTabContent('Custom')">Graphic Design</button>
+          <button class="custom-tab-button" onclick="showTabContent('Digital')">Digital Marketing</button>
+          <button class="custom-tab-button" onclick="showTabContent('E-Book')">E-Book</button>
+
+
+
+        
+        </div>
+    
+        <div class="custom-tab-content" style="background: transparent">
+          <!-- Repeat this block for each tab -->
+          <div id="CMS" class="custom-tab-pane active">
+            <!-- <h2 class="section-title text-center">Our Packages</h2> -->
+            <div class="package-cards">
+              <div class="package-card">
+                <h3 style="color: white;">Basic</h3>
+                <!-- <p>PKR 49k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 1-3 Web Pages</li>
+                  <li><span class="icon-tick">✔</span> Custom Designed Website</li>
+                  <li><span class="icon-tick">✔</span> Mobile-Friendly Design</li>
+                  <li><span class="icon-tick">✔</span> 3-5 Days to Complete a Page</li>
+                  <li><span class="icon-tick">✔</span> 1 Creative Concept</li>
+                  <li><span class="icon-tick">✔</span> 1 Revision - up to</li>
+                  <li><span class="icon-tick">✔</span> 2-5 Initial Design - in x Days</li>
+                  <li><span class="icon-tick">✔</span> Multimedia Support</li>
+                  <li><span class="icon-tick">✔</span> Custom Graphics</li>
+                  <li><span class="icon-tick">✔</span> Query / Feedback Form</li>
+                  <li><span class="icon-tick">✔</span> Search Engine Submission</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> 100% Advance / Down Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Basic Package">BUY</button> -->
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Standard</h3>
+                <p style="color: orange;">**Most Popular**</p>
+                <!-- <p>PKR 110k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 1-5 Web Pages</li>
+                  <li><span class="icon-tick">✔</span> Custom Designed Website</li>
+                  <li><span class="icon-tick">✔</span> Mobile-Friendly Design</li>
+                  <li><span class="icon-tick">✔</span> 2-4 Days to Complete a Page</li>
+                  <li><span class="icon-tick">✔</span> 1 Creative Concept</li>
+                  <li><span class="icon-tick">✔</span> 2 Revisions - up to</li>
+                  <li><span class="icon-tick">✔</span> 3-8 Initial Design - in x Days</li>
+                  <li><span class="icon-tick">✔</span> Multimedia Support</li>
+                  <li><span class="icon-tick">✔</span> Custom Graphics</li>
+                  <li><span class="icon-tick">✔</span> Query / Feedback Form</li>
+                  <li><span class="icon-tick">✔</span> Search Engine Submission</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> FREE Domain Registration **</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web Only)</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance / Down Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Standard Package">BUY</button> -->
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;" >Premium</h3>
+                <!-- <p>PKR 149k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 1-20 Web Pages</li>
+                  <li><span class="icon-tick">✔</span> Custom Designed Website</li>
+                  <li><span class="icon-tick">✔</span> Mobile-Friendly Design</li>
+                  <li><span class="icon-tick">✔</span> 2-4 Days to Complete a Page</li>
+                  <li><span class="icon-tick">✔</span> 2 Creative Concepts</li>
+                  <li><span class="icon-tick">✔</span> 5 Revisions - up to</li>
+                  <li><span class="icon-tick">✔</span> 5-10 Initial Design - in x Days</li>
+                  <li><span class="icon-tick">✔</span> Multimedia Support</li>
+                  <li><span class="icon-tick">✔</span> Custom Graphics</li>
+                  <li><span class="icon-tick">✔</span> Query / Feedback Form</li>
+                  <li><span class="icon-tick">✔</span> Search Engine Submission</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> FREE Domain Registration **</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web Only)</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web & Print)</li>
+                  <li><span class="icon-tick">✔</span> Image Scanning</li>
+                  <li><span class="icon-tick">✔</span> Site Search</li>
+                  <li><span class="icon-tick">✔</span> Meta Tag Optimization</li>
+                  <li><span class="icon-tick">✔</span> Web Store</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance / Down Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Premium Package">BUY</button> -->
+              </div>
+            </div>
+          </div>
+    
+          <!-- Repeat similar structure for each tab below -->
+          <div id="Custom" class="custom-tab-pane">
+            <div class="package-cards">
+              <!-- Basic Package -->
+              <div class="package-card">
+                <h3 style="color: white;">Basic</h3>
+                <!-- <p>PKR 49k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 3 Design Concepts</li>
+                  <li><span class="icon-tick">✔</span> 2 Revisions</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web Only)</li>
+                  <li><span class="icon-tick">✔</span> Banner Design</li>
+                  <li><span class="icon-tick">✔</span> 2 Social Media Posts</li>
+                  <li><span class="icon-tick">✔</span> Flyer or Brochure Design</li>
+                  <li><span class="icon-tick">✔</span> High-Resolution Files</li>
+                  <li><span class="icon-tick">✔</span> PNG, JPEG, PDF Formats</li>
+                  <li><span class="icon-tick">✔</span> Delivery in 3-5 Days</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> 100% Advance Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Basic Package">BUY</button> -->
+              </div>
+          
+              <!-- Standard Package -->
+              <div class="package-card">
+                <h3 style="color: white;">Standard</h3>
+                <p style="color: orange;">**Most Popular**</p>
+                <!-- <p>PKR 110k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 5 Design Concepts</li>
+                  <li><span class="icon-tick">✔</span> 4 Revisions</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web & Print)</li>
+                  <li><span class="icon-tick">✔</span> Banner Design</li>
+                  <li><span class="icon-tick">✔</span> 5 Social Media Posts</li>
+                  <li><span class="icon-tick">✔</span> Flyer or Brochure Design</li>
+                  <li><span class="icon-tick">✔</span> Stationery Design</li>
+                  <li><span class="icon-tick">✔</span> High-Resolution Files</li>
+                  <li><span class="icon-tick">✔</span> PNG, JPEG, PDF Formats</li>
+                  <li><span class="icon-tick">✔</span> Mockup Presentations</li>
+                  <li><span class="icon-tick">✔</span> Delivery in 2-4 Days</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Standard Package">BUY</button> -->
+              </div>
+          
+              <!-- Premium Package -->
+              <div class="package-card">
+                <h3 style="color: white;">Premium</h3>
+                <!-- <p>PKR 149k *</p> -->
+                <ul>
+                  <li><span class="icon-tick">✔</span> 8 Design Concepts</li>
+                  <li><span class="icon-tick">✔</span> Unlimited Revisions</li>
+                  <li><span class="icon-tick">✔</span> Logo Design (Web & Print)</li>
+                  <li><span class="icon-tick">✔</span> All Marketing Collateral</li>
+                  <li><span class="icon-tick">✔</span> 10+ Social Media Posts</li>
+                  <li><span class="icon-tick">✔</span> Flyer, Brochure, Poster Design</li>
+                  <li><span class="icon-tick">✔</span> Stationery + Brand Guidelines</li>
+                  <li><span class="icon-tick">✔</span> Mockup Presentations</li>
+                  <li><span class="icon-tick">✔</span> High-Resolution & Source Files</li>
+                  <li><span class="icon-tick">✔</span> PNG, JPEG, PDF, AI Formats</li>
+                  <li><span class="icon-tick">✔</span> Delivery in 2-3 Days</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance Payment</li>
+                </ul>
+                <!-- <button class="cta" aria-label="Choose Premium Package">BUY</button> -->
+              </div>
+            </div>
+          </div>
+    
+          <div id="Digital" class="custom-tab-pane">
+            <div class="package-cards">
+              <div class="package-card">
+                <h3 style="color: white;">Basic</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Social Media Setup (2 Platforms)</li>
+                  <li><span class="icon-tick">✔</span> 5 Posts Per Month</li>
+                  <li><span class="icon-tick">✔</span> Basic SEO Optimization</li>
+                  <li><span class="icon-tick">✔</span> Google My Business Setup</li>
+                  <li><span class="icon-tick">✔</span> Monthly Analytics Report</li>
+                  <li><span class="icon-tick">✔</span> Email Support</li>
+                  <li><span class="icon-tick">✔</span> 100% Advance Payment</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Standard</h3>
+                <p style="color: orange;">**Most Popular**</p>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Social Media Management (3 Platforms)</li>
+                  <li><span class="icon-tick">✔</span> 12 Posts Per Month</li>
+                  <li><span class="icon-tick">✔</span> On-Page SEO Optimization</li>
+                  <li><span class="icon-tick">✔</span> Blog Posting (2/month)</li>
+                  <li><span class="icon-tick">✔</span> Monthly Analytics & Strategy Call</li>
+                  <li><span class="icon-tick">✔</span> Email + Chat Support</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance Payment</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Premium</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Full Digital Strategy (5 Platforms)</li>
+                  <li><span class="icon-tick">✔</span> 20+ Custom Posts Per Month</li>
+                  <li><span class="icon-tick">✔</span> Full SEO (On-Page & Off-Page)</li>
+                  <li><span class="icon-tick">✔</span> Paid Ad Management (Google & Meta)</li>
+                  <li><span class="icon-tick">✔</span> Content Marketing & Blogging</li>
+                  <li><span class="icon-tick">✔</span> Conversion Tracking & A/B Testing</li>
+                  <li><span class="icon-tick">✔</span> Weekly Reporting + Strategy Sessions</li>
+                  <li><span class="icon-tick">✔</span> Priority Support</li>
+                  <li><span class="icon-tick">✔</span> 50% Advance Payment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="Logo" class="custom-tab-pane">
+            <div class="package-cards">
+              <div class="package-card">
+                <h3 style="color: white;">Basic</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> 2 Logo Concepts</li>
+                  <li><span class="icon-tick">✔</span> 2 Revisions</li>
+                  <li><span class="icon-tick">✔</span> JPG & PNG Formats</li>
+                  <li><span class="icon-tick">✔</span> 100% Ownership Rights</li>
+                  <li><span class="icon-tick">✔</span> 2-3 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Standard</h3>
+                <p style="color: orange;">**Most Popular**</p>
+                <ul>
+                  <li><span class="icon-tick">✔</span> 4 Logo Concepts</li>
+                  <li><span class="icon-tick">✔</span> Unlimited Revisions</li>
+                  <li><span class="icon-tick">✔</span> JPG, PNG, PDF, SVG</li>
+                  <li><span class="icon-tick">✔</span> 100% Ownership Rights</li>
+                  <li><span class="icon-tick">✔</span> Business Card Mockup</li>
+                  <li><span class="icon-tick">✔</span> 2-3 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Premium</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> 6+ Logo Concepts</li>
+                  <li><span class="icon-tick">✔</span> Unlimited Revisions</li>
+                  <li><span class="icon-tick">✔</span> All File Formats (AI, PSD, SVG, PDF)</li>
+                  <li><span class="icon-tick">✔</span> Branding Guide Included</li>
+                  <li><span class="icon-tick">✔</span> Social Media Kit</li>
+                  <li><span class="icon-tick">✔</span> Stationery Designs (Business Card, Letterhead)</li>
+                  <li><span class="icon-tick">✔</span> 3-5 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div id="E-Book" class="custom-tab-pane">
+            <div class="package-cards">
+              <div class="package-card">
+                <h3 style="color: white;">Basic</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Up to 5,000 Words</li>
+                  <li><span class="icon-tick">✔</span> Basic Editing</li>
+                  <li><span class="icon-tick">✔</span> Simple Cover Design</li>
+                  <li><span class="icon-tick">✔</span> Delivered in PDF & DOCX</li>
+                  <li><span class="icon-tick">✔</span> 4-7 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Standard</h3>
+                <p style="color: orange;">**Most Popular**</p>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Up to 10,000 Words</li>
+                  <li><span class="icon-tick">✔</span> Professional Editing</li>
+                  <li><span class="icon-tick">✔</span> Custom Cover Design</li>
+                  <li><span class="icon-tick">✔</span> ePub + PDF + DOCX</li>
+                  <li><span class="icon-tick">✔</span> ISBN Guidance</li>
+                  <li><span class="icon-tick">✔</span> 7-10 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE Consultation</li>
+                </ul>
+              </div>
+              <div class="package-card">
+                <h3 style="color: white;">Premium</h3>
+                <ul>
+                  <li><span class="icon-tick">✔</span> Up to 20,000 Words</li>
+                  <li><span class="icon-tick">✔</span> Full Editing & Proofreading</li>
+                  <li><span class="icon-tick">✔</span> Premium Cover Design</li>
+                  <li><span class="icon-tick">✔</span> Publishing Assistance (Amazon KDP, etc.)</li>
+                  <li><span class="icon-tick">✔</span> Formatting for All Devices</li>
+                  <li><span class="icon-tick">✔</span> Marketing Strategy Consultation</li>
+                  <li><span class="icon-tick">✔</span> 10-15 Days Delivery</li>
+                  <li><span class="icon-tick">✔</span> FREE ISBN & Copyright Tips</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="home.html">
+                <img
+                  src="images/logoa.png"
+                  alt="Logo"
+                  class="logo"
+                  width="500px"
+                />
+              </a>
+            </li>
+            <li>447716487602</li>
+            <li>support@streamartisian.com</li>
+            <li>
+              Office No.50A, 5 The Shires Old <br />
+              Bedford Road Luton, England LU27QA
+            </li>
+            <!-- <li><img src="/images/semi-logo.png" alt="" width="150px" /></li> -->
+          </ul>
+          <!-- <p style="color: white">447716487602</p>
+          <p style="color: white">support@streamartisian.com</p>
+          <address>
+            Office No.50A, 5 The Shires Old <br />
+            Bedford Road Luton, England LU27QA
+          </address> -->
+          <br />
+        </div>
+        <div class="col">
+          <h4>Digital Development</h4>
+          <ul>
+            <li>Mobile app developers</li>
+            <li>Chatbots</li>
+            <li>Web developers</li>
+            <li>Web-app developers</li>
+            <li>Intranet/Sharepoint Developers</li>
+            <li>IOT Developers</li>
+            <li>BlockChain Developers</li>
+            <li>AI/ML Solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Ebook</h4>
+          <ul>
+            <li>E-Book Writting</li>
+            <li>E-Book Writting</li>
+            <li>E-Book Formatting</li>
+            <li>Cover Design</li>
+            <li>Publishing Assistance</li>
+            <li>Marketing for E-Books</li>
+            <li>Distribution Strategies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="/images/arrival.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/trust.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/reviews.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/B-teck.png" alt="" />
+        </div>
+        <div class="col">
+          <img src="/images/site.png" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a href="" style="color: white">Privacy Policy</a>
+        </div>
+        <div class="col">
+          <a href="" style="color: white"> Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function showTabContent(tabId) {
+        document
+          .querySelectorAll(".custom-tab-pane")
+          .forEach((pane) => pane.classList.remove("active"));
+        document
+          .querySelectorAll(".custom-tab-button")
+          .forEach((button) => button.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+        document
+          .querySelector(
+            `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
+          )
+          .classList.add("active");
+      }
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplay: true /* Enable autoplay */,
+          autoplayTimeout: 3000 /* Set autoplay interval */,
+          responsive: {
+            0: { items: 2 },
+            600: { items: 4 },
+            1000: { items: 6 },
+          },
+        });
+      });
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      // Hide navbar on page load if not at the top
+      window.addEventListener("load", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 0) {
+          navbar.style.top = "-150px";
+        } else {
+          navbar.style.top = "0";
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scroll down
+          navbar.style.top = "-150px";
+        } else {
+          // Scroll up
+          navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      const scrollToTopButton = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollToTopButton.classList.add("show");
+        } else {
+          scrollToTopButton.classList.remove("show");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      const floatingButtons = document.querySelector(".floating-buttons");
+      floatingButtons.addEventListener("click", () => {
+        floatingButtons.classList.toggle("expanded");
+      });
+
+      function toggleFloatingButtons() {
+        document
+          .querySelector(".floating-buttons")
+          .classList.toggle("expanded");
+      }
+    </script>
+    <!-- Floating button to scroll to top -->
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+      />
+    </div>
+  </body>
+</html>
