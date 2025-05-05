@@ -26,10 +26,10 @@
   animation: slideUp 2s ease-in-out;
 }
 .contact-title{
-  margin-top: -110px;
+  margin-top: -110px!important;
 }
 .form-input{
-  background-color: transparent;
+  background-color: transparent!important;
 }
 @keyframes fadeIn {
   from {
