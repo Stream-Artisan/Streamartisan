@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensure the section takes full viewport height */
+  height: 20vh; /* Ensure the section takes full viewport height */
 }
 
 .hero-content h1 {
@@ -25,7 +25,12 @@
   /* margin-left: 180px; */
   animation: slideUp 2s ease-in-out;
 }
-
+.contact-title{
+  margin-top: -110px;
+}
+.form-input{
+  background-color: transparent;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
