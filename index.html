@@ -111,19 +111,19 @@
         </div>
       </div>
     </div>
-    
+
     <div class="carousel">
       <h1 class="section-title">Our Achievements</h1>
       <div class="carousel-container">
         <div class="carousel-item">
           <img src="/images/webfirm.svg" alt="Web firm achievement badge" />
         </div>
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
           <img
             src="/images/web-design-agencies-2023-9f3c56be082a087f33cb29dd2ecdffd5a6f0d48dfc8bcd5b0c0d2467f432d73e.png"
             alt="Web design agencies 2023 badge"
           />
-        </div>
+        </div> -->
         <div class="carousel-item">
           <img
             src="/images/app-development-companies.webp"
@@ -163,7 +163,7 @@
             alt="Software Suggest badge"
           />
         </div>
-        <div class="carousel-item">
+        <!-- <div class="carousel-item">
           <img
             src="/images/Verified-Agency-v2-1.png"
             alt="Verified agency badge"
@@ -174,7 +174,7 @@
         </div>
         <div class="carousel-item">
           <img src="/images/selected-firms.webp" alt="Selected firms badge" />
-        </div>
+        </div> -->
       </div>
       <button class="carousel-button prev" onclick="scrollCarousel(-1)">
         &#10094;
@@ -822,7 +822,7 @@
         <h2 class="contact-title">Let's Talk</h2>
         <p class="contact-description">
           Want to chat with us about your mobile, web, or digital ideas? <br />
-          Call us on <a href="tel:+14092454910">(409) 245-4910</a> or fill in
+          Call us on <a href="tel:+14092454910" style="color: white;">(409) 245-4910</a> or fill in
           the contact form below.
         </p>
       </div>
@@ -890,7 +890,12 @@
         <form id="popup-contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
@@ -917,8 +922,10 @@
               Bedford Road Luton, England LU27QA
             </li>
             <li>USA</li>
-            <li>Stream Artisan Corporation 418 <br>
-              Broadway #5981 Albany, NY, 12207</li>
+            <li>
+              Stream Artisan Corporation 418 <br />
+              Broadway #5981 Albany, NY, 12207
+            </li>
           </ul>
           <br />
         </div>
@@ -970,13 +977,186 @@
           copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
         </div>
         <div class="col">
-          <a href="" style="color: white">Privacy Policy</a>
+          <a
+            href="#"
+            id="privacyLink"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
         </div>
         <div class="col">
-          <a href="" style="color: white"> Terms & Conditions</a>
+          <a
+            href="#"
+            id="termsLink"
+            style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
         </div>
       </div>
     </footer>
+    <!-- Privacy Policy Popup -->
+    <div id="privacyModal" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" data-target="privacyModal">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>
+          At Stream Artisan, your privacy is important to us. This Privacy
+          Policy outlines how we collect, use, and protect your personal
+          information when you interact with our platform.
+        </p>
+        <h3>1. Information We Collect</h3>
+        <p>We may collect the following types of information:</p>
+        <p>
+          • Personal Information: such as your name, email address, and payment
+          details when you create an account or make purchases.
+        </p>
+        <p>
+          • Usage Data: including IP address, browser type, pages visited, and
+          time spent on our platform.
+        </p>
+        <p>
+          • Cookies and Tracking Technologies: to enhance your experience and
+          analyze platform usage.
+        </p>
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the information we collect to:</p>
+        <p>• Provide and improve our services</p>
+        <p>• Process transactions</p>
+        <p>• Communicate with you regarding your account or updates</p>
+        <p>• Ensure platform security and prevent fraud</p>
+        <p>• Analyze usage patterns to optimize performance</p>
+        <h3>3. Sharing Your Information</h3>
+        <p>
+          We do not sell your personal information. We may share data with
+          trusted third parties only for the purposes of operating our platform,
+          fulfilling legal obligations, or protecting rights and safety.
+        </p>
+        <h3>4. Data Security</h3>
+        <p>
+          We implement appropriate technical and organizational measures to
+          protect your personal data from unauthorized access, alteration,
+          disclosure, or destruction.
+        </p>
+        <h3>5. Your Rights</h3>
+        <p>Depending on your location, you may have the right to:</p>
+        <p>• Access the personal data we hold about you</p>
+        <p>• Request corrections or deletions</p>
+        <p>• Object to or restrict certain processing activities</p>
+        <p>• Withdraw consent where applicable</p>
+        <h3>6. Third-Party Links</h3>
+        <p>
+          Our platform may contain links to third-party websites. We are not
+          responsible for their privacy practices and encourage you to review
+          their privacy policies.
+        </p>
+        <h3>7. Children’s Privacy</h3>
+        <p>
+          Stream Artisan is not intended for use by children under the age of
+          13. We do not knowingly collect personal information from children.
+        </p>
+        <h3>8. Changes to This Policy</h3>
+        <p>
+          We may update this policy from time to time. When we do, we will
+          revise the “Effective Date” at the top of this page and notify users
+          if the changes are significant.
+        </p>
+        <h3>9. Contact Us</h3>
+        <p>
+          If you have any questions about this Privacy Policy, you can contact
+          us at:
+        </p>
+        <p>Email: services@streamartisian.com</p>
+        <p>Address: Office no 50 A 5 the shires old bedford luton LU27QA</p>
+      </div>
+    </div>
+
+    <!-- Terms & Conditions Popup -->
+    <div id="termsModal" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" data-target="termsModal">&times;</span>
+        <h2>Terms & Conditions</h2>
+        <p>
+          Welcome to Stream Artisan. By accessing or using our platform, you
+          agree to comply with and be bound by the following Terms and
+          Conditions. Please read them carefully.
+        </p>
+        <h3>1. Acceptance of Terms</h3>
+        <p>
+          By registering, accessing, or using Stream Artisan in any manner, you
+          agree to these Terms and Conditions and our Privacy Policy. If you do
+          not agree, please do not use our services.
+        </p>
+        <h3>2. Use of the Platform</h3>
+        <p>
+          You agree to use Stream Artisan only for lawful purposes and in a way
+          that does not violate the rights of others or restrict their use of
+          the platform. You are responsible for any activity under your account.
+        </p>
+        <h3>3. User Accounts</h3>
+        <p>
+          To access certain features, you may be required to create an account.
+          You must provide accurate and complete information and keep your login
+          credentials secure. You are responsible for any activity that occurs
+          under your account.
+        </p>
+        <h3>4. Intellectual Property</h3>
+        <p>
+          All content on Stream Artisian, including but not limited to artwork,
+          videos, text, graphics, and logos, is the property of Stream Artisian
+          or its licensors and is protected by copyright and other intellectual
+          property laws. You may not use, reproduce, or distribute any content
+          without permission.
+        </p>
+        <h3>5. User-Generated Content</h3>
+        <p>
+          You may submit content to Stream Artisan (e.g., comments, artwork,
+          videos). By submitting content, you grant us a non-exclusive,
+          royalty-free, worldwide license to use, reproduce, and distribute it.
+          You are solely responsible for the content you provide and must not
+          upload anything illegal, harmful, or infringing on others’ rights.
+        </p>
+        <h3>6. Payments and Subscriptions</h3>
+        <p>
+          If your use of Stream Artisan involves purchases or subscriptions, you
+          agree to provide accurate billing information. All payments are
+          non-refundable unless stated otherwise.
+        </p>
+        <h3>7. Termination</h3>
+        <p>
+          We reserve the right to suspend or terminate your access to Stream
+          Artisan at any time, with or without notice, if you violate these
+          Terms or engage in harmful behavior.
+        </p>
+        <h3>8. Disclaimers</h3>
+        <p>
+          Stream Artisian is provided “as is” and “as available.” We do not
+          guarantee that the platform will be uninterrupted, secure, or
+          error-free. We are not responsible for any content uploaded by users.
+        </p>
+        <h3>9. Limitation of Liability</h3>
+        <p>
+          To the fullest extent permitted by law, Stream Artisan and its
+          affiliates shall not be liable for any direct, indirect, incidental,
+          or consequential damages arising from your use of the platform.
+        </p>
+        <h3>10. Governing Law</h3>
+        <p>
+          These Terms are governed by and construed in accordance with the laws
+          of Country. Any disputes shall be subject to the exclusive
+          jurisdiction of the courts in that location.
+        </p>
+        <h3>11. Changes to Terms</h3>
+        <p>
+          We may update these Terms from time to time. Continued use of the
+          platform after changes constitutes your acceptance of the updated
+          Terms.
+        </p>
+        <h3>12. Contact Us</h3>
+        <p>If you have any questions about these Terms, contact us at:</p>
+        <p>Email: services@streamartisian.com</p>
+        <p>Address: Office no 50 A 5 the shires old bedford luton LU27QA</p>
+      </div>
+    </div>
     <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
       <img
         src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
@@ -1004,13 +1184,15 @@
     </div>
 
     <style>
+     
+
       .scroll-to-top {
         position: fixed;
         bottom: 20px;
         left: 20px; /* Move to the left */
         display: none;
         cursor: pointer;
-        background-color:transparent;
+        background-color: transparent;
         z-index: 1000;
       }
 
@@ -1034,7 +1216,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: transparent!important;
+        background-color: transparent !important;
         cursor: pointer;
         transition: transform 0.3s ease, opacity 0.3s ease;
       }
@@ -1120,14 +1302,39 @@
       }
     </style>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("privacyLink").onclick = function (e) {
+      e.preventDefault();
+      document.getElementById("privacyModal").style.display = "flex";
+    };
+
+    document.getElementById("termsLink").onclick = function (e) {
+      e.preventDefault();
+      document.getElementById("termsModal").style.display = "flex";
+    };
+
+    document.querySelectorAll(".close-btn").forEach((btn) => {
+      btn.onclick = function () {
+        const targetId = this.getAttribute("data-target");
+        document.getElementById(targetId).style.display = "none";
+      };
+    });
+
+    window.onclick = function (e) {
+      if (e.target.classList.contains("popup")) {
+        e.target.style.display = "none";
+      }
+    };
+  });
+
       function toggleMenu() {
-  const overlay = document.getElementById("overlay");
-  if (overlay.style.width === "100%") {
-    overlay.style.width = "0";
-  } else {
-    overlay.style.width = "100%";
-  }
-}
+        const overlay = document.getElementById("overlay");
+        if (overlay.style.width === "100%") {
+          overlay.style.width = "0";
+        } else {
+          overlay.style.width = "100%";
+        }
+      }
       // for scrolling effect
       let lastScrollTop = 0;
       const navbar = document.querySelector(".navbar");
@@ -1299,18 +1506,20 @@
       }
 
       function openPopup() {
-        document.getElementById('contactPopup').classList.add('active');
+        document.getElementById("contactPopup").classList.add("active");
       }
 
       function closePopup() {
-        document.getElementById('contactPopup').classList.remove('active');
+        document.getElementById("contactPopup").classList.remove("active");
       }
 
-      document.getElementById('popup-contact-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Message sent successfully!');
-        closePopup();
-      });
+      document
+        .getElementById("popup-contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Message sent successfully!");
+          closePopup();
+        });
     </script>
   </body>
 </html>

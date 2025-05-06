@@ -16,7 +16,8 @@ body {
   width: 100vw;
 
   /* Background image setup */
-  background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  /* background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif'); */
+ background-image: url('https://media1.giphy.com/media/KX5nwoDX97AtPvKBF6/200.webp?cid=ecf05e47qfe6tnwhbeiu296xpbw26m0fbxiuprg5mp6v33in&ep=v1_gifs_search&rid=200.webp&ct=g');
   background-size: cover;         /* fill entire screen */
   background-repeat: no-repeat;
   background-attachment: fixed;   /* makes it static */
@@ -74,7 +75,7 @@ body {
 }
 
 .overlay-menu {
-  background-image: url('/videos/overlay-bg.gif');
+  background-image: url('https://media4.giphy.com/media/26BRGoqbUQvk8nwTC/200.webp?cid=ecf05e47qfe6tnwhbeiu296xpbw26m0fbxiuprg5mp6v33in&ep=v1_gifs_search&rid=200.webp&ct=g');
   background-size: cover;
 
   height: 100%;
@@ -873,7 +874,7 @@ footer .col:first-child {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
   }
 
@@ -1143,4 +1144,500 @@ footer .col:first-child {
 .floating-button .fab-options img:hover {
   transform: scale(1.2); /* Larger hover effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  /* General Body Adjustments */
+  body {
+    font-size: 16px; /* Base font size for better readability */
+  }
+
+  /* Navbar Adjustments */
+  .navbar {
+    padding: 15px 10px; /* Slightly more padding for touch targets */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+  }
+
+  .logo {
+    width: 180px;
+    margin-left: -40em; /* Smaller logo for mobile */
+  }
+
+  .hamburger span {
+    width: 25px; /* Smaller hamburger icon */
+    height: 3px;
+  }
+
+  /* Overlay Menu for Mobile */
+  .overlay-menu {
+    padding-top: 80px; /* More space for close button */
+  }
+
+  .overlay-content {
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px; /* Reduced padding */
+    justify-content: flex-start; /* Align content at the top */
+  }
+
+  .overlay-left li {
+    font-size: 24px; /* Smaller font size for menu items */
+    margin-bottom: 20px;
+  }
+
+  .overlay-right {
+    grid-template-columns: 1fr; /* Single column for service categories */
+    gap: 15px;
+  }
+
+  .overlay-right .service-category h3 {
+    font-size: 20px; /* Smaller headings */
+  }
+
+  .overlay-right .service-category ul {
+    font-size: 14px; /* Smaller list items */
+  }
+
+  .services-title {
+    font-size: 28px; /* Smaller title */
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 15px; /* Reduced padding */
+    height: auto; /* Allow height to adjust */
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%; /* Full width for content */
+  }
+
+  .hero-subtitle {
+    font-size: 24px; /* Smaller subtitle */
+  }
+
+  .hero-title {
+    font-size: 48px; /* Smaller title */
+    margin-left: 0; /* Remove indent */
+    margin-top: 0;
+  }
+
+  .hero-button {
+    width: 200px; /* Smaller button */
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .hero-image img {
+    width: 90%; /* Slightly smaller image */
+    margin: 20px auto; /* Center image */
+  }
+
+  /* Carousel */
+  .carousel {
+    padding: 20px 10px; /* Reduced padding */
+  }
+
+  .carousel-container {
+    gap: 10px; /* Smaller gap between items */
+  }
+
+  .carousel-item {
+    width: 200px; /* Smaller carousel items */
+  }
+
+  .carousel-button {
+    width: 35px; /* Smaller buttons */
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* Video Section */
+  .video-overlay-content {
+    padding: 40px 15px; /* Reduced padding */
+  }
+
+  /* App Images */
+  .app-images {
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px;
+    height: auto; /* Allow height to adjust */
+  }
+
+  .app-images img {
+    width: 200px; /* Smaller images */
+    height: 400px;
+  }
+
+  /* Section Titles and Descriptions */
+  .section-title {
+    font-size: 3.5em; /* Smaller title */
+  }
+
+  .section-description,
+  .column-description {
+    font-size: 1.5em; /* Smaller description */
+    line-height: 2rem;
+    margin-top: -20px;
+  }
+
+  /* Question Section */
+  .question-section {
+    height: auto; /* Allow height to adjust */
+    padding: 40px 15px;
+  }
+
+  .typewriter {
+    font-size: 2.5rem; /* Smaller typewriter text */
+    max-width: 90%;
+  }
+
+  .chat-icon {
+    width: 40px; /* Smaller icon */
+    margin-top: 30px;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 30px 15px; /* Reduced padding */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px;
+  }
+
+  .service-item h3 {
+    font-size: 16px; /* Smaller heading */
+  }
+
+  .service-item p {
+    font-size: 13px; /* Smaller text */
+  }
+
+  /* Presence Section */
+  .presence-wrapper {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+  }
+
+  .presence-item img {
+    width: 70%; /* Smaller image */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .presence-item h4 {
+    font-size: 36px; /* Smaller heading */
+    line-height: 40px;
+  }
+
+  .presence-item p {
+    font-size: 16px; /* Smaller text */
+    line-height: 24px;
+    margin-top: -20px;
+  }
+
+  .presence-wrapper hr {
+    width: 100%; /* Full-width horizontal line */
+    height: 2px;
+    margin: 20px 0;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 50px 20px; /* Reduced padding */
+  }
+
+  .contact-title {
+    font-size: 2.5rem; /* Smaller title */
+  }
+
+  .contact-description {
+    font-size: 1rem; /* Smaller description */
+  }
+
+  .contact-form {
+    max-width: 100%; /* Full width */
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%; /* Full width */
+    font-size: 0.9rem; /* Smaller font */
+  }
+
+  .form-button {
+    width: 8em; /* Smaller button */
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 15px; /* Reduced padding */
+  }
+
+  footer .col img.logo {
+    width: 120px; /* Smaller logo */
+  }
+
+  footer .col h4 {
+    font-size: 28px; /* Smaller heading */
+  }
+
+  footer .col ul li {
+    font-size: 14px; /* Smaller list items */
+  }
+
+  footer .row img {
+    max-width: 150px; /* Smaller image */
+  }
+
+  footer .row:last-child a {
+    font-size: 14px; /* Smaller links */
+    margin: 0 10px;
+  }
+
+  /* Tabs */
+  .tabs-container {
+    flex-direction: column; /* Stack tabs vertically */
+    padding: 15px;
+  }
+
+  .tab-button {
+    font-size: 14px; /* Smaller buttons */
+    padding: 8px;
+  }
+
+  .tab-content {
+    margin-left: 0; /* Remove margin */
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Floating Button */
+  .floating-button .main-fab {
+    width: 50px; /* Smaller main button */
+    height: 50px;
+  }
+
+  .floating-button .fab-options img {
+    width: 40px; /* Smaller option icons */
+    height: 40px;
+  }
+
+  .floating-button:hover .fab-options {
+    transform: translateY(-60px); /* Adjust for smaller buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  body {
+    font-size: 14px; /* Smaller base font */
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 10px 5px; /* Minimal padding */
+  }
+
+  .logo {
+    width: 150px; /* Even smaller logo */
+  }
+
+  .hamburger span {
+    width: 20px; /* Smaller hamburger */
+    height: 2px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 40px 10px; /* Minimal padding */
+  }
+
+  .hero-subtitle {
+    font-size: 20px; /* Smaller subtitle */
+  }
+
+  .hero-title {
+    font-size: 36px; /* Smaller title */
+  }
+
+  .hero-button {
+    width: 180px; /* Smaller button */
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .hero-image img {
+    width: 100%; /* Full width */
+  }
+
+  /* Carousel */
+  .carousel-item {
+    width: 150px; /* Smaller carousel items */
+  }
+
+  .carousel-button {
+    width: 30px; /* Smaller buttons */
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* App Images */
+  .app-images img {
+    width: 150px; /* Smaller images */
+    height: 300px;
+  }
+
+  /* Section Titles and Descriptions */
+  .section-title {
+    font-size: 2.5em; /* Smaller title */
+  }
+
+  .section-description,
+  .column-description {
+    font-size: 1.2em; /* Smaller description */
+    line-height: 1.8rem;
+  }
+
+  /* Question Section */
+  .typewriter {
+    font-size: 2rem; /* Smaller typewriter text */
+  }
+
+  .chat-icon {
+    width: 30px; /* Smaller icon */
+    margin-top: 20px;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 20px 10px; /* Minimal padding */
+  }
+
+  .service-item h3 {
+    font-size: 14px; /* Smaller heading */
+  }
+
+  .service-item p {
+    font-size: 12px; /* Smaller text */
+  }
+
+  /* Presence Section */
+  .presence-item h4 {
+    font-size: 28px; /* Smaller heading */
+    line-height: 32px;
+  }
+
+  .presence-item p {
+    font-size: 14px; /* Smaller text */
+    line-height: 20px;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 30px 10px; /* Minimal padding */
+  }
+
+  .contact-title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .form-button {
+    width: 7em; /* Smaller button */
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 10px; /* Minimal padding */
+  }
+
+  footer .col img.logo {
+    width: 100px; /* Smaller logo */
+  }
+
+  footer .col h4 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  footer .col ul li {
+    font-size: 13px; /* Smaller list items */
+  }
+
+  /* Tabs */
+  .tab-button {
+    font-size: 12px; /* Smaller buttons */
+    padding: 6px;
+  }
+
+  .tab-content {
+    font-size: 14px; /* Smaller content */
+    padding: 10px;
+  }
+
+  /* Floating Button */
+  .floating-button .main-fab {
+    width: 45px; /* Smaller main button */
+    height: 45px;
+  }
+
+  .floating-button .fab-options img {
+    width: 35px; /* Smaller option icons */
+    height: 35px;
+  }
+}     .popup-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1; /* creates padding effect */
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.popup-content {
+  scrollbar-width: thin; /* Options: auto, thin, none */
+  scrollbar-color: #888 #f1f1f1; /* thumb color, track color */
+}
+/* Popup background */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG83cnZ2amdkcjZianY4Z3B5NmZueTVxdzYyZzN0dW85eXhnczJnbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/8JNhmGOn981a77Jl0u/giphy.webp");
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh; /* restrict height */
+  overflow-y: auto; /* enable scrolling */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
 }
