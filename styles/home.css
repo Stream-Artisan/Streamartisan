@@ -1164,7 +1164,7 @@ footer .col:first-child {
 
   .carousel-container {
     gap: 0.2em;
-    width: 100%;
+    width: 84%;
 
   }
 
@@ -1179,14 +1179,16 @@ footer .col:first-child {
   }
 
   .app-images {
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
     gap: 1em;
+    margin-left: -50px;
     height: auto;
-    padding: 20px;
+    /* padding: 20px; */
   }
 
   .app-images img {
-    width: 200px;
+    width: 130px;
     height: 400px;
   }
 
@@ -1215,12 +1217,14 @@ footer .col:first-child {
 
   .question-section {
     height: auto;
+
     padding: 40px 20px;
   }
 
   .typewriter {
+    margin-left: -3em!important;
     font-size: 2.5rem;
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .chat-icon {
@@ -1312,7 +1316,8 @@ footer .col:first-child {
   }
 
   .tabs-container {
-    flex-direction: column;
+    flex-direction:column;
+    width: 80%;
   }
 
   .tab-content {
@@ -1321,12 +1326,12 @@ footer .col:first-child {
   }
 
   .floating-button .main-fab {
-    width: 50px;
+    width: 30px;
     height: 50px;
   }
 
   .floating-button .fab-options img {
-    width: 40px;
+    width: 30px;
     height: 40px;
   }
 
