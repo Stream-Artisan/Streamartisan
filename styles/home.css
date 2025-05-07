@@ -1070,6 +1070,9 @@ footer .col:first-child {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .tab-images{
+    display:none!important;
+  }
   .tabs {
     flex-wrap: wrap;
     gap: 5px;
@@ -1160,15 +1163,20 @@ footer .col:first-child {
   }
 
   .logo {
+    padding-left: 20px;
+    padding-right: 20px;
     width: 180px;
-    margin-left: -18em; /* Smaller logo for mobile */
+    margin-left: -15em;
+     /* Smaller logo for mobile */
   }
 
   .hamburger span {
     width: 25px; /* Smaller hamburger icon */
     height: 3px;
     margin-top: -15px;
-    margin-left: 25em;
+    margin-left: 20em;
+    margin-right: 30px!important;
+
   }
 
   /* Overlay Menu for Mobile */
@@ -1323,6 +1331,7 @@ footer .col:first-child {
     text-align: center;
     margin-left: 3.5em;/* Smaller text */
   }
+ 
   .img{
     margin-left: 10em;
     width: 50%;
@@ -1478,6 +1487,7 @@ footer .col:first-child {
   .hamburger span {
     width: 20px; /* Smaller hamburger */
     height: 2px;
+    margin-right: 30px!important;
   }
 
   /* Hero Section */
