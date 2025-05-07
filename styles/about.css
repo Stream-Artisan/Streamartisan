@@ -165,34 +165,46 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+ /* about.css */
+/* Mobile-first base styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.counter-section {
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.counter-section .row {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.counter-section .col {
+  width: 100%;
+  padding: 1rem;
+}
+
+.why .cards {
+  flex-direction: column;
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
-
+  
   .counter-section .row {
-    flex-direction: column;
-    gap: 30px; /* Adjusted gap for smaller screens */
+    flex-direction: row;
   }
-
-  .counter-section .col img {
-    max-width: 80%;
-  }
-
-  .counter-section .col h4 {
-    font-size: 40px;
-  }
-
-  .counter-section .col p {
-    font-size: 14px;
-  }
-
+  
   .why .cards {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
   }
-
-  .why .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+}
 }

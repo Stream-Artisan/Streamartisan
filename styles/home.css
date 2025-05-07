@@ -873,131 +873,6 @@ footer .col:first-child {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    padding: 10px;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-    padding: 50px 20px;
-    text-align: center;
-  }
-
-  .hero-title {
-    font-size: 50px;
-    margin-left: 0;
-  }
-
-  .hero-button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  .hero-image img {
-    width: 80%;
-    margin: 20px 0;
-  }
-
-  .overlay-content {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .overlay-right {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form,
-  .form-input,
-  .form-textarea {
-    width: 100%;
-    background-color: transparent;
-  }
-
-  .presence-item img {
-    width: 80%;
-    margin-left: 0;
-  }
-
-  footer .row {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .hero-title {
-    font-size: 40px;
-    margin-left: 0;
-  }
-
-  .hero-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .hero-image img {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .overlay-content {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .overlay-right {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form,
-  .form-input,
-  .form-textarea {
-    width: 100%;
-  }
-
-  .presence-item img {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  footer .row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .services-title {
-    font-size: 2em;
-  }
-
-  .service-item {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
 
 .tabs-container {
   display: flex;
@@ -1068,26 +943,8 @@ footer .col:first-child {
   display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .tab-images{
-    display:none!important;
-  }
-  .tabs {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
 
-  .tab-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
 
-  .tab-content {
-    font-size: 16px;
-    padding: 15px;
-  }
-}
 
 .floating-button {
   position: fixed;
@@ -1150,484 +1007,8 @@ footer .col:first-child {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 /* Mobile View Adjustments */
-@media (max-width: 768px) {
-  /* General Body Adjustments */
-  body {
-    font-size: 16px; /* Base font size for better readability */
-  }
 
-  /* Navbar Adjustments */
-  .navbar {
-    padding: 15px 10px; /* Slightly more padding for touch targets */
-    flex-wrap: wrap; /* Allow items to wrap if needed */
-  }
-
-  .logo {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 180px;
-    margin-left: -15em;
-     /* Smaller logo for mobile */
-  }
-
-  .hamburger span {
-    width: 25px; /* Smaller hamburger icon */
-    height: 3px;
-    margin-top: -15px;
-    margin-left: 20em;
-    margin-right: 30px!important;
-
-  }
-
-  /* Overlay Menu for Mobile */
-  .overlay-menu {
-    padding-top: 80px; /* More space for close button */
-  }
-
-  .overlay-content {
-    flex-direction: column; /* Stack content vertically */
-    padding: 20px; /* Reduced padding */
-    justify-content: flex-start; /* Align content at the top */
-  }
-
-  .overlay-left li {
-    font-size: 24px; /* Smaller font size for menu items */
-    margin-bottom: 20px;
-  }
-
-  .overlay-right {
-    grid-template-columns: 1fr; /* Single column for service categories */
-    gap: 15px;
-  }
-
-  .overlay-right .service-category h3 {
-    font-size: 20px; /* Smaller headings */
-  }
-
-  .overlay-right .service-category ul {
-    font-size: 14px; /* Smaller list items */
-  }
-
-  .services-title {
-    font-size: 28px; /* Smaller title */
-  }
-
-  /* Hero Section */
-  .hero {
-    padding: 60px 15px; /* Reduced padding */
-    height: auto; /* Allow height to adjust */
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%; /* Full width for content */
-  }
-
-  .hero-subtitle {
-    font-size: 24px; /* Smaller subtitle */
-  }
-
-  .hero-title {
-    font-size: 48px; /* Smaller title */
-    margin-left: 0; /* Remove indent */
-    margin-top: 0;
-  }
-
-  .hero-button {
-    width: 200px; /* Smaller button */
-    font-size: 16px;
-    padding: 10px 15px;
-  }
-
-  .hero-image img {
-    width: 60%; /* Slightly smaller image */
-    margin: 20px auto; /* Center image */
-  }
-
-  /* Carousel */
-  .carousel {
-    padding: 20px 10px; /* Reduced padding */
-  }
-
-  .carousel-container {
-    gap: 10px; /* Smaller gap between items */
-  }
-
-  .carousel-item {
-    width: 200px; /* Smaller carousel items */
-  }
-
-  .carousel-button {
-    width: 35px; /* Smaller buttons */
-    height: 35px;
-    font-size: 16px;
-  }
-
-  /* Video Section */
-  .video-overlay-content {
-    padding: 40px 15px; /* Reduced padding */
-  }
-
-  /* App Images */
-  .app-images {
-    flex-direction: column; /* Stack images vertically */
-    gap: 20px;
-    height: auto; /* Allow height to adjust */
-  }
-
-  .app-images img {
-    width: 300px; /* Smaller images */
-    height: 400px;
-  }
-
-  /* Section Titles and Descriptions */
-  .section-title {
-    font-size: 3.5em!important;
-    line-height: 1em!important; /* Smaller title */
-  }
-
-  .section-description,
-  .column-description {
-    font-size: 1.5em; /* Smaller description */
-    line-height: 2rem;
-    margin-top: -20px;
-    /* margin-left: 15em; */
-  }
-
-  /* Question Section */
-  .question-section {
-    height: auto; /* Allow height to adjust */
-    padding: 40px 15px;
-  }
-
-  .typewriter {
-    font-size: 2.5rem; /* Smaller typewriter text */
-    max-width: 90%;
-  }
-
-  .chat-icon {
-    width: 40px; /* Smaller icon */
-    margin-top: 30px;
-  }
-
-  /* Services Section */
-  .services-section {
-    padding: 30px 15px; /* Reduced padding */
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr; /* Single column */
-    gap: 15px;
-    margin-left: -12em;
-  }
-
-  .service-item h3 {
-    font-size: 16px; /* Smaller heading */
-    margin-right: -12em!important;
-  }
-
-  .service-item p {
-    font-size: 13px; 
-    text-align: center;
-    margin-left: 3.5em;/* Smaller text */
-  }
- 
-  .img{
-    margin-left: 10em;
-    width: 50%;
-  }
-  .service-item h2{
-    text-align: center!important;
-    margin-right: -5em;
-  }
-  .client{
-    margin-right: -9rem!important;
-  }
-  #btn{
-    margin-left: 12em!important;
-  }
-  /* Presence Section */
-  .presence-wrapper {
-    flex-direction: column; /* Stack items vertically */
-    gap: 15px;
-  }
-  .title{
-    text-align: center!important;
-    /* margin-right: em; */
-    font-size: 5em!important;
-  }
-  .presence-item img {
-    width: 70%; /* Smaller image */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .presence-item h4 {
-    font-size: 36px; /* Smaller heading */
-    line-height: 40px;
-  }
-
-  .presence-item p {
-    font-size: 16px; /* Smaller text */
-    line-height: 24px;
-    margin-top: -20px;
-  }
-
-  .presence-wrapper hr {
-    width: 100%; /* Full-width horizontal line */
-    height: 2px;
-    margin: 20px 0;
-  }
-
-  /* Contact Section */
-  .contact {
-    padding: 50px 20px; /* Reduced padding */
-  }
-
-  .contact-title {
-    font-size: 2.5rem; /* Smaller title */
-  }
-
-  .contact-description {
-    font-size: 1rem; /* Smaller description */
-  }
-
-  .contact-form {
-    max-width: 100%; /* Full width */
-  }
-
-  .form-input,
-  .form-textarea {
-    width: 90%; /* Full width */
-    font-size: 0.9rem; /* Smaller font */
-  }
-
-  .form-button {
-    width: 8em; /* Smaller button */
-    font-size: 0.9rem;
-  }
-  .loc-img{
-    width: 50%!important;
-    margin-left: 7em!important;
-  }
-  /* Footer */
-  footer {
-    padding: 40px 15px; /* Reduced padding */
-  }
-
-  footer .col img.logo {
-    width: 120px; /* Smaller logo */
-  }
-
-  footer .col h4 {
-    font-size: 28px; /* Smaller heading */
-  }
-
-  footer .col ul li {
-    font-size: 14px; /* Smaller list items */
-  }
-
-  footer .row img {
-    max-width: 150px; /* Smaller image */
-  }
-
-  footer .row:last-child a {
-    font-size: 14px; /* Smaller links */
-    margin: 0 10px;
-  }
-
-  /* Tabs */
-  .tabs-container {
-    flex-direction: column; /* Stack tabs vertically */
-    padding: 15px;
-  }
-
-  .tab-button {
-    font-size: 14px; /* Smaller buttons */
-    padding: 8px;
-  }
-
-  .tab-content {
-    margin-left: 0; /* Remove margin */
-    font-size: 16px;
-    padding: 15px;
-  }
-
-  /* Floating Button */
-  .floating-button .main-fab {
-    width: 50px; /* Smaller main button */
-    height: 50px;
-  }
-
-  .floating-button .fab-options img {
-    width: 40px; /* Smaller option icons */
-    height: 40px;
-  }
-
-  .floating-button:hover .fab-options {
-    transform: translateY(-60px); /* Adjust for smaller buttons */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
-  body {
-    font-size: 14px; /* Smaller base font */
-  }
-
-  /* Navbar */
-  .navbar {
-    padding: 10px 5px; /* Minimal padding */
-  }
-
-  .logo {
-    width: 150px; /* Even smaller logo */
-  }
-
-  .hamburger span {
-    width: 20px; /* Smaller hamburger */
-    height: 2px;
-    margin-right: 30px!important;
-  }
-
-  /* Hero Section */
-  .hero {
-    padding: 40px 10px; /* Minimal padding */
-  }
-
-  .hero-subtitle {
-    font-size: 20px; /* Smaller subtitle */
-  }
-
-  .hero-title {
-    font-size: 36px; /* Smaller title */
-  }
-
-  .hero-button {
-    width: 180px; /* Smaller button */
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .hero-image img {
-    width: 100%; /* Full width */
-  }
-
-  /* Carousel */
-  .carousel-item {
-    width: 150px; /* Smaller carousel items */
-  }
-
-  .carousel-button {
-    width: 30px; /* Smaller buttons */
-    height: 30px;
-    font-size: 14px;
-  }
-
-  /* App Images */
-  .app-images img {
-    width: 150px; /* Smaller images */
-    height: 300px;
-  }
-
-  /* Section Titles and Descriptions */
-  .section-title {
-    font-size: 2.5em; /* Smaller title */
-  }
-
-  .section-description,
-  .column-description {
-    font-size: 1.2em; /* Smaller description */
-    line-height: 1.8rem;
-  }
-
-  /* Question Section */
-  .typewriter {
-    font-size: 2rem; /* Smaller typewriter text */
-  }
-
-  .chat-icon {
-    width: 30px; /* Smaller icon */
-    margin-top: 20px;
-  }
-
-  /* Services Section */
-  .services-section {
-    padding: 20px 10px; /* Minimal padding */
-  }
-
-  .service-item h3 {
-    font-size: 14px; /* Smaller heading */
-  }
-
-  .service-item p {
-    font-size: 12px; /* Smaller text */
-  }
-
-  /* Presence Section */
-  .presence-item h4 {
-    font-size: 28px; /* Smaller heading */
-    line-height: 32px;
-  }
-
-  .presence-item p {
-    font-size: 14px; /* Smaller text */
-    line-height: 20px;
-  }
-
-  /* Contact Section */
-  .contact {
-    padding: 30px 10px; /* Minimal padding */
-  }
-
-  .contact-title {
-    font-size: 2rem; /* Smaller title */
-  }
-
-  .form-button {
-    width: 7em; /* Smaller button */
-    font-size: 0.8rem;
-  }
-
-  /* Footer */
-  footer {
-    padding: 30px 10px; /* Minimal padding */
-  }
-
-  footer .col img.logo {
-    width: 100px; /* Smaller logo */
-  }
-
-  footer .col h4 {
-    font-size: 24px; /* Smaller heading */
-  }
-
-  footer .col ul li {
-    font-size: 13px; /* Smaller list items */
-  }
-
-  /* Tabs */
-  .tab-button {
-    font-size: 12px; /* Smaller buttons */
-    padding: 6px;
-  }
-
-  .tab-content {
-    font-size: 14px; /* Smaller content */
-    padding: 10px;
-  }
-
-  /* Floating Button */
-  .floating-button .main-fab {
-    width: 45px; /* Smaller main button */
-    height: 45px;
-  }
-
-  .floating-button .fab-options img {
-    width: 35px; /* Smaller option icons */
-    height: 35px;
-  }
-}     .popup-content::-webkit-scrollbar {
+    .popup-content::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -1681,4 +1062,281 @@ footer .col:first-child {
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+/* @media (max-width: 480px) {
+  Further adjustments for very small screens
+
+}  */
+  /* Mobile View Adjustments */
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 90px;
+    border-radius: 50%;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    margin-left: -18em;
+  }
+
+  .overlay-menu {
+    padding-top: 40px;
+  }
+
+  .overlay-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .overlay-left ul {
+    align-items: center;
+  }
+
+  .overlay-left li {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .overlay-right {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+
+  .overlay-right .service-category h3 {
+    font-size: 20px;
+  }
+
+  .overlay-right .service-category ul {
+    font-size: 14px;
+  }
+
+  .services-title {
+    font-size: 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 60px 15px;
+    height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+    margin-left: -5em;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    margin-left: -3em;
+    margin-top: 10px;
+  }
+
+  .hero-button {
+    width: 200px;
+    font-size: 16px;
+    margin:10px 50px 20px;
+  }
+
+  .hero-image img {
+    margin-right: 0;
+    width: 60%;
+    margin: 10px 50px 20px;
+  }
+
+  .carousel-container {
+    gap: 0.2em;
+    width: 100%;
+
+  }
+
+  .carousel-item {
+    width: 150px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .app-images {
+    flex-direction: column;
+    gap: 1em;
+    height: auto;
+    padding: 20px;
+  }
+
+  .app-images img {
+    width: 200px;
+    height: 400px;
+  }
+
+  .section-title {
+    font-size: 3em;
+    margin: 80px 80px 80px -80px;
+  }
+
+  .section-description{
+    font-size: 1.2em;
+  line-height: 1.6rem;
+  margin: 10px 20px 20px;
+  text-align: center; /* optional: for better centering on mobile */
+  padding-right: 90px;
+    
+  }
+  .column-description {
+    font-size: 1.5em;
+    line-height: 2rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .typewriter {
+    font-size: 2.5rem;
+    max-width: 90%;
+  }
+
+  .chat-icon {
+    width: 40px;
+  }
+
+  .services-section {
+    padding: 30px 10px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-item h3 {
+    font-size: 16px;
+  }
+
+  .service-item p {
+    font-size: 12px;
+  }
+
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+  }
+
+  .form-button {
+    width: 8em;
+  }
+
+  .presence-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .presence h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .presence-item img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .presence-item h4 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .presence-item p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  footer .col {
+    min-width: 200px;
+  }
+
+  footer .col img.logo {
+    width: 120px;
+  }
+
+  footer .col h4 {
+    font-size: 28px;
+  }
+
+  footer .col ul li {
+    font-size: 14px;
+  }
+
+  footer .row img {
+    max-width: 150px;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+  }
+
+  .tab-content {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .floating-button .main-fab {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-button .fab-options img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .popup-content {
+    width: 95%;
+    max-height: 70vh;
+    padding: 15px;
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
 }

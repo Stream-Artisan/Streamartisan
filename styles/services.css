@@ -245,3 +245,69 @@
   background-color: transparent!important;
 }
 /* Add services-specific styles here */
+
+
+.floating-button {
+  position: fixed;
+  bottom: 20px; /* Adjusted for better spacing */
+  right: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  z-index: 1000;
+}
+
+.floating-button .main-fab {
+  width: 60px;
+  height: 60px; /* Made it circular */
+  background-color: #0073e6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.floating-button .main-fab:hover {
+  transform: scale(1.15); /* Slightly larger hover effect */
+  background-color: #005bb5; /
+}
+
+.floating-button .fab-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.floating-button:hover .fab-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-70px); /* Adjusted for smoother appearance */
+}
+
+.floating-button .fab-options a {
+  margin-bottom: 15px; /* Increased spacing for better alignment */
+}
+
+.floating-button .fab-options img {
+  width: 50px;
+  height: 50px;
+  background-color: transparent !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-button .fab-options img:hover {
+  transform: scale(1.2); /* Larger hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  
+}
