@@ -99,7 +99,7 @@
         </div>
       </div>
     </div>
-    <section class="contact" style="background-color: transparent;">
+    <section class="contact">
       <div class="contact-container">
         <!-- <img src="/images/logo.png" alt="Logo" class="contact-left-image" /> -->
         <!-- <img src="/images/phone.png" alt="Phone" class="contact-right-image" /> -->
@@ -144,122 +144,6 @@
       </form>
     </section>
 
-    <!-- Floating Buttons -->
-    <!-- <div class="floating-button">
-      <div class="main-fab">
-        <img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contact Icon" style="width: 30px; height: 30px;" />
-      </div>
-      <div class="fab-options">
-        <a href="tel:+447716487602">
-          <img src="images/phone.png" alt="Phone" />
-        </a>
-        <a href="https://wa.me/447716487602" target="_blank">
-          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
-        </a>
-      </div>
-    </div> -->
-    
-
-    <style>
-      .contact-container {
-        background-color: transparent!important;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-      }
-
-      .contact-left-image {
-        width: 150px;
-        height: auto;
-      }
-
-      .contact-right-image {
-        width: 200px;
-        height: auto;
-        animation: moveLeftRight 1.5s infinite alternate; /* Reduced duration */
-      }
-
-      /* New bottom-left image styles */
-      .contact-bottom-left-image {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        width: 200px;
-        height: auto;
-        animation: moveLeftRight 1.5s infinite alternate;
-      }
-
-      @keyframes moveLeftRight {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(20px);
-        }
-      }
-
-      .scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        left: 20px; /* Move to the left */
-        width: 50px;
-        height: 50px;
-        background-color: transparent;
-        border-radius: 50%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
-      }
-
-      .scroll-to-top img {
-        width: 30px;
-        height: 30px;
-      }
-
-      .scroll-to-top.show {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .floating-buttons {
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 1000;
-      }
-
-      .floating-button {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        cursor: pointer;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-      }
-
-      .floating-button:hover {
-        transform: scale(1.1);
-      }
-
-      .floating-button img {
-        width: 30px;
-        height: 30px;
-      }
-    </style>
     <footer>
       <div class="row">
         <div class="col">
@@ -537,6 +421,7 @@
     </div>
     </div>
     </footer>
+    <script src="scripts/contact.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("privacyLink").onclick = function (e) {

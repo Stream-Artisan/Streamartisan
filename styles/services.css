@@ -307,6 +307,138 @@
   transform: scale(1.2); /* Larger hover effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
+
+/* Scroll to top button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-to-top img {
+  width: 30px;
+  height: 30px;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Floating button styles */
+.floating-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+}
+
+.floating-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Trust section styles */
+.trust {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.trust-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.trust .section-title {
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove inline style for .btn in hero-content */
+.hero .btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Remove inline style for .mobile-app */
+.mobile-app {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Remove inline style for .process-grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Remove inline style for .process-item img */
+.process-item img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+/* Remove inline style for .trust .hero-button */
+.trust .hero-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  border: white solid 2px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/* Remove inline style for .tab-images in .custom-tab-pane */
+.tab-images {
+  display: flex;
+  gap: 30px;
+}
+
+/* Remove inline style for .hero-button.text-center in .custom-tab-pane */
+.hero-button.text-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+  border: white solid 2px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   
