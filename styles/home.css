@@ -65,9 +65,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: transparent; /* transparent background */
-  border: none; /* remove border if any */
-  box-shadow: none; /* remove shadow if any */
 }
 
 .hamburger span {
@@ -103,10 +100,6 @@ body {
   font-size: 36px;
   color: white;
   cursor: pointer;
-  background: transparent; /* transparent background */
-  border: none; /* remove border if any */
-  box-shadow: none; /* remove shadow if any */
-  outline: none;
 }
 
 .overlay-content {
@@ -1070,49 +1063,42 @@ footer .col:first-child {
   font-size: 24px;
   cursor: pointer;
 }
-/* Mobile View Adjustments */
+/* @media (max-width: 480px) {
+  Further adjustments for very small screens
+
+}  */
+  /* Mobile View Adjustments */
 @media only screen and (max-width: 768px) {
   body {
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center top;
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    padding: 0;
-    margin: 0;
   }
 
   .navbar {
-    padding: 10px 8px;
-    height: 56px;
-    min-height: 56px;
-    align-items: center;
+    padding: 15px;
   }
 
   .logo {
-    width: 70px;
+    width: 90px;
     border-radius: 50%;
-    margin: 0;
   }
 
-  .hamburger {
-    margin-left: auto;
-    margin-right: 0;
-  }
   .hamburger span {
-    width: 22px;
+    width: 25px;
     height: 3px;
-    margin-left: 0;
+    margin-left: -18em;
   }
 
   .overlay-menu {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   .overlay-content {
     flex-direction: column;
-    padding: 10px;
-    gap: 10px;
+    padding: 20px;
   }
 
   .overlay-left ul {
@@ -1120,412 +1106,507 @@ footer .col:first-child {
   }
 
   .overlay-left li {
-    font-size: 20px;
-    margin-bottom: 14px;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 
   .overlay-right {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 15px;
   }
 
   .overlay-right .service-category h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .overlay-right .service-category ul {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .services-title {
-    font-size: 22px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 30px;
   }
 
   .hero {
     flex-direction: column;
-    padding: 30px 8px 10px 8px;
+    padding: 60px 15px;
     height: auto;
-    gap: 10px;
   }
 
   .hero-content {
     max-width: 100%;
     text-align: center;
-    padding: 0;
   }
 
   .hero-subtitle {
-    font-size: 18px;
-    margin: 0 0 8px 0;
+    font-size: 24px;
+    margin-left: -10em;
   }
 
   .hero-title {
-    font-size: 32px;
-    margin: 0 0 8px 0;
-    line-height: 1.1;
-    text-align: center;
+    font-size: 48px;
+    margin-left: -5em!important;
+    margin-top: 10px;
   }
 
   .hero-button {
-    width: 100%;
-    font-size: 15px;
-    margin: 10px 0 20px 0;
-    padding: 10px 0;
+    width: 200px;
+    font-size: 16px;
+    margin-left:-8em!important;
+    margin:10px 50px 20px;
   }
 
   .hero-image img {
-    margin: 0 auto 10px auto;
-    width: 90%;
-    max-width: 220px;
-    min-width: 120px;
+    margin-right: 0;
+    width: 50%;
+    margin: 10px 50px 20px;
   }
 
   .carousel-container {
-    gap: 0.5em;
-    width: 100%;
-    padding: 10px 0;
+    gap: 0.1em;
+    width: 84%;
+
   }
 
   .carousel-item {
-    width: 110px;
+    width: 150px;
   }
 
   .carousel-button {
-    width: 28px;
-    height: 28px;
-    font-size: 13px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 
   .app-images {
     flex-direction: row;
     width: 100%;
-    gap: 0.5em;
-    margin: 0;
+    gap: 1em;
+    margin-left: -50px;
     height: auto;
-    padding: 0;
+    /* padding: 20px; */
   }
 
   .app-images img {
-    width: 90px;
-    height: 180px;
-    min-width: 60px;
-    min-height: 120px;
+    width: 130px;
+    height: 400px;
   }
 
   .section-title {
-    font-size: 1.8em;
-    margin: 30px 0 10px 0;
-    text-align: center;
-    padding: 0;
+    font-size: 3em;
+    margin: 80px 80px 80px -80px;
   }
 
-  .section-description {
-    font-size: 1em;
-    line-height: 1.4rem;
-    margin: 10px 0 10px 0;
-    text-align: center;
-    padding: 0 5px;
+  .section-description{
+    font-size: 1.2em;
+  line-height: 1.6rem;
+  margin: 10px 20px 20px;
+  text-align: center; /* optional: for better centering on mobile */
+  padding-right: 90px;
+    
   }
-
   .column-description {
-    font-size: 1.1em;
-    line-height: 1.5rem;
-    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    line-height: 2rem;
   }
 
   .row {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
   }
 
   .question-section {
     height: auto;
-    padding: 20px 5px;
+
+    padding: 40px 20px;
   }
 
   .typewriter {
-    margin: 0 auto;
-    font-size: 1.3rem;
-    max-width: 95%;
-    padding: 0;
+    margin-left: -3em!important;
+    font-size: 2.5rem;
+    max-width: 80%;
   }
 
   .chat-icon {
-    width: 32px;
-    margin-top: 10px;
+    width: 40px;
   }
 
   .services-section {
-    padding: 20px 5px;
+    padding: 30px 10px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
   }
 
   .service-item h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .service-item p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .contact {
-    padding: 20px 5px;
-    gap: 20px;
+    padding: 40px 20px;
   }
 
   .contact-title {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   .contact-description {
-    font-size: 0.95rem;
-  }
-
-  .contact-form {
-    gap: 10px;
-    max-width: 100%;
-    padding: 0 2px;
+    font-size: 1rem;
   }
 
   .form-input,
   .form-textarea {
     width: 100%;
-    font-size: 1em;
-    padding: 8px;
   }
 
   .form-button {
-    width: 100%;
-    font-size: 1em;
-    padding: 10px 0;
+    width: 8em;
   }
 
   .presence-wrapper {
     flex-direction: column;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
+    gap: 10px;
   }
 
   .presence h2 {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    margin: 10px 0;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .presence-item img {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .presence-item h4 {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    margin: 10px 0 0 0;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .presence-item p {
-    font-size: 0.95em;
-    line-height: 1.3em;
-    margin: 0 0 10px 0;
-  }
-
-  footer {
-    padding: 20px 5px;
-    font-size: 0.95em;
-  }
-
-  footer .row {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   footer .col {
-    min-width: 100px;
-    padding: 0;
-    margin: 0 auto 10px auto;
-    text-align: center;
+    min-width: 200px;
   }
 
   footer .col img.logo {
-    width: 80px;
-    margin-bottom: 10px;
+    width: 120px;
   }
 
   footer .col h4 {
-    font-size: 1.1em;
-    margin-bottom: 8px;
+    font-size: 28px;
   }
 
   footer .col ul li {
-    font-size: 13px;
-    margin-bottom: 6px;
+    font-size: 14px;
   }
 
   footer .row img {
-    max-width: 90px;
+    max-width: 150px;
   }
 
   .tabs-container {
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-  }
-
-  .tabs {
-    gap: 5px;
-    padding: 0;
+    flex-direction:column;
+    width: 80%;
   }
 
   .tab-content {
     margin-left: 0;
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 1em;
+    margin-top: 10px;
   }
 
   .floating-button .main-fab {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 50px;
   }
 
   .floating-button .fab-options img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 40px;
   }
 
   .popup-content {
-    width: 98%;
-    max-height: 60vh;
-    padding: 8px;
+    width: 95%;
+    max-height: 70vh;
+    padding: 15px;
   }
 
   .close-btn {
-    font-size: 18px;
-    top: 5px;
-    right: 8px;
+    font-size: 20px;
   }
-}
-
-.hero-button.text-center {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 150px;
-  border: white solid 2px;
-  margin-top: 30px;
-  justify-content: center;
-}
-
-.tab-images {
-  display: flex;
-  gap: 30px;
-}
-
-.service-item p.large {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 48px;
-  color: white;
-  animation: slideFromRight 1s ease-out forwards;
-}
-
-.service-item p.left {
-  text-align: left;
-  color: white;
-  font-family: poppins, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  margin-left: 200px;
-}
-
-.service-item h3.left {
-  color: white;
-  text-align: left;
-  margin-left: 220px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 19px;
-}
-
-.service-item h2.client {
-  font-family: josefin sans;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 48px;
-  margin-top: 130px;
-}
-
-.service-item p.client {
-  color: white;
-  font-family: poppins, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 27px;
-}
-
-.hero-button#btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 200px;
-  margin-left: 320px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.service-item img.img,
-.service-item img.loc-img {
-  border-radius: 20px;
-}
-
-.service-item img.img {
-  width: 450px;
-}
-
-.service-item img.loc-img {
-  /* ...existing code... */
 }
 
 @media only screen and (max-width: 768px) {
-  /* ...existing mobile code... */
-  .hero-button.text-center,
-  .hero-button#btn {
-    width: 100%;
-    margin-left: 0;
+  .logo {
+    width: 5.625em; /* 90px */
+    border-radius: 50%;
   }
-  .service-item p.left,
-  .service-item h3.left {
-    margin-left: 0;
-    text-align: left;
+
+  .navbar {
+    padding: 0.9375em; /* 15px */
   }
-  .service-item img.img {
-    width: 100%;
+
+  .hamburger span {
+    width: 1.5625em; /* 25px */
+    height: 0.1875em; /* 3px */
+    margin-left: -18em;
+  }
+
+  .overlay-menu {
+    padding-top: 2.5em; /* 40px */
+  }
+
+  .overlay-content {
+    flex-direction: column;
+    padding: 1.25em; /* 20px */
+  }
+
+  .overlay-left li {
+    font-size: 1.5em; /* 24px */
+    margin-bottom: 1.25em; /* 20px */
+  }
+
+  .overlay-right {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.9375em; /* 15px */
+  }
+
+  .overlay-right .service-category h3 {
+    font-size: 1.25em; /* 20px */
+  }
+
+  .overlay-right .service-category ul {
+    font-size: 0.875em; /* 14px */
+  }
+
+  .services-title {
+    font-size: 1.875em; /* 30px */
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 3.75em 0.9375em; /* 60px 15px */
+    height: auto;
+  }
+
+  .hero-content {
     max-width: 100%;
+    text-align: center;
   }
-  .service-item h2.client {
-    font-size: 2em;
-    margin-top: 30px;
+
+  .hero-subtitle {
+    font-size: 1.5em; /* 24px */
+    margin-left: -10em;
   }
-  .service-item p.client {
-    font-size: 1em;
+
+  .hero-title {
+    font-size: 3em; /* 48px */
+    margin-left: -5em !important;
+    margin-top: 0.625em; /* 10px */
+  }
+
+  .hero-button {
+    width: 12.5em; /* 200px */
+    font-size: 1em; /* 16px */
+    margin-left: -8em !important;
+    margin: 0.625em 3.125em 1.25em; /* 10px 50px 20px */
+  }
+
+  .hero-image img {
+    margin-right: 0;
+    width: 50%;
+    margin: 0.625em 3.125em 1.25em; /* 10px 50px 20px */
+  }
+
+  .carousel-container {
+    gap: 0.1em;
+    width: 84%;
+  }
+
+  .carousel-item {
+    width: 9.375em; /* 150px */
+  }
+
+  .carousel-button {
+    width: 1.875em; /* 30px */
+    height: 1.875em; /* 30px */
+    font-size: 0.875em; /* 14px */
+  }
+
+  .app-images {
+    flex-direction: row;
+    width: 100%;
+    gap: 1em;
+    margin-left: -3.125em; /* -50px */
+    height: auto;
+  }
+
+  .app-images img {
+    width: 8.125em; /* 130px */
+    height: 25em; /* 400px */
+  }
+
+  .section-title {
+    font-size: 3em;
+    margin: 5em 5em 5em -5em; /* 80px 80px 80px -80px */
+  }
+
+  .section-description {
+    font-size: 1.2em;
+    line-height: 1.6rem;
+    margin: 0.625em 1.25em 1.25em; /* 10px 20px 20px */
+    text-align: center;
+    padding-right: 5.625em; /* 90px */
+  }
+
+  .column-description {
+    font-size: 1.5em;
+    line-height: 2rem;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-section {
+    height: auto;
+    padding: 2.5em 1.25em; /* 40px 20px */
+  }
+
+  .typewriter {
+    margin-left: -3em !important;
+    font-size: 2.5rem;
+    max-width: 80%;
+  }
+
+  .chat-icon {
+    width: 2.5em; /* 40px */
+  }
+
+  .services-section {
+    padding: 1.875em 0.625em; /* 30px 10px */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9375em; /* 15px */
+  }
+
+  .service-item h3 {
+    font-size: 1em; /* 16px */
+  }
+
+  .service-item p {
+    font-size: 0.75em; /* 12px */
+  }
+
+  .contact {
+    padding: 2.5em 1.25em; /* 40px 20px */
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+  }
+
+  .form-button {
+    width: 8em;
+  }
+
+  .presence-wrapper {
+    flex-direction: column;
+    gap: 0.625em; /* 10px */
+  }
+
+  .presence h2 {
+    font-size: 3.125em; /* 50px */
+    line-height: 3.75em; /* 60px */
+  }
+
+  .presence-item img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .presence-item h4 {
+    font-size: 1.875em; /* 30px */
+    line-height: 2.5em; /* 40px */
+  }
+
+  .presence-item p {
+    font-size: 1em; /* 16px */
+    line-height: 1.5em; /* 24px */
+  }
+
+  footer .col {
+    min-width: 12.5em; /* 200px */
+  }
+
+  footer .col img.logo {
+    width: 7.5em; /* 120px */
+  }
+
+  footer .col h4 {
+    font-size: 1.75em; /* 28px */
+  }
+
+  footer .col ul li {
+    font-size: 0.875em; /* 14px */
+  }
+
+  footer .row img {
+    max-width: 9.375em; /* 150px */
+  }
+
+  .tabs-container {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .tab-content {
+    margin-left: 0;
+    margin-top: 0.625em; /* 10px */
+  }
+
+  .floating-button .main-fab {
+    width: 1.875em; /* 30px */
+    height: 3.125em; /* 50px */
+  }
+
+  .floating-button .fab-options img {
+    width: 1.875em; /* 30px */
+    height: 2.5em; /* 40px */
+  }
+
+  .popup-content {
+    width: 95%;
+    max-height: 70vh;
+    padding: 0.9375em; /* 15px */
+  }
+
+  .close-btn {
+    font-size: 1.25em; /* 20px */
   }
 }
