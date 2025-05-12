@@ -3,44 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Streamartisan | Mobile App & Web Development Agency</title>
-    <meta name="description" content="Streamartisan is a leading digital agency specializing in mobile app development, web development, digital marketing, and design services for startups and brands worldwide." />
-    <meta name="keywords" content="mobile app development, web development, digital marketing, UI/UX design, blockchain, software development, ebook, Streamartisan" />
-    <meta name="author" content="Streamartisan" />
-    <link rel="canonical" href="https://streamartisan.com/" />
+    <title>Streamartisan</title>
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/popup.css" />
     <script src="/scripts/home.js" defer></script>
   </head>
   <body>
-    <!-- HERO SECTION -->
     <section class="hero">
-      <header class="navbar" role="banner">
-        <a href="index.html" aria-label="Stream Artisan Home">
-          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="300" height="auto" />
+      <header class="navbar">
+        <a href="index.html">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="300px" />
         </a>
-        <button class="hamburger" aria-label="Open navigation menu" aria-controls="overlay" aria-expanded="false" onclick="toggleMenu()">
+        <div class="hamburger" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
-        </button>
+        </div>
       </header>
       <div class="hero-content">
         <p class="hero-subtitle">Step Into The</p>
         <h1 class="hero-title">World Of Technology.</h1>
-        <a href="/contact.html" class="hero-button" aria-label="Talk to an expert">
+        <a href="/contact.html" class="hero-button">
           Talk To An Expert
-          <img src="https://img.icons8.com/?size=64&id=49411&format=png" alt="Arrow pointing to contact us" />
+          <img
+            src="https://img.icons8.com/?size=64&id=49411&format=png"
+            alt="Arrow pointing to contact us"
+          />
         </a>
       </div>
       <div class="hero-image">
-        <img src="images/hero-image.webp" alt="Showcase of application technology" width="680" height="auto" />
+        <img
+          src="images/hero-image.webp"
+          alt="Showcase of application technology"
+          width="680px"
+        />
       </div>
     </section>
 
-    <!-- OVERLAY NAVIGATION -->
-    <nav id="overlay" class="overlay-menu" aria-label="Main menu">
-      <button class="closebtn" aria-label="Close navigation menu" onclick="toggleMenu()">&times;</button>
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
       <div class="overlay-content">
         <div class="overlay-left">
           <ul>
@@ -108,10 +110,9 @@
           </div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <!-- CAROUSEL SECTION -->
-    <section class="carousel" aria-label="Our Achievements">
+    <div class="carousel">
       <h1 class="section-title">Our Achievements</h1>
       <div class="carousel-container">
         <div class="carousel-item">
@@ -175,27 +176,31 @@
           <img src="/images/selected-firms.webp" alt="Selected firms badge" />
         </div> -->
       </div>
-      <button class="carousel-button prev" aria-label="Previous" onclick="scrollCarousel(-1)">
+      <button class="carousel-button prev" onclick="scrollCarousel(-1)">
         &#10094;
       </button>
-      <button class="carousel-button next" aria-label="Next" onclick="scrollCarousel(1)">
+      <button class="carousel-button next" onclick="scrollCarousel(1)">
         &#10095;
       </button>
-    </section>
+    </div>
+    <div class="video-section-wrapper">
+      <!-- Video Background -->
+      <!-- <video autoplay muted loop playsinline class="bg-video">
+        <source src="videos/Introducing StreamArtisan_ (online-video-cutter.com).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> -->
 
-    <!-- VIDEO SECTION -->
-    <section class="video-section-wrapper">
+      <!-- Content over the video -->
       <div class="video-overlay-content">
+        <!-- WHO WE ARE SECTION -->
         <div class="who-we-are">
           <div class="who-we-are-content">
-            <h2 class="section-title">Who We Are</h2>
+            <h1 class="section-title">Who We Are</h1>
             <p class="section-description">
               We are a team of passionate and experienced professionals
               dedicated to delivering innovative solutions for brands and
-              startups.<br />
-              Our expertise spans across multiple domains, ensuring impactful
-              results for your business.<br />
-              Get in touch — let's create something extraordinary together.
+              startups. Our expertise spans across multiple domains, ensuring impactful
+              results for your business. Get in touch — let's create something extraordinary together with Streamartisan.
             </p>
           </div>
         </div>
@@ -226,8 +231,9 @@
           />
         </div>
 
+        <!-- WHAT WE OFFER SECTION -->
         <div class="mobile-app">
-          <h2 class="section-title">What We Offer?</h2>
+          <h1 class="section-title">What We Offer?</h1>
           <div class="tabs-container">
             <div class="tabs">
               <button
@@ -595,9 +601,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- QUESTION SECTION -->
     <section class="question-section">
       <div class="icon-wrapper">
         <img
@@ -606,12 +611,26 @@
           class="chat-icon"
         />
       </div>
-      <h2 id="question" class="typewriter"></h2>
+      <h1 id="question" class="typewriter"></h1>
     </section>
 
-    <!-- SERVICES SECTION -->
     <section class="services-section">
-      <h2 class="section-title">We provide <br />mobile app <br />development</h2>
+      <h1
+        class="section-title"
+        style="
+          font-family: poppins, sans-serif;
+          font-size: 120px;
+          line-height: 144px;
+          font-weight: 700;
+          text-shadow: -2px -2px 0 rgb(238, 218, 238),
+            1px -1px 0 rgb(233, 207, 232), -1px 1px 0 rgb(233, 206, 231),
+            1px 1px 0 rgb(240, 212, 236);
+        "
+      >
+        We provide <br />
+        mobile app <br />
+        development
+      </h1>
       <div class="services-grid">
         <div class="service-item">
           <p
@@ -700,7 +719,7 @@
           </h3>
           <img
             src="/images/service-image1.webp"
-            class="img"
+            class="image"
 
             alt="Creative technology service image"
             width="450px"
@@ -727,7 +746,7 @@
         <div class="service-item">
           <img
             src="/images/service-image2.webp"
-          class="img"
+          class="image"
 
             alt="Digitising the forecourt service image"
             width="450px"
@@ -801,14 +820,12 @@
         <div class="service-item">
           <img
             src="/images/service-image3.webp"
-            class="img"
+            class="image"
             alt="Our clients service image"
           />
         </div>
       </div>
     </section>
-
-    <!-- CONTACT SECTION -->
     <section class="contact">
       <div class="contact-header">
         <h2 class="contact-title">Let's Talk</h2>
@@ -848,8 +865,6 @@
         <button type="submit" class="form-button">Send</button>
       </form>
     </section>
-
-    <!-- PRESENCE SECTION -->
     <section class="presence">
       <h2 class="title" id="loc">OUR GLOBAL PRESENCE</h2>
       <div class="presence-wrapper">
@@ -880,22 +895,23 @@
         </div>
       </div>
     </section>
-
-    <!-- POPUP CONTACT FORM -->
-    <div class="popup-container" id="contactPopup" role="dialog" aria-modal="true" aria-labelledby="contactPopupTitle">
+    <div class="popup-container" id="contactPopup">
       <div class="popup-content">
-        <button class="popup-close" onclick="closePopup()" aria-label="Close">&times;</button>
-        <h2 id="contactPopupTitle">Contact Us</h2>
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+        <h2>Contact Us</h2>
         <form id="popup-contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
-
-    <!-- FOOTER -->
     <footer>
       <div class="row">
         <div class="col">
@@ -973,19 +989,28 @@
           copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
         </div>
         <div class="col">
-          <a href="#" id="privacyLink" style="color: white; text-decoration: underline">Privacy Policy</a>
+          <a
+            href="#"
+            id="privacyLink"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
         </div>
         <div class="col">
-          <a href="#" id="termsLink" style="color: white; text-decoration: underline">Terms & Conditions</a>
+          <a
+            href="#"
+            id="termsLink"
+            style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
         </div>
       </div>
     </footer>
-
-    <!-- PRIVACY POLICY POPUP -->
-    <div id="privacyModal" class="popup" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <!-- Privacy Policy Popup -->
+    <div id="privacyModal" class="popup">
       <div class="popup-content">
-        <span class="close-btn" data-target="privacyModal" aria-label="Close">&times;</span>
-        <h2 id="privacyTitle">Privacy Policy</h2>
+        <span class="close-btn" data-target="privacyModal">&times;</span>
+        <h2>Privacy Policy</h2>
         <p>
           At Stream Artisan, your privacy is important to us. This Privacy
           Policy outlines how we collect, use, and protect your personal
@@ -1060,11 +1085,11 @@
       </div>
     </div>
 
-    <!-- TERMS & CONDITIONS POPUP -->
-    <div id="termsModal" class="popup" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <!-- Terms & Conditions Popup -->
+    <div id="termsModal" class="popup">
       <div class="popup-content">
-        <span class="close-btn" data-target="termsModal" aria-label="Close">&times;</span>
-        <h2 id="termsTitle">Terms & Conditions</h2>
+        <span class="close-btn" data-target="termsModal">&times;</span>
+        <h2>Terms & Conditions</h2>
         <p>
           Welcome to Stream Artisan. By accessing or using our platform, you
           agree to comply with and be bound by the following Terms and
@@ -1161,11 +1186,31 @@
         </p>
       </div>
     </div>
-
-    <!-- SCROLL TO TOP BUTTON -->
-    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
-      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to top arrow" width="50" height="50" />
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to top arrow"
+        width="50px"
+      />
     </button>
+    <!-- Floating Buttons -->
+    <!-- <div class="floating-button">
+      <div class="main-fab">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/552/552489.png"
+          alt="Contact Icon"
+          style="width: 30px; height: 30px"
+        />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div> -->
 
     <style>
       .scroll-to-top {

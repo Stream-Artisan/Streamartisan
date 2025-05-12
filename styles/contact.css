@@ -1,130 +1,105 @@
-/* ...existing code... */
+/* Optimized CSS for Mobile View (hero, contact, scroll-to-top, floating-buttons) */
+
+/* Custom Properties for Consistency */
+:root {
+  --font-primary: "Josefin Sans", sans-serif;
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --color-bg: #fff;
+  --color-primary: #007bff;
+  --color-text: #333;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: clamp(1.25rem, 4vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 5vw, 1.75rem);
+  --touch-target: 3rem;
+}
+
+/* Global Reset for Consistency */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Base Styles (Mobile-Relevant) */
 .hero {
   text-align: center;
-  padding: 50px 20px;
-  font-family: 'Josefin Sans', sans-serif;
+  padding: var(--spacing-md);
+  font-family: var(--font-primary);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh; /* Ensure the section takes full viewport height */
+  min-height: auto;
 }
 
 .hero-content h1 {
-  font-size: 120px;
-  line-height: 120px;
+  font-size: var(--font-size-xl);
+  line-height: 1.4;
   font-weight: 700;
-  margin: 0;
-  animation: fadeIn 2s ease-in-out;
+  margin: var(--spacing-md) 0;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-content p {
-  font-size: 45px;
-  line-height: 55px;
-  font-weight: 700;
-  margin: 20px 0 0;
-  /* margin-left: 180px; */
-  animation: slideUp 2s ease-in-out;
-}
-.contact-title{
-  margin-top: -100px!important;
-}
-.form-input{
-  background-color: transparent!important;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  font-weight: 500;
+  margin: var(--spacing-sm) 0;
+  animation: slideUp 1.2s ease-in-out;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    margin-top: 50px;
-    padding: 20px;
-    height: auto;
-    flex-direction: column;
-  }
-
-  .hero-content h1 {
-    margin-top:20em!important;
-    font-size: 50px;
-    line-height: 60px;
-    text-align: center;
-  }
-
-  .hero-content p {
-    margin-bottom: 20px!important;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    margin: 10px 0;
-  }
-  .form-input{
-    width: 90%;
-  }
-}
-
-/* Add contact-specific styles here */
 .contact-container {
-  background-color: transparent !important;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
+  padding: var(--spacing-lg);
+  background-color: transparent;
+  gap: var(--spacing-md);
 }
 
-.contact-left-image {
-  width: 150px;
-  height: auto;
+.contact-title {
+  font-size: var(--font-size-lg);
+  font-family: var(--font-primary);
+  margin: var(--spacing-md) 0;
 }
 
-.contact-right-image {
-  width: 200px;
+.form-input {
+  width: 95%;
+  padding: var(--spacing-sm);
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  border-radius: 0.25rem;
+  font-size: var(--font-size-md);
+  font-family: var(--font-system);
+}
+
+.contact-left-image,
+.contact-right-image,
+.contact-bottom-left-image {
+  max-width: 100%;
+  width: clamp(6rem, 25vw, 8rem);
   height: auto;
-  animation: moveLeftRight 1.5s infinite alternate;
+  animation: moveLeftRight 2s ease-in-out infinite alternate;
 }
 
 .contact-bottom-left-image {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 200px;
-  height: auto;
-  animation: moveLeftRight 1.5s infinite alternate;
-}
-
-@keyframes moveLeftRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(20px);
-  }
+  margin-top: var(--spacing-md);
 }
 
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
+  bottom: var(--spacing-lg);
+  left: var(--spacing-md);
+  width: var(--touch-target);
+  height: var(--touch-target);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--color-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,12 +107,8 @@
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.scroll-to-top img {
-  width: 30px;
-  height: 30px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  will-change: opacity;
 }
 
 .scroll-to-top.show {
@@ -145,36 +116,149 @@
   visibility: visible;
 }
 
+.scroll-to-top img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.scroll-to-top[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-to-top:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .floating-buttons {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
+  bottom: calc(var(--spacing-lg) + var(--touch-target));
+  right: var(--spacing-md);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--spacing-sm);
   z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.floating-buttons.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .floating-button {
-  width: 50px;
-  height: 50px;
+  width: var(--touch-target);
+  height: var(--touch-target);
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--color-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: var(--color-bg);
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
 }
 
-.floating-button:hover {
+.floating-button:hover,
+.floating-button:focus {
   transform: scale(1.1);
+  outline: none;
 }
 
 .floating-button img {
-  width: 30px;
-  height: 30px;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
-/* ...existing code... */
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(1rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveLeftRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(0.5rem); }
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    margin-top:-25em;
+    padding: var(--spacing-md);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    line-height: 1.4;
+    margin: var(--spacing-sm) 0;
+  }
+
+  .hero-content p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: var(--spacing-sm) 0;
+  }
+  .contact-container{
+    margin-top: -25em;
+  }
+
+  .form-input {
+    width: 95%;
+  }
+
+  .contact-container {
+    gap: var(--spacing-md);
+  }
+
+  .contact-left-image,
+  .contact-right-image,
+  .contact-bottom-left-image {
+    width: clamp(5rem, 20vw, 7rem);
+  }
+}
+
+/* Smaller Mobile Screens */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .contact-title {
+    font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .contact-left-image,
+  .contact-right-image,
+  .contact-bottom-left-image {
+    width: clamp(4rem, 18vw, 6rem);
+  }
+
+  .floating-button,
+  .scroll-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .floating-button img,
+  .scroll-to-top img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

@@ -47,11 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Typewriter animation
   const questions = [
-    "How do i get more people to use my app?",
-    "Should i build native app or a hybrid app?",
+    "How do I get more people to use my app?",
+    "Should I build a native app or a hybrid app?",
     "How to integrate payment methods in my app?",
-    "Should i build my app in react native?",
-    "Should i get my desins made in vector form?",
+    "Should I build my app in React Native?",
+    "Should I get my designs made in vector form?",
+    "What services does Streamartisan offer?",
   ];
   let current = 0;
   const questionEl = document.getElementById("question");

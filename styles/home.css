@@ -1068,37 +1068,48 @@ footer .col:first-child {
 
 }  */
   /* Mobile View Adjustments */
-@media only screen and (max-width: 768px) {
-  body {
-    background-size: 100% auto;
-    background-position: center top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-  }
+@media (max-width: 768px) {
+ body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* Combine gradient with background image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  background-size: cover; /* Set smaller size for the GIF (adjust as needed) */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-attachment: fixed;
+  background-position: center; /* Center the smaller GIF */
+  background-color: #000; /* Optional: Set a fallback background color */
+
+  font-family: "Josefin Sans", Arial, sans-serif;
+  color: white;
+}
 
   .navbar {
-    padding: 15px;
+    padding: 1rem; /* Relative unit for consistency */
   }
 
   .logo {
-    width: 90px;
+    width: 5rem; /* Smaller, scalable logo */
     border-radius: 50%;
   }
 
   .hamburger span {
-    width: 25px;
-    height: 3px;
-    margin-left: -18em;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 0.3rem auto; /* Centered, no negative margin */
   }
 
   .overlay-menu {
-    padding-top: 40px;
+    padding-top: 2.5rem;
   }
 
   .overlay-content {
     flex-direction: column;
-    padding: 20px;
+    padding: 1.5rem;
   }
 
   .overlay-left ul {
@@ -1106,32 +1117,31 @@ footer .col:first-child {
   }
 
   .overlay-left li {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .overlay-right {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
+    gap: 1rem;
   }
 
   .overlay-right .service-category h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .overlay-right .service-category ul {
-    font-size: 14px;
+    font-size: 0.875rem; /* Slightly larger for readability */
   }
 
   .services-title {
-    font-size: 30px;
+    font-size: 1.875rem; /* More reasonable for mobile */
   }
 
   .hero {
     flex-direction: column;
-    padding: 60px 15px;
-    height: auto;
+    padding: 3rem 1rem;
+    min-height: auto; /* Avoid fixed heights */
   }
 
   .hero-content {
@@ -1140,75 +1150,74 @@ footer .col:first-child {
   }
 
   .hero-subtitle {
-    font-size: 24px;
-    margin-left: -10em;
+    font-size: 1.5rem;
+    margin: 0; /* Remove negative margin */
   }
 
   .hero-title {
-    font-size: 48px;
-    margin-left: -5em!important;
-    margin-top: 10px;
+    font-size: 2.5rem;
+    margin: 0.5rem 0; /* Simplified spacing */
   }
 
   .hero-button {
-    width: 200px;
-    font-size: 16px;
-    margin-left:-8em!important;
-    margin:10px 50px 20px;
+    width: 12rem;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin: 1rem auto; /* Centered */
   }
 
   .hero-image img {
-    margin-right: 0;
-    width: 50%;
-    margin: 10px 50px 20px;
+    max-width: 80%; /* Responsive image */
+    margin: 1rem auto;
+    display: block;
   }
 
   .carousel-container {
-    gap: 0.1em;
-    width: 84%;
-
+    width: 90%; /* Slightly wider but not overflowing */
+    gap: 0.5rem;
   }
 
   .carousel-item {
-    width: 150px;
+    width: 10rem; /* Scalable */
   }
 
   .carousel-button {
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
   }
 
   .app-images {
     flex-direction: row;
-    width: 100%;
-    gap: 1em;
-    margin-left: -50px;
-    height: auto;
-    /* padding: 20px; */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem;
   }
 
   .app-images img {
-    width: 130px;
-    height: 400px;
+    width: 8rem; /* Smaller, responsive */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .section-title {
-    font-size: 3em;
-    margin: 80px 80px 80px -80px;
+    font-size: 2.5rem !important; /* Reduced for mobile */
+    margin: 2rem 0;
+    text-align: center; /* Centered for better UX */
   }
 
-  .section-description{
-    font-size: 1.2em;
-  line-height: 1.6rem;
-  margin: 10px 20px 20px;
-  text-align: center; /* optional: for better centering on mobile */
-  padding-right: 90px;
-    
+  .ceive {
+    font-size: 1rem; /* Assuming this was meant to be .section-description */
+    line-height: 1.5;
+    margin: 1rem 1.5rem;
+    text-align: center;
+    padding: 0;
   }
+
   .column-description {
-    font-size: 1.5em;
-    line-height: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
   }
 
   .row {
@@ -1217,396 +1226,138 @@ footer .col:first-child {
   }
 
   .question-section {
-    height: auto;
-
-    padding: 40px 20px;
+    padding: 2rem 1rem;
+    min-height: auto;
   }
 
   .typewriter {
-    margin-left: -3em!important;
-    font-size: 2.5rem;
-    max-width: 80%;
+    font-size: 1.75rem;
+    max-width: 90%;
+    margin: 0 auto !important;
+    text-align: center;
   }
 
   .chat-icon {
-    width: 40px;
+    width: 2.5rem;
   }
 
   .services-section {
-    padding: 30px 10px;
+    padding: 2rem 1rem;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 1rem;
   }
 
   .service-item h3 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .service-item p {
-    font-size: 12px;
+    font-size: 0.875rem; /* Larger for readability */
+  }
+
+  .images {
+    max-width: 100% !important; /* Responsive images */
   }
 
   .contact {
-    padding: 40px 20px;
+    padding: 2rem 1rem;
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .contact-description {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .form-input,
   .form-textarea {
     width: 100%;
+    box-sizing: border-box; /* Prevent overflow */
   }
 
   .form-button {
-    width: 8em;
+    width: 10rem; /* Slightly larger for touch targets */
+    padding: 0.75rem;
   }
 
   .presence-wrapper {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.75rem;
   }
 
   .presence h2 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 
   .presence-item img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 60%;
+    margin: 0 auto;
   }
 
   .presence-item h4 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-
-  .presence-item p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  footer .col {
-    min-width: 200px;
-  }
-
-  footer .col img.logo {
-    width: 120px;
-  }
-
-  footer .col h4 {
-    font-size: 28px;
-  }
-
-  footer .col ul li {
-    font-size: 14px;
-  }
-
-  footer .row img {
-    max-width: 150px;
-  }
-
-  .tabs-container {
-    flex-direction:column;
-    width: 80%;
-  }
-
-  .tab-content {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .floating-button .main-fab {
-    width: 30px;
-    height: 50px;
-  }
-
-  .floating-button .fab-options img {
-    width: 30px;
-    height: 40px;
-  }
-
-  .popup-content {
-    width: 95%;
-    max-height: 70vh;
-    padding: 15px;
-  }
-
-  .close-btn {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .logo {
-    width: 5.625em; /* 90px */
-    border-radius: 50%;
-  }
-
-  .navbar {
-    padding: 0.9375em; /* 15px */
-  }
-
-  .hamburger span {
-    width: 1.5625em; /* 25px */
-    height: 0.1875em; /* 3px */
-    margin-left: -18em;
-  }
-
-  .overlay-menu {
-    padding-top: 2.5em; /* 40px */
-  }
-
-  .overlay-content {
-    flex-direction: column;
-    padding: 1.25em; /* 20px */
-  }
-
-  .overlay-left li {
-    font-size: 1.5em; /* 24px */
-    margin-bottom: 1.25em; /* 20px */
-  }
-
-  .overlay-right {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 0.9375em; /* 15px */
-  }
-
-  .overlay-right .service-category h3 {
-    font-size: 1.25em; /* 20px */
-  }
-
-  .overlay-right .service-category ul {
-    font-size: 0.875em; /* 14px */
-  }
-
-  .services-title {
-    font-size: 1.875em; /* 30px */
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 3.75em 0.9375em; /* 60px 15px */
-    height: auto;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-subtitle {
-    font-size: 1.5em; /* 24px */
-    margin-left: -10em;
-  }
-
-  .hero-title {
-    font-size: 3em; /* 48px */
-    margin-left: -5em !important;
-    margin-top: 0.625em; /* 10px */
-  }
-
-  .hero-button {
-    width: 12.5em; /* 200px */
-    font-size: 1em; /* 16px */
-    margin-left: -8em !important;
-    margin: 0.625em 3.125em 1.25em; /* 10px 50px 20px */
-  }
-
-  .hero-image img {
-    margin-right: 0;
-    width: 50%;
-    margin: 0.625em 3.125em 1.25em; /* 10px 50px 20px */
-  }
-
-  .carousel-container {
-    gap: 0.1em;
-    width: 84%;
-  }
-
-  .carousel-item {
-    width: 9.375em; /* 150px */
-  }
-
-  .carousel-button {
-    width: 1.875em; /* 30px */
-    height: 1.875em; /* 30px */
-    font-size: 0.875em; /* 14px */
-  }
-
-  .app-images {
-    flex-direction: row;
-    width: 100%;
-    gap: 1em;
-    margin-left: -3.125em; /* -50px */
-    height: auto;
-  }
-
-  .app-images img {
-    width: 8.125em; /* 130px */
-    height: 25em; /* 400px */
-  }
-
-  .section-title {
-    font-size: 3em;
-    margin: 5em 5em 5em -5em; /* 80px 80px 80px -80px */
-  }
-
-  .section-description {
-    font-size: 1.2em;
-    line-height: 1.6rem;
-    margin: 0.625em 1.25em 1.25em; /* 10px 20px 20px */
-    text-align: center;
-    padding-right: 5.625em; /* 90px */
-  }
-
-  .column-description {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .question-section {
-    height: auto;
-    padding: 2.5em 1.25em; /* 40px 20px */
-  }
-
-  .typewriter {
-    margin-left: -3em !important;
-    font-size: 2.5rem;
-    max-width: 80%;
-  }
-
-  .chat-icon {
-    width: 2.5em; /* 40px */
-  }
-
-  .services-section {
-    padding: 1.875em 0.625em; /* 30px 10px */
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 0.9375em; /* 15px */
-  }
-
-  .service-item h3 {
-    font-size: 1em; /* 16px */
-  }
-
-  .service-item p {
-    font-size: 0.75em; /* 12px */
-  }
-
-  .contact {
-    padding: 2.5em 1.25em; /* 40px 20px */
-  }
-
-  .contact-title {
-    font-size: 2rem;
-  }
-
-  .contact-description {
-    font-size: 1rem;
-  }
-
-  .form-input,
-  .form-textarea {
-    width: 100%;
-  }
-
-  .form-button {
-    width: 8em;
-  }
-
-  .presence-wrapper {
-    flex-direction: column;
-    gap: 0.625em; /* 10px */
-  }
-
-  .presence h2 {
-    font-size: 3.125em; /* 50px */
-    line-height: 3.75em; /* 60px */
-  }
-
-  .presence-item img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .presence-item h4 {
-    font-size: 1.875em; /* 30px */
-    line-height: 2.5em; /* 40px */
-  }
-
   .presence-item p {
-    font-size: 1em; /* 16px */
-    line-height: 1.5em; /* 24px */
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   footer .col {
-    min-width: 12.5em; /* 200px */
+    min-width: 100%; /* Full width for mobile */
+    text-align: center;
   }
 
   footer .col img.logo {
-    width: 7.5em; /* 120px */
+    width: 7rem;
   }
 
   footer .col h4 {
-    font-size: 1.75em; /* 28px */
+    font-size: 1.5rem;
   }
 
   footer .col ul li {
-    font-size: 0.875em; /* 14px */
+    font-size: 0.875rem;
   }
 
   footer .row img {
-    max-width: 9.375em; /* 150px */
+    max-width: 10rem;
   }
 
   .tabs-container {
     flex-direction: column;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .tab-content {
-    margin-left: 0;
-    margin-top: 0.625em; /* 10px */
+    margin: 1rem 0;
   }
 
   .floating-button .main-fab {
-    width: 1.875em; /* 30px */
-    height: 3.125em; /* 50px */
+    width: 3rem;
+    height: 3rem;
   }
 
   .floating-button .fab-options img {
-    width: 1.875em; /* 30px */
-    height: 2.5em; /* 40px */
+    width: 2rem;
+    height: 2rem;
   }
 
   .popup-content {
-    width: 95%;
-    max-height: 70vh;
-    padding: 0.9375em; /* 15px */
+    width: 90%;
+    max-height: 80vh;
+    padding: 1rem;
   }
 
   .close-btn {
-    font-size: 1.25em; /* 20px */
+    font-size: 1.25rem;
   }
 }

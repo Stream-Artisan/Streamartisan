@@ -1,7 +1,9 @@
 .hero {
   height: 40vh;
 }
-
+.hero h1{
+  font-size: 8em;
+}
 .video-call {
   background-image: url("/images/call%20background%20image.jpg"); /* Fixed escape sequence */
   background-size: cover;
@@ -242,8 +244,13 @@ p {
 }
 
 @media (max-width: 768px) {
+ 
   .hero {
+    margin-top: 1em;
     height: 30vh;
+  }
+  .hero h1{
+    font-size: 5em;
   }
 
   .video-call,
