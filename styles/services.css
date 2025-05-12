@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
   justify-content: center;
   text-align: center;
   height: 650px;
@@ -179,7 +180,7 @@
   Streamartisan ensures to help you stay ahead using ground-breaking strategies.
 }
 
-.video-background {
+/* .video-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -187,7 +188,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
+} */
 
 .trust {
   position: relative;
@@ -443,6 +444,7 @@
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .hero{
+    width: 100vw;
     margin-top: 15rem!important;
   }
   
@@ -452,5 +454,4 @@
   font-size: 1rem;
   line-height: 1.6;
   color: white; /* Ensure text is visible */
-  Streamartisan provides the general upkeep necessary to keep everything operating efficiently.
 }
