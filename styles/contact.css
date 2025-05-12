@@ -27,6 +27,7 @@
 /* Base Styles (Mobile-Relevant) */
 .hero {
   text-align: center;
+  margin-top: -10em;
   padding: var(--spacing-md);
   font-family: var(--font-primary);
   display: flex;
@@ -37,15 +38,15 @@
 }
 
 .hero-content h1 {
-  font-size: var(--font-size-xl);
-  line-height: 1.4;
-  font-weight: 700;
+  font-size: 5em;
+  line-height: 1.8!important;
+  font-weight: bold;
   margin: var(--spacing-md) 0;
   animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-content p {
-  font-size: var(--font-size-md);
+  font-size: 2em;
   line-height: 1.6;
   font-weight: 500;
   margin: var(--spacing-sm) 0;
@@ -266,27 +267,29 @@
 }
 
 .contact {
-  padding: 50px 20px;
+  padding: var(--spacing-lg);
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--color-bg);
 }
 
 .contact-title {
-  font-size: 2.5rem;
+  font-size: var(--font-size-xl);
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
 }
 
 .contact-description {
-  font-size: 1.2rem;
+  font-size: var(--font-size-md);
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--spacing-md);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -294,19 +297,27 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-text);
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
+  font-family: var(--font-system);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: 2px solid var(--color-primary);
 }
 
 .form-button {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -315,43 +326,15 @@
   background-color: #0056b3;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-}
-
-.navbar .logo {
-  width: 150px;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-}
-
-/* Footer */
 .footer-content {
   text-align: center;
-  padding: 20px;
+  padding: var(--spacing-md);
   background-color: #333;
   color: white;
 }
 
 .footer-content a {
-  color: #007bff;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -374,7 +357,7 @@
 }
 
 .popup-content {
-  background-color: white;
+  background-color:transparent;
   padding: 20px;
   border-radius: 5px;
   max-width: 500px;
@@ -415,4 +398,176 @@
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
+}
+
+.calendar-form .form-input,
+.calendar-form .form-textarea {
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  border: 1px solid white; /* White border for better visibility */
+}
+
+.calendar-form .form-input::placeholder,
+.calendar-form .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white for placeholders */
+}
+
+.calendar-form .form-input:focus,
+.calendar-form .form-textarea:focus {
+  outline: 2px solid var(--color-primary); /* Highlight on focus */
+}
+#bookingName,
+#bookingEmail,
+#notes{
+  background-color: transparent!important;
+  color:white!important;
+
+}
+ /* Custom Styles for Request a Call Popup */
+      #requestCallPopup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      }
+      .request-call-popup-content {
+        background: black;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        max-width: 90%;
+        width: 600px;
+        position: relative;
+        overflow-y: auto;
+        max-height: 90vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .request-call-close-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #333;
+      }
+      #calendar {
+        max-width: 100%;
+        margin: 1rem auto;
+        min-height: 400px; /* Ensure visibility */
+      }
+      .fc-timegrid-slot {
+        height: 2rem;
+      }
+      .fc-timegrid-col {
+        cursor: pointer;
+      }
+      .fc-timegrid-slot-label {
+        font-size: 0.875rem;
+      }
+      @media (max-width: 640px) {
+        .request-call-popup-content {
+          padding: 1rem;
+          max-width: 95%;
+        }
+        #calendar {
+          font-size: 0.75rem;
+          min-height: 300px;
+        }
+        .fc-timegrid-slot {
+          height: 1.5rem;
+        }
+      }
+      .request-call-btn {
+        background: #d84676;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 1.5rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .request-call-btn:hover,
+      .request-call-btn:focus {
+        background: #b53a61;
+        outline: none;
+      }
+
+.region-selection {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+#regionSelect {
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-md);
+  border: 1px solid var(--color-text);
+  border-radius: 5px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+#regionSelect:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+.popup .call-options {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.call-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.call-button.audio-call {
+  background-color: #28a745;
+  color: white;
+}
+
+.call-button.audio-call:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.call-button.video-call {
+  background-color: #dc3545;
+  color: white;
+}
+
+.call-button.video-call:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.call-status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+video {
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }

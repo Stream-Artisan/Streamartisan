@@ -917,29 +917,21 @@
     <footer>
       <div class="row">
         <div class="col">
-          <ul>
+ <ul>
             <li>
               <a href="home.html">
-                <img
-                  src="images/lllogo.png"
-                  alt="Stream Artisan Logo"
-                  class="logo"
-                  width="300px"
-                />
+                <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="500px" />
               </a>
             </li>
-            <li>447716487602</li>
             <li>services@streamartisan.com</li>
             <li>UK</li>
-            <li>
-              Office No.50A, 5 The Shires Old <br />
-              Bedford Road Luton, England LU27QA
-            </li>
+            <li>447716487602</li>
+
+            <li>Office No.50A, 5 The Shires Old <br /> Bedford Road Luton, England LU27QA</li>
             <li>USA</li>
-            <li>
-              Stream Artisan Corporation 418 <br />
-              Broadway #5981 Albany, NY, 12207
-            </li>
+            <li>+13323731192</li>
+
+            <li>Stream Artisan Corporation 418 <br> Broadway #5981 Albany, NY, 12207</li>
           </ul>
           <br />
         </div>
@@ -1213,6 +1205,23 @@
         </a>
       </div>
     </div> -->
+
+    <div id="makeCallPopup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closeMakeCallPopup()">&times;</span>
+        <h2>Make a Call</h2>
+        <div class="call-options">
+          <button class="call-button audio-call" onclick="startAudioCall()">Audio Call</button>
+          <button class="call-button video-call" onclick="startVideoCall()">Video Call</button>
+        </div>
+        <div id="callStatus" class="call-status">Waiting to start a call...</div>
+        <div id="videoContainer" class="video-container" style="display: none;">
+          <video id="localVideo" autoplay muted></video>
+          <video id="remoteVideo" autoplay></video>
+        </div>
+      </div>
+    </div>
+    <button class="make-call-button" onclick="openMakeCallPopup()">Make a Call</button>
 
     <style>
       .scroll-to-top {
