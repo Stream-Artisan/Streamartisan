@@ -1,9 +1,7 @@
 .hero {
   height: 40vh;
 }
-.hero h1{
-  font-size: 8em;
-}
+
 .video-call {
   background-image: url("/images/call%20background%20image.jpg"); /* Fixed escape sequence */
   background-size: cover;
@@ -244,13 +242,8 @@ p {
 }
 
 @media (max-width: 768px) {
- 
   .hero {
-    margin-top: 1em;
     height: 30vh;
-  }
-  .hero h1{
-    font-size: 5em;
   }
 
   .video-call,
@@ -335,51 +328,3 @@ p {
 }
 
 /* Add portfolio-specific styles here */
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  display: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.scroll-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.floating-buttons {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.floating-button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.floating-button:hover {
-  transform: scale(1.1);
-}
-
-.floating-button img {
-  width: 30px;
-  height: 30px;
-}
