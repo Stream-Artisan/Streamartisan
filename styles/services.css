@@ -442,15 +442,90 @@
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
-  .hero{
-    width: 100vw;
-    margin-top: 15rem!important;
-  }
-  
-}
+    body {
+      margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 
-.trust p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: white; /* Ensure text is visible */
+  /* Mobile-optimized background setup */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Prevent jank on mobile scroll */
+  background-color: #000; /* Fallback */
+
+  font-family: "Josefin Sans", Arial, sans-serif;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  .hero {
+    min-height: 30vh !important;
+    height: auto !important;
+    padding: 20px 5px !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100vw !important;
+  }
+  .hero h1 {
+    display: block !important;
+    font-size: 2.5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto 10px auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    padding: 0 10px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .hero p {
+    font-size: 1.1rem !important;
+    /* padding: 0 10px !important; */
+    /* margin-bottom: 10px !important; */
+    color: white !important;
+    text-align: center !important;
+  }
+  .custom-tab-pane h2{
+    font-size: 40px!important;
+  }
+  .tab-images{
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.carousel-container {
+    gap: 0.2em;
+    width: 100%;
+
+  }
+
+  .carousel-item {
+    width: 150px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.3rem !important;
+    padding: 0 5px !important;
+  }
+  .hero p {
+    font-size: 1rem !important;
+    padding: 0 5px !important;
+  }
 }

@@ -167,16 +167,62 @@
 @media (max-width: 768px) {
  /* about.css */
 /* Mobile-first base styles */
+body{
+        margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* Mobile-optimized background setup */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Prevent jank on mobile scroll */
+  background-color: #000; /* Fallback */
+
+  font-family: "Josefin Sans", Arial, sans-serif;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin: 1.5rem 0;
+  /* margin: 1.5rem 0; */
 }
-
+.btn{
+  display: flex;
+  flex-direction: column;
+  color: yellow!important;
+  border: none;
+}
+.btn a{
+  color: yellow!important;
+  text-decoration: none;
+  border-color: antiquewhite;
+  background: transparent;
+  font-size: 1rem;
+}
+.grid-item h1{
+  font-size: 3rem;
+}
+.section-title{
+  margin-top: 2em;
+}
+#text{
+ font-size: 1.2em;
+  line-height: 1.6rem;
+  /* margin */
+  text-align: center;
+  margin-left: -0.5em!important; 
+  width: 100%;
+  /* padding-right: 90px; */
+}
 .counter-section {
-  padding: 1.5rem;
-  margin: 1rem 0;
+  /* padding: 1.5rem; */
+  /* margin: 1rem 0; */
 }
 
 .counter-section .row {
@@ -191,12 +237,14 @@
 
 .why .cards {
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Tablet+ */
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   
   .counter-section .row {

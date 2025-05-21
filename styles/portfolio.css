@@ -281,6 +281,23 @@ p {
   .side-image {
     width: 100%;
   }
+
+  .hero-content h1 {
+    display: block !important;
+    font-size: 2.5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    padding: 0 10px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -325,6 +342,74 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .hero-content{
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  .title {
+    display: block !important;
+    font-size: 1.5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    padding: 0 5px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 
-/* Add portfolio-specific styles here */
+/* Fix for .title class in portfolio.html */
+.title {
+  display: block !important;
+  color: white !important;
+  font-size: 5rem !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  line-height: 1.1 !important;
+  z-index: 2 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+}
+@media (max-width: 768px) {
+  .title {
+    display: block !important;
+    font-size: 2.5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    padding: 0 10px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    display: block !important;
+    font-size: 1.5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+    padding: 0 5px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
