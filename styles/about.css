@@ -220,10 +220,10 @@ body{
   width: 100%;
   /* padding-right: 90px; */
 }
-.counter-section {
+/* .counter-section {
   /* padding: 1.5rem; */
   /* margin: 1rem 0; */
-}
+} */
 
 .counter-section .row {
   flex-direction: column;
@@ -255,4 +255,4 @@ body{
     flex-direction: row;
   }
 }
-}
+
