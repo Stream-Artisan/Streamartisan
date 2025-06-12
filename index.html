@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streamartisan</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/popup.css" />
+    <script src="/scripts/home.js" defer></script>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="navbar">
+        <a href="index.html">
+          <img
+            src="images/lllogo.png"
+            alt="Stream Artisan Logo"
+            class="logo"
+            width="300px"
+          />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="hero-content">
+        <p class="hero-subtitle">Step Into The</p>
+        <h1 class="hero-title">World Of Technology.</h1>
+        <a href="/contact.html" class="hero-button">
+          Talk To An Expert
+          <img
+            src="https://img.icons8.com/?size=64&id=49411&format=png"
+            alt="Arrow pointing to contact us"
+          />
+        </a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="images/hero-image.webp"
+          alt="Showcase of application technology"
+          width="680px"
+        />
+      </div>
+    </section>
+
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
+      <div class="overlay-content">
+        <div class="overlay-left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+
+        <div class="overlay-right">
+          <h2 class="services-title">Services</h2>
+          <div class="service-category">
+            <h3>Digital Development</h3>
+            <ul>
+              <li>Mobile app developers</li>
+              <li>Chatbots</li>
+              <li>Web developers</li>
+              <li>Web-app developers</li>
+              <li>Intranet/sharepoints developers</li>
+              <li>IOT developers</li>
+              <li>Blockchain developers</li>
+              <li>AI/ML solutions</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Graphic Designing</h3>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity</li>
+              <li>UI/UX design</li>
+              <li>Illustrations</li>
+              <li>3D modeling</li>
+              <li>Motion graphics</li>
+              <li>Print design</li>
+            </ul>
+          </div>
+
+          <div class="service-category">
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>SEO optimization</li>
+              <li>Social media marketing</li>
+              <li>Email campaigns</li>
+              <li>Content creation</li>
+              <li>Pay-per-click advertising</li>
+              <li>Analytics and reporting</li>
+              <li>Influencer marketing</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Ebook</h3>
+            <ul>
+              <li>Ebook writing</li>
+              <li>Ebook editing</li>
+              <li>Ebook formatting</li>
+              <li>Cover design</li>
+              <li>Publishing assistance</li>
+              <li>Marketing for ebooks</li>
+              <li>Distribution strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <h1 class="section-title">Our Achievements</h1>
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <img src="/images/webfirm.svg" alt="Web firm achievement badge" />
+        </div>
+        <!-- <div class="carousel-item">
+          <img
+            src="/images/web-design-agencies-2023-9f3c56be082a087f33cb29dd2ecdffd5a6f0d48dfc8bcd5b0c0d2467f432d73e.png"
+            alt="Web design agencies 2023 badge"
+          />
+        </div> -->
+        <div class="carousel-item">
+          <img
+            src="/images/app-development-companies.webp"
+            alt="App development companies badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/Champion-Badge-2023-Fall-3-2-svg.webp"
+            alt="Champion badge 2023 Fall"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/upcity.png" alt="UpCity badge" />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/research-partner-badge-svg.png"
+            alt="Research partner badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software-dev-usa.png"
+            alt="Software development USA badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software-dev-nyc.png"
+            alt="Software development NYC badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/software_suggest.png"
+            alt="Software Suggest badge"
+          />
+        </div>
+        <!-- <div class="carousel-item">
+          <img
+            src="/images/Verified-Agency-v2-1.png"
+            alt="Verified agency badge"
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/selected-firms.webp" alt="Selected firms badge" />
+        </div>
+        <div class="carousel-item">
+          <img src="/images/selected-firms.webp" alt="Selected firms badge" />
+        </div> -->
+      </div>
+      <button class="carousel-button prev" onclick="scrollCarousel(-1)">
+        &#10094;
+      </button>
+      <button class="carousel-button next" onclick="scrollCarousel(1)">
+        &#10095;
+      </button>
+    </div>
+    <div class="video-section-wrapper">
+      <!-- Video Background -->
+      <!-- <video autoplay muted loop playsinline class="bg-video">
+        <source src="videos/Introducing StreamArtisan_ (online-video-cutter.com).mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> -->
+
+      <!-- Content over the video -->
+      <div class="video-overlay-content">
+        <!-- WHO WE ARE SECTION -->
+        <div class="who-we-are">
+          <div class="who-we-are-content">
+            <h1 class="section-title">Who We Are</h1>
+            <p class="section-description">
+              We are a team of passionate and experienced professionals
+              dedicated to delivering innovative solutions for brands and
+              startups.<br />
+              Our expertise spans across multiple domains, ensuring impactful
+              results for your business.<br />
+              Get in touch — let's create something extraordinary together.
+            </p>
+          </div>
+        </div>
+        <div class="app-images">
+          <img
+            src="/images/app1.webp"
+            alt="App Image 1"
+            class="image1"
+            style="margin-top: 6%"
+          />
+          <img
+            src="/images/app3.png"
+            alt="App Image 2"
+            class="image2"
+            style="margin-bottom: 20%"
+          />
+          <img
+            src="/images/app2.webp"
+            alt="App Image 3"
+            class="image2"
+            style="margin-bottom: 12.5%"
+          />
+          <img
+            src="/images/app3.png"
+            alt="App Image 4"
+            class="image2"
+            style="margin-bottom: 5%"
+          />
+        </div>
+
+        <!-- WHAT WE OFFER SECTION -->
+        <div class="mobile-app">
+          <h1 class="section-title">What We Offer?</h1>
+          <div class="tabs-container">
+            <div class="tabs">
+              <button
+                class="tab-button active"
+                onclick="showTabContent('tab1')"
+              >
+                CMS Web Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab2')">
+                Custom Web Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab3')">
+                E-Commerce Web Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab4')">
+                Mobile App Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab5')">
+                UI/UX Design
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab6')">
+                Software Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab7')">
+                Blockchain Development
+              </button>
+              <button class="tab-button" onclick="showTabContent('tab8')">
+                QA
+              </button>
+            </div>
+            <div class="tab-content" style="background: transparent">
+              <div id="tab1" class="tab-pane active">
+                <h2>CMS Web Development</h2>
+                <p>
+                  Following a result-driven model for easing the curation and
+                  management of content-based sites, our experts offer CMS
+                  development solutions that are best suited to the client’s
+                  business and goals.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/WordPress.png" alt="WordPress logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/joomla.webp" alt="Joomla logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/hubspot.png" alt="HubSpot logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/wix.png" alt="Wix logo" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab2" class="tab-pane">
+                <h2>Custom Web Development</h2>
+                <p>
+                  We have an expert development team that creates web solutions
+                  tailored exclusively to your business goals, so you can code
+                  your vision faster and retain customers for a lifetime.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/react.png" alt="React logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/vue.png" alt="Vue.js logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Angular.png" alt="Angular logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/php.png" alt="PHP logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Laravel.png" alt="Laravel logo" />
+                  </div>
+                  <div class="img">
+                    <img
+                      src="/images/Group-3-1.webp"
+                      alt="Custom web development tools"
+                    />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab3" class="tab-pane">
+                <h2>ECommerce Web Development</h2>
+                <p>
+                  Using the ideal e-business strategies, we develop
+                  high-functioning eCommerce websites that drive sales quickly
+                  and efficiently. Put simply; we incline your smart shop with
+                  your vision and mission!
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/woocommerce.png" alt="WooCommerce logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/shopify.png" alt="Shopify logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Magento.png" alt="Magento logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/opencart-1.png" alt="OpenCart logo" />
+                  </div>
+                  <div class="img">
+                    <img
+                      src="/images/Mirakl-Development.webp"
+                      alt="Mirakl Development logo"
+                    />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Vector-1-1.webp" alt="E-commerce tools" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab4" class="tab-pane">
+                <h2>Mobile App Development</h2>
+                <p>
+                  We work with you to create secure, scalable, fully functional,
+                  and future-proof mobile apps that stand the test of time –
+                  centered around getting your business noticed.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/react.png" alt="React logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/kotlin.webp" alt="Kotlin logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/java.png" alt="Java logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/swift.png" alt="Swift logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/flutter.png" alt="Flutter logo" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab5" class="tab-pane">
+                <h2>UI/UX Design</h2>
+                <p>
+                  Our creative UI/UX experts design websites and apps with your
+                  customer’s experience in mind. With a modern approach and
+                  cutting-edge tools, we create beauty pixel-by-pixel.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/figma.png" alt="Figma logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/adobe-xd.png" alt="Adobe XD logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Invision.png" alt="InVision logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/photoshop-1.png" alt="Photoshop logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Zeplin.png" alt="Zeplin logo" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab6" class="tab-pane">
+                <h2>Software Development</h2>
+                <p>
+                  Leveraging their tech expertise, our developers work with
+                  companies of all sizes and across every industry to develop
+                  and deliver unparalleled and impactful software products.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/python.webp" alt="Python logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/framework.webp" alt="Framework tools" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/java.png" alt="Java logo" />
+                  </div>
+                  <div class="img">
+                    <img
+                      src="/images/diamond.webp"
+                      alt="Software development tools"
+                    />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab7" class="tab-pane">
+                <h2>Blockchain Development</h2>
+                <p>
+                  Our blockchain development solutions are best for startups or
+                  enterprises searching for optimum scalability by making the
+                  most out of existing technology and industry-leading tools.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/polygon.png" alt="Polygon logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/ethereum.webp" alt="Ethereum logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/bitcoin.png" alt="Bitcoin logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/binance.png" alt="Binance logo" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+              <div id="tab8" class="tab-pane">
+                <h2>QA</h2>
+                <p>
+                  The software can break; our QA testing ensures they don’t. We
+                  put your solutions through vigorous testing processes,
+                  resulting in faster turnaround times and quick delivery.
+                </p>
+                <div class="tab-images" style="display: flex; gap: 30px">
+                  <div class="img">
+                    <img src="/images/selenium-1.webp" alt="Selenium logo" />
+                  </div>
+                  <div class="img">
+                    <img
+                      src="/images/TestRail_Logo_Square-1.png"
+                      alt="TestRail logo"
+                    />
+                  </div>
+                  <div class="img">
+                    <img src="/images/Watir-1.png" alt="Watir logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/jira.png" alt="Jira logo" />
+                  </div>
+                  <div class="img">
+                    <img
+                      src="/images/asf.png"
+                      alt="Apache Software Foundation logo"
+                    />
+                  </div>
+                  <div class="img">
+                    <img src="/images/helium.png" alt="Helium logo" />
+                  </div>
+                  <div class="img">
+                    <img src="/images/postman.png" alt="Postman logo" />
+                  </div>
+                </div>
+                <a
+                  href="/contact.html"
+                  class="hero-button text-center"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 150px;
+                    border: white solid 2px;
+                    margin-top: 30px;
+                    justify-content: center; /* Center horizontally */
+                  "
+                  >Explore More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="question-section">
+      <div class="icon-wrapper">
+        <img
+          src="images/chat-icon.png"
+          alt="Chat icon for questions"
+          class="chat-icon"
+        />
+      </div>
+      <h1 id="question" class="typewriter"></h1>
+    </section>
+
+    <section class="services-section">
+      <h1
+        class="section-title"
+        style="
+          font-family: poppins, sans-serif;
+          font-size: 120px;
+          line-height: 144px;
+          font-weight: 700;
+          text-shadow: -2px -2px 0 rgb(238, 218, 238),
+            1px -1px 0 rgb(233, 207, 232), -1px 1px 0 rgb(233, 206, 231),
+            1px 1px 0 rgb(240, 212, 236);
+        "
+      >
+        We provide <br />
+        mobile app <br />
+        development
+      </h1>
+      <div class="services-grid">
+        <div class="service-item">
+          <p
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              font-weight: 300;
+              font-size: 32px;
+              line-height: 48px;
+              color: white;
+              animation: slideFromRight 1s ease-out forwards;
+            "
+          >
+            We develop native, hybrid <br />
+            and cross-platform mobile <br />
+            apps.
+          </p>
+        </div>
+        <div class="service-item" id="text">
+          <p
+            style="
+              text-align: left;
+              /* justify-content: center; */
+              color: white;
+              font-family: poppins, sans-serif;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 24px;
+              margin-left: 200px;
+            "
+          >
+            <img
+              src="https://img.icons8.com/?size=48&id=KSNPI4CIK5lf&format=png"
+              alt=""
+              width="30px;"
+              height="18px"
+              style="margin-right: 10px"
+            />iOS Native (Swift and Objective-C) <br />
+            <img
+              src="https://img.icons8.com/?size=48&id=KSNPI4CIK5lf&format=png"
+              alt=""
+              width="30px;"
+              height="18px"
+              style="margin-right: 10px"
+            />
+            Android Native (Kotlin) <br />
+            <img
+              src="https://img.icons8.com/?size=48&id=KSNPI4CIK5lf&format=png"
+              alt=""
+              width="30px;"
+              height="18px"
+              style="margin-right: 10px"
+            />React Native <br />
+            <img
+              src="https://img.icons8.com/?size=48&id=KSNPI4CIK5lf&format=png"
+              alt=""
+              width="30px;"
+              height="18px"
+              style="margin-right: 10px"
+            />Flutter <br />
+            <img
+              src="https://img.icons8.com/?size=48&id=KSNPI4CIK5lf&format=png"
+              alt=""
+              width="30px;"
+              height="18px"
+              style="margin-right: 10px"
+            />Xamarin
+          </p>
+        </div>
+        <div class="service-item">
+          <h3
+            style="
+              color: white;
+              text-align: left;
+              margin-left: 220px;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              font-weight: 500;
+              font-size: 19px;
+              line-height: 19px;
+            "
+          >
+            Client stories we love
+          </h3>
+          <img
+            src="/images/service-image1.webp"
+            class="img"
+            alt="Creative technology service image"
+            width="450px"
+            style="border-radius: 20px"
+          />
+          <h2
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 32px;
+            "
+          >
+            Creative technology that <br />
+            connects
+          </h2>
+        </div>
+        <div class="service-item">
+          <img
+            src="/images/service-image2.webp"
+            class="img"
+            alt="Digitising the forecourt service image"
+            width="450px"
+            style="border-radius: 20px; margin-top: 50px"
+          />
+          <h2
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              font-weight: 700;
+              font-size: 32px;
+              line-height: 32px;
+            "
+          >
+            Digitising the forecourt
+          </h2>
+        </div>
+        <div class="service-item">
+          <h2
+            class="client"
+            style="
+              font-family: josefin sans;
+              font-weight: 700;
+              font-size: 48px;
+              line-height: 48px;
+              margin-top: 130px;
+            "
+          >
+            Our Clients
+          </h2>
+          <p
+            style="
+              color: white;
+              font-family: poppins, sans-serif;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 27px;
+            "
+          >
+            We do game-changing work for <br />
+            game-changing companies.
+          </p>
+          <a
+            href="/contact.html"
+            class="hero-button text-center"
+            id="btn"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              width: 200px;
+              margin-left: 320px;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 24px;
+            "
+          >
+            Work With Us
+            <img
+              src="https://img.icons8.com/?size=64&id=49411&format=png"
+              alt="Arrow pointing to contact us"
+              width="50px"
+              style="margin-top: 0"
+            />
+          </a>
+        </div>
+        <div class="service-item">
+          <img
+            src="/images/service-image3.webp"
+            class="img"
+            alt="Our clients service image"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact-header">
+        <h2 class="contact-title">Let's Talk</h2>
+        <p class="contact-description">
+          Want to chat with us about your mobile, web, or digital ideas? <br />
+          Call us on
+          <a href="tel:+14092454910" style="color: white">(409) 245-4910</a> or
+          fill in the contact form below.
+        </p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="form-input"
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="form-input"
+        />
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="form-textarea"
+        ></textarea>
+        <button type="submit" class="form-button">Send</button>
+      </form>
+    </section>
+    <section class="presence">
+      <h2 class="title" id="loc">OUR GLOBAL PRESENCE</h2>
+      <div class="presence-wrapper">
+        <div class="presence-item">
+          <img
+            src="https://cdn.pixabay.com/animation/2024/01/17/04/48/04-48-16-749_512.gif"
+            class="loc-img"
+            alt="USA map animation"
+          />
+          <h4>USA</h4>
+          <p>
+            Stream Artisan Corporation 418 <br />
+            Broadway #5981 Albany, NY, 12207
+          </p>
+        </div>
+        <hr />
+        <div class="presence-item">
+          <img
+            src="https://cdn.pixabay.com/animation/2024/01/17/04/48/04-48-16-749_512.gif"
+            class="loc-img"
+            alt="UK map animation"
+          />
+          <h4>UK</h4>
+          <p>
+            Office No.50A, 5 The Shires <br />
+            Old Bedford Road Luton, England LU27QA
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="popup-container" id="contactPopup">
+      <div class="popup-content">
+        <button class="popup-close" onclick="closePopup()">&times;</button>
+        <h2>Contact Us</h2>
+        <form id="popup-contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="home.html">
+                <img
+                  src="images/lllogo.png"
+                  alt="Stream Artisan Logo"
+                  class="logo"
+                  width="500px"
+                />
+              </a>
+            </li>
+            <li>services@streamartisan.com</li>
+            <li>UK</li>
+            <li>447716487602</li>
+
+            <li>
+              Office No.50A, 5 The Shires Old <br />
+              Bedford Road Luton, England LU27QA
+            </li>
+            <li>USA</li>
+            <li>+13323731192</li>
+
+            <li>
+              Stream Artisan Corporation 418 <br />
+              Broadway #5981 Albany, NY, 12207
+            </li>
+          </ul>
+          <br />
+        </div>
+        <div class="col">
+          <h4>Digital Development</h4>
+          <ul>
+            <li>Mobile app developers</li>
+            <li>Chatbots</li>
+            <li>Web developers</li>
+            <li>Web-app developers</li>
+            <li>Intranet/Sharepoint Developers</li>
+            <li>IOT Developers</li>
+            <li>BlockChain Developers</li>
+            <li>AI/ML Solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Ebook</h4>
+          <ul>
+            <li>E-Book Writting</li>
+            <li>E-Book Writting</li>
+            <li>E-Book Formatting</li>
+            <li>Cover Design</li>
+            <li>Publishing Assistance</li>
+            <li>Marketing for E-Books</li>
+            <li>Distribution Strategies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="/images/arrival.png" alt="Arrival badge" />
+        </div>
+        <div class="col">
+          <img src="/images/trust.png" alt="Trust badge" />
+        </div>
+        <div class="col">
+          <img src="/images/reviews.png" alt="Reviews badge" />
+        </div>
+        <div class="col">
+          <img src="/images/B-teck.png" alt="B-Tech badge" />
+        </div>
+        <div class="col">
+          <img src="/images/site.png" alt="Site badge" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a
+            href="privacy.html"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </div>
+        <div class="col">
+          <a href="terms.html" style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
+        </div>
+      </div>
+    </footer>
+    
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to top arrow"
+        width="50px"
+      />
+    </button>
+    <!-- Floating Buttons -->
+    <!-- <div class="floating-button">
+      <div class="main-fab">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/552/552489.png"
+          alt="Contact Icon"
+          style="width: 30px; height: 30px"
+        />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div> -->
+
+    <style>
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* Move to the left */
+        display: none;
+        cursor: pointer;
+        background-color: transparent;
+        z-index: 1000;
+      }
+
+      .floating-buttons {
+        position: fixed;
+        background-color: transparent;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .floating-button {
+        width: 50px;
+        background: transparent;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .floating-button:hover {
+        transform: scale(1.1);
+      }
+
+      .floating-button img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .tabs-container {
+        display: flex;
+        background-color: transparent;
+        margin-bottom: 55px;
+      }
+
+      .tabs {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      .tab-button {
+        background: none;
+        border: none;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        cursor: pointer;
+        font-family: poppins, sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        transition: background 0.3s;
+      }
+
+      .tab-button:hover,
+      .tab-button.active {
+        background-color: #555;
+      }
+
+      .tab-content {
+        flex: 3;
+        padding: 20px;
+        color: white;
+        font-family: poppins, sans-serif;
+        font-size: 20px;
+        line-height: 27px;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+      }
+
+      .explore-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .explore-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+    </style>
+    <script>
+   
+        document.querySelectorAll(".close-btn").forEach((btn) => {
+          btn.onclick = function () {
+            const targetId = this.getAttribute("data-target");
+            document.getElementById(targetId).style.display = "none";
+          };
+        });
+
+        window.onclick = function (e) {
+          if (e.target.classList.contains("popup")) {
+            e.target.style.display = "none";
+          }
+        };
+    
+
+      function toggleMenu() {
+        const overlay = document.getElementById("overlay");
+        if (overlay.style.width === "100%") {
+          overlay.style.width = "0";
+        } else {
+          overlay.style.width = "100%";
+        }
+      }
+      // for scrolling effect
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      // Hide navbar on page load if not at the top
+      window.addEventListener("load", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 0) {
+          navbar.style.top = "-150px";
+        } else {
+          navbar.style.top = "0";
+        }
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scroll down
+          navbar.style.top = "-150px";
+        } else {
+          // Scroll up
+          navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+      //text-animation function
+
+      const questions = [
+        "How do i get more people to use my app?",
+        "Should i build native app or a hybrid app?",
+        "How to integrate payment methods in my app?",
+        "Should i build my app in react native?",
+        "Should i get my desins made in vector form?",
+      ];
+
+      let current = 0;
+      const questionEl = document.getElementById("question");
+
+      function showQuestion(text, callback) {
+        questionEl.innerHTML = "";
+
+        text.split("").forEach((char, index) => {
+          const span = document.createElement("span");
+          span.textContent = char;
+          span.style.animationDelay = `${index * 0.03}s`;
+          questionEl.appendChild(span);
+        });
+
+        const totalTime = text.length * 30 + 2000; // wait a bit longer before next
+        setTimeout(callback, totalTime);
+      }
+
+      function cycleQuestions() {
+        showQuestion(questions[current], () => {
+          current = (current + 1) % questions.length;
+          cycleQuestions();
+        });
+      }
+
+      cycleQuestions();
+
+      // Scroll to top functionality
+      const scrollToTopButton = document.getElementById("scrollToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value,
+        };
+
+        try {
+          const response = await fetch("http://localhost:5000/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+
+          const responseData = await response.json(); // Parse the response body
+          console.log("Response:", responseData); // Log the response for debugging
+
+          if (response.ok) {
+            alert("Message sent successfully!");
+            form.reset();
+          } else {
+            alert(
+              `Failed to send message: ${responseData.error || "Unknown error"}`
+            );
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("Error sending message.");
+        }
+      });
+
+      const floatingButtons = document.querySelector(".floating-buttons");
+      floatingButtons.addEventListener("click", () => {
+        floatingButtons.classList.toggle("expanded");
+      });
+
+      function scrollCarousel(direction) {
+        const container = document.querySelector(".carousel-container");
+        const scrollAmount = container.offsetWidth / 2;
+        container.scrollBy({
+          left: direction * scrollAmount,
+          behavior: "smooth",
+        });
+      }
+
+      // Automatically scroll the carousel
+      let autoScrollInterval;
+      function startAutoScroll() {
+        const container = document.querySelector(".carousel-container");
+        autoScrollInterval = setInterval(() => {
+          container.scrollBy({
+            left: container.offsetWidth / 2,
+            behavior: "smooth",
+          });
+        }, 3000); // Adjust the interval as needed
+      }
+
+      function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+      }
+
+      const carousel = document.querySelector(".carousel");
+      carousel.addEventListener("mouseenter", stopAutoScroll);
+      carousel.addEventListener("mouseleave", startAutoScroll);
+
+      startAutoScroll();
+
+      function showTabContent(tabId) {
+        const tabs = document.querySelectorAll(".tab-button");
+        const panes = document.querySelectorAll(".tab-pane");
+
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        panes.forEach((pane) => pane.classList.remove("active"));
+
+        document
+          .querySelector(`[onclick="showTabContent('${tabId}')"]`)
+          .classList.add("active");
+        document.getElementById(tabId).classList.add("active");
+      }
+
+      function toggleFloatingButtons() {
+        document
+          .querySelector(".floating-buttons")
+          .classList.toggle("expanded");
+      }
+
+      function openPopup() {
+        document.getElementById("contactPopup").classList.add("active");
+      }
+
+      function closePopup() {
+        document.getElementById("contactPopup").classList.remove("active");
+      }
+
+      document
+        .getElementById("popup-contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Message sent successfully!");
+          closePopup();
+        });
+    </script>
+  </body>
+</html>

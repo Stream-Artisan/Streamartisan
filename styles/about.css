@@ -1,0 +1,258 @@
+/* Add about-specific styles here */
+
+/* Add this to styles/about.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px; /* Increased spacing for better layout */
+  }
+  
+  .grid-item {
+    background-color: transparent!important;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
+
+/* .grid-container .grid-item:first-child {
+    background-color: transparent!important;
+    text-shadow: -2px -2px 0 rgb(255, 253, 253), 1px -1px 0 rgb(8, 8, 8),
+    -1px 1px 0 rgb(2, 2, 2), 1px 1px 0 rgb(12, 12, 12);
+} */
+
+.counter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    /* background-color: #1a1a1a; */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.counter-section .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Increased spacing */
+    gap: 80px; /* More gap between columns */
+}
+
+.counter-section .col {
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.counter-section .col:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); 
+    cursor: pointer;
+}
+
+.counter-section .col img {
+    max-width: 60%;
+    max-height: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Adjusted spacing */
+    /* border-radius: 50%;  */
+    /* border: 3px solid #fff;  */
+}
+
+.counter-section .col h4 {
+    font-size: 50px; /* Adjusted font size for better readability */
+    font-weight: bold;
+    margin: 20px 0; /* Adjusted spacing */
+    color: #f0f0f0; /* Lighter text color */
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  */
+}
+
+.counter-section .col p {
+    font-size: 15px; /* Adjusted font size for consistency */
+    color: #dcdcdc; /* Softer white for better readability */
+    margin-top: 10px; /* Added spacing */
+}
+
+.why {
+     /* background: radial-gradient(
+      circle at top left,
+      rgb(24, 23, 23) 0%,
+      #d84676 100%
+    ); */
+    padding: 50px 20px;
+    color: #fff; /* White text color */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* .why .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+} */
+
+.why .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+@keyframes animatedBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.why .card {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1a1a1a; /* Dark inner background */
+  color: white;
+  z-index: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(25% - 20px);
+  max-width: 300px;
+}
+
+.why .card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(270deg, rgba(14, 1, 7, 0.8), rgba(225, 204, 245, 0.8), rgba(42, 250, 223, 0.8), rgba(255, 0, 128, 0.8));
+  background-size: 800% 800%;
+  z-index: -1;
+  border-radius: inherit;
+  animation: animatedBorder 6s ease infinite;
+}
+
+.why .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.why .card img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.why .card h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #6a0dad; /* Changed to purple for better contrast */
+}
+
+.why .card p {
+    font-size: 16px; /* Adjusted font size for better readability */
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+ /* about.css */
+/* Mobile-first base styles */
+body{
+        margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* Mobile-optimized background setup */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Prevent jank on mobile scroll */
+  background-color: #000; /* Fallback */
+
+  font-family: "Josefin Sans", Arial, sans-serif;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  /* margin: 1.5rem 0; */
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  color: yellow!important;
+  border: none;
+}
+.btn a{
+  color: yellow!important;
+  text-decoration: none;
+  border-color: antiquewhite;
+  background: transparent;
+  font-size: 1rem;
+}
+.grid-item h1{
+  font-size: 3rem;
+}
+.section-title{
+  margin-top: 2em;
+}
+#text{
+ font-size: 1.2em;
+  line-height: 1.6rem;
+  /* margin */
+  text-align: center;
+  margin-left: -0.5em!important; 
+  width: 100%;
+  /* padding-right: 90px; */
+}
+/* .counter-section {
+  /* padding: 1.5rem; */
+  /* margin: 1rem 0; */
+} */
+
+.counter-section .row {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.counter-section .col {
+  width: 100%;
+  padding: 1rem;
+}
+
+.why .cards {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .counter-section .row {
+    flex-direction: row;
+  }
+  
+  .why .cards {
+    flex-direction: row;
+  }
+}
+

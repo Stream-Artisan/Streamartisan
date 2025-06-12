@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streamartisan</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <script src="/scripts/animations.js"></script>
+    <script src="/scripts/home.js"></script>
+  </head>
+  <body>
+    <section class="hero animate-fade-in">
+      <header class="navbar">
+        <a href="index.html">
+          <img src="images/lllogo.png" alt="Logo" class="logo" />
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <div class="hero-content">
+        <h1 class="title">Portfolio</h1>
+      </div>
+    </section>
+
+    <!-- Overlay Navigation -->
+    <div id="overlay" class="overlay-menu animate-slide-in">
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
+      <div class="overlay-content">
+        <div class="overlay-left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div class="overlay-right">
+          <h2 class="services-title">Services</h2>
+          <div class="service-category">
+            <h3>Digital Development</h3>
+            <ul>
+              <li>Mobile app developers</li>
+              <li>Chatbots</li>
+              <li>Web developers</li>
+              <li>Web-app developers</li>
+              <li>Intranet/SharePoint developers</li>
+              <li>IoT developers</li>
+              <li>Blockchain developers</li>
+              <li>AI/ML solutions</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Graphic Designing</h3>
+            <ul>
+              <li>Logo design</li>
+              <li>Brand identity</li>
+              <li>UI/UX design</li>
+              <li>Illustrations</li>
+              <li>3D modeling</li>
+              <li>Motion graphics</li>
+              <li>Print design</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>SEO optimization</li>
+              <li>Social media marketing</li>
+              <li>Email campaigns</li>
+              <li>Content creation</li>
+              <li>Pay-per-click advertising</li>
+              <li>Analytics and reporting</li>
+              <li>Influencer marketing</li>
+            </ul>
+          </div>
+          <div class="service-category">
+            <h3>Ebook</h3>
+            <ul>
+              <li>Ebook writing</li>
+              <li>Ebook editing</li>
+              <li>Ebook formatting</li>
+              <li>Cover design</li>
+              <li>Publishing assistance</li>
+              <li>Marketing for ebooks</li>
+              <li>Distribution strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Call Section -->
+    <div class="video-call">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img
+              src="/images/call-section-logo.webp"
+              alt="Call logo"
+              id="logo"
+            />
+          </div>
+          <div class="row">
+            <h2 class="heading">Live Video Call - Live Chat</h2>
+          </div>
+          <div class="row">
+            <p>
+              Live video call app connects you to the rest of the world with a
+              <br />
+              single tap. Random live video call apps let you call strangers,
+              <br />
+              chat with them, and have fun. This app is free to make unlimited
+              <br />
+              video calls and meet people online from different countries.
+              <br />
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Random Live Video Call – Live Chat Free allows you to meet many
+              <br />
+              people online, start video chats with them, and make new <br />
+              interesting friends. Random video chat apps let you connect with
+              <br />
+              strangers and make video calls with people from different <br />
+              countries.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/live-video-call-live-chat/id1588223614" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=gallery.app.silicon.photosvideo&hl=en_US&gl=US" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="/images/call-section-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Fitness For Women Section -->
+    <div class="fitness">
+      <div class="row">
+        <div class="col">
+          <img
+            src="/images/fitness side image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <img src="/images/fitness-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Sweat: Fitness App For Women</h2>
+          </div>
+          <div class="row">
+            <p>
+              Train at home or in the gym with one of the world’s largest <br />
+              women’s fitness communities! Get the fitness motivation you need
+              <br />
+              with Sweat, a personal training app featuring co-founder and elite
+              <br />
+              head trainer, Kayla Itsines.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Sweat offers a broad suite of challenging, yet achievable programs
+              <br />
+              with workouts you can do anywhere, anytime to progressively build
+              <br />
+              your fitness. New programs give you more ways to push yourself and
+              <br />
+              get you closer to reaching your goals. Stay accountable with
+              <br />
+              virtual community challenges and feel supported by like-minded
+              <br />
+              women everywhere.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/sweat-fitness-app-for-women/id1049234587" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.kaylaitsines.sweatwithkayla&hl=en" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fieldwire Section -->
+    <div class="Fieldwire">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="/images/fieldwire-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Fieldwire - Construction App</h2>
+          </div>
+          <div class="row">
+            <p>
+              Get the #1 construction management app and join over 1,000,000+
+              <br />
+              construction projects who trust Fieldwire to run efficient field
+              <br />
+              operations. <br />
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Fieldwire connects your entire field team, from the project <br />
+              manager all the way down to each specialty contractor’s foreman,
+              <br />
+              on one construction management platform. Anyone can now view their
+              <br />
+              drawings, schedule work and track their punch list while they are
+              <br />
+              in the field. <br />
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/fieldwire-construction-app/id780165517" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=net.fieldwire.app&hl=en&gl=US" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="/images/fieldwire-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Invoice -->
+    <div class="invoice">
+      <div class="row">
+        <div class="col">
+          <img
+            src="/images/invoice-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <img src="/images/invoice-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">nvoice ASAP: Mobile Invoicing</h2>
+          </div>
+          <div class="row">
+            <p>
+              Invoice ASAP is a quick and professional invoice generator with
+              <br />
+              secure cloud storage. Invoice your customers easily and create
+              <br />
+              estimates directly from your mobile device, saving hours of work.
+              <br />
+              Invoice ASAP is the #1 invoice app to make work easier for <br />
+              Plumbers, Electricians, Contractors, Landscapers, and Carpenters,
+              <br />
+              and manage any home service business, such as HVAC/Heating & Air.
+              <br />
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Create quick, professional estimates and invoices, accept payments
+              <br />
+              & manage customers and projects from anywhere with Invoice ASAP.
+              <br />
+              Get great reporting and team management tools for the office too.
+              <br />
+              Use Invoice ASAP as a standalone, or sync everything with your
+              <br />
+              accounting software: QuickBooks Desktop, QuickBooks Online & Xero.
+              <br />
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/invoice-asap-mobile-invoicing/id451228846" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.invoiceasap.nativeapp" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Friends -->
+    <div class="Friends">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="/images/friend's logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">MEEFF - Make Global Friends</h2>
+          </div>
+          <div class="row">
+            <p>
+              You can do it all on the chat, matching, and dating social network
+              <br />
+              MEEFF. Would you like to make friends from all 196 countries,
+              <br />
+              including Korean, Asian, and French? Would you like to meet a
+              <br />
+              travelling friend, travel companion, movie friend, or date? Or
+              <br />
+              would you like to chat for language exchange, such as French chat,
+              <br />
+              Spanish chat, or Korean chat?
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              MEEFF is the ultimate matchmaker for the communication of love and
+              <br />
+              language. Try the language-exchange chatting app MEEFF.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.noyesrun.meeff.kr" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="/images/friend's bg image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Lazy -->
+    <div class="lazy">
+      <div class="row">
+        <div class="col">
+          <img
+            src="/images/lazy-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <img src="/images/lazy-load.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">JustFit: Lazy Workout & Fit</h2>
+          </div>
+          <div class="row">
+            <p>
+              Ready to get fit without breaking the bank (or your back)? No
+              <br />
+              equipment needed. Start your journey with our super-fun, <br />
+              beginner-friendly wall Pilates courses and see real results. Let’s
+              <br />
+              make fitness fun again!
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Meet JustFit: Your virtual coach, powered by science (and a bit of
+              <br />
+              magic). Dive into our 28-day wall Pilates challenge and kickstart
+              <br />
+              your fitness journey. We’ve got everything you need, except maybe
+              <br />
+              a cape.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/justfit-lazy-workout-fit/id1574460221" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=fitness.home.workout.weight.loss" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign -->
+    <div class="sign">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="/images/sign-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Lingvano: Sign Language - ASL</h2>
+          </div>
+          <div class="row">
+            <p>
+              Lingvano is the fun, fast and easy way to learn Sign Language! Our
+              <br />
+              bite-sized, interactive lessons in combination with our ASL <br />
+              dictionary will help you develop the skills you need for real-life
+              <br />
+              communication. Learn American Sign Language (ASL) hands-on and
+              <br />
+              build bridges!
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              We know you are busy, so we made sure that with just 10 minutes a
+              <br />
+              day, you will be able to engage in your first conversations in no
+              <br />
+              time.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/ca/app/lingvano-sign-language-asl/id1547252782" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.lingvano.app" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="/images/sign-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- mango -->
+    <div class="mango">
+      <div class="row">
+        <div class="col">
+          <img
+            src="/images/mango-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <img src="/images/mango-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Mango Languages: Learning</h2>
+          </div>
+          <div class="row">
+            <p>
+              Language is an Adventure. Learn real-life conversations with
+              <br />
+              native-speaker audio and cultural context so that you can speak
+              <br />
+              like a local.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Mango features authentic content, interactive features, and an
+              <br />
+              algorithmic review activity designed to adapt to your individual
+              <br />
+              learning path.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              In our comprehensive courses you’ll learn vocabulary, <br />
+              pronunciation, grammar, and culture simultaneously through <br />
+              interactive lessons and activities.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/mango-languages-learning/id443516516" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.mango.android" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Delivery -->
+    <div class="delivery">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="/images/delivery-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Skip - Delivery</h2>
+          </div>
+          <div class="row">
+            <p>
+              In a world where traffic, wait times, and long lines make everyday
+              <br />
+              tasks feel like a massive hassle, we’re here to help you skip to
+              <br />
+              the good part.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              n a world where traffic, wait times, and long lines make everyday
+              <br />
+              tasks feel like a massive hassle, we’re here to help you skip to
+              <br />
+              the good part.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Skip is Canada’s homegrown delivery app—trusted by 5+ million <br>
+              customers and 50,000+ retailers nationwide. We’re available in <br>
+              more than 450 cities and towns across Canada. Order from anywhere <br>
+              and get whatever you need delivered right to your house, condo, <br>
+              apartment, workplace, hotel…you get the idea.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/ca/app/skip-delivery/id969229981" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.ncconsulting.skipthedishes_android" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="/images/delivery-side-image.webp"
+            alt="Side image"
+            class="side-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Rover, Dog boarding & walking -->
+    <div class="rover">
+      <div class="row">
+        <div class="col">
+          <img
+            src="https://play-lh.googleusercontent.com/L8wis3UeXPF4SwFN_fER1SetaI3pLpFk_6ckMmtENcl7c-Q8pOgxogPzTbeq0V0Knw=w2560-h1440-rw"
+            alt="Side image"
+            class="side-image"
+            style="border-radius: 15px;"
+          />
+        </div>
+        <div class="col">
+          <div class="row">
+            <img src="/images/rover-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">Rover—Dog Sitters & Walkers</h2>
+          </div>
+          <div class="row">
+            <p>
+              Dog care made simple. Book trusted dog sitters and walkers with <br>
+              real-time updates, GPS tracking, and secure in-app messaging.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              Rover connects pet parents to background-checked caregivers <br>
+              offering walks, drop-ins, daycare, and overnight stays.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              With user reviews, mobile scheduling, and 24/7 support, <br>
+              Rover gives you peace of mind and your dog the care they deserve.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/rover-dog-sitters-walkers/id547320928" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.rover.android&hl=en_IN" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- SideChef-->
+     <div class="chef">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <img src="/images/chef-logo.webp" alt="Call logo" id="logo" />
+          </div>
+          <div class="row">
+            <h2 class="heading">SideChef: Recipes & Meal Plans
+            </h2>
+          </div>
+          <div class="row">
+            <p>
+              Cooking made easy. Discover step-by-step recipes, meal plans, <br>
+              and grocery lists tailored to your taste and dietary needs.
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              SideChef helps you plan, shop, and cook with interactive instructions, <br>
+              voice guidance, and smart kitchen integration.
+              
+              
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              From beginner to pro, enjoy delicious meals at home with <br>
+              personalized recommendations and over 18,000 guided recipes.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="https://apps.apple.com/us/app/side%D1%81hef-easy-cooking-recipes/id905229928" target="_blank">
+                <img
+                  src="images/appstore.png.webp"
+                  class="social"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+            <div class="col">
+              <a href="https://play.google.com/store/apps/details?id=com.sidechef.sidechef&hl=en&gl=US" target="_blank">
+                <img
+                  src="/images/play.png.webp"
+                  class="social"
+                  alt="Get it on Google Play"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/78/c6/57/78c6577b-69a0-f1f0-7c7b-6c23a7e4d084/7b6e0a5f-d9bc-4c9b-9a3a-766fb21e6cbf_00__U00282_U0029.jpg/313x0w.webp"
+            alt="Side image"
+            class="side-image"
+            style="border-radius: 15px;"
+
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Floating Button -->
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+        class="scroll-icon"
+      />
+    </div>
+    <!-- Floating Buttons -->
+    <!-- <div class="floating-button">
+      <div class="main-fab">
+        <img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contact Icon" style="width: 30px; height: 30px;" />
+      </div>
+      <div class="fab-options">
+        <a href="tel:+447716487602">
+          <img src="images/phone.png" alt="Phone" />
+        </a>
+        <a href="https://wa.me/447716487602" target="_blank">
+          <img src="images/whatsapp.jpeg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div> -->
+    
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="home.html">
+                <img
+                  src="images/lllogo.png"
+                  alt="Logo"
+                  class="logo"
+                  width="500px"
+                />
+              </a>
+            </li>
+            <li>447716487602</li>
+            <li>services@streamartisan.com</li>
+            <li>UK</li>
+            <li>
+              Office No.50A, 5 The Shires Old <br />
+              Bedford Road, Luton, England LU27QA
+            </li>
+            <li>USA</li>
+            <li>Stream Artisan Corporation 418 <br>
+              Broadway #5981 Albany, NY, 12207</li>
+            <li>
+              <!-- <img src="/images/semi-logo.png" alt="Semi Logo" width="150px" /> -->
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Digital Development</h4>
+          <ul>
+            <li>Mobile app developers</li>
+            <li>Chatbots</li>
+            <li>Web developers</li>
+            <li>Web-app developers</li>
+            <li>Intranet/SharePoint developers</li>
+            <li>IoT developers</li>
+            <li>Blockchain developers</li>
+            <li>AI/ML solutions</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Ebook</h4>
+          <ul>
+            <li>Ebook writing</li>
+            <li>Ebook editing</li>
+            <li>Ebook formatting</li>
+            <li>Cover design</li>
+            <li>Publishing assistance</li>
+            <li>Marketing for ebooks</li>
+            <li>Distribution strategies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="/images/arrival.png" alt="Arrival" />
+        </div>
+        <div class="col">
+          <img src="/images/trust.png" alt="Trust" />
+        </div>
+        <div class="col">
+          <img src="/images/reviews.png" alt="Reviews" />
+        </div>
+        <div class="col">
+          <img src="/images/B-teck.png" alt="B-Tech" />
+        </div>
+        <div class="col">
+          <img src="/images/site.png" alt="Site" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Copyright &copy; 2025 Stream Artisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a
+            href="privacy.html"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </div>
+        <div class="col">
+          <a
+            href="terms.html"
+            style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
+        </div>
+          
+  
+    </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("privacyLink").onclick = function (e) {
+      e.preventDefault();
+      document.getElementById("privacyModal").style.display = "flex";
+    };
+
+    document.getElementById("termsLink").onclick = function (e) {
+      e.preventDefault();
+      document.getElementById("termsModal").style.display = "flex";
+    };
+
+    document.querySelectorAll(".close-btn").forEach((btn) => {
+      btn.onclick = function () {
+        const targetId = this.getAttribute("data-target");
+        document.getElementById(targetId).style.display = "none";
+      };
+    });
+
+    window.onclick = function (e) {
+      if (e.target.classList.contains("popup")) {
+        e.target.style.display = "none";
+      }
+    };
+  });
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("load", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        navbar.style.top = scrollTop > 0 ? "-150px" : "0";
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        navbar.style.top = scrollTop > lastScrollTop ? "-150px" : "0";
+        lastScrollTop = Math.max(0, scrollTop);
+      });
+
+      const scrollToTopButton = document.getElementById("scrollToTop");
+      window.addEventListener("scroll", () => {
+        scrollToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+    <style>
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* Move to the left */
+        display: none;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .scroll-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .floating-buttons {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .floating-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .floating-button:hover {
+        transform: scale(1.1);
+      }
+
+      .floating-button img {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+  </body>
+</html>
