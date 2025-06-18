@@ -3,17 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Stream Artisan: Premier software house offering innovative digital development, graphic design, digital marketing, and ebook solutions. Transform your ideas into reality with our expert team. Contact us today!">
-<meta name="keywords" content="software house, digital development, web development, mobile app development, AI solutions, blockchain development, graphic design, logo design, UI/UX design, digital marketing, SEO optimization, ebook writing, ebook publishing, Stream Artisan">
+    <meta
+      name="description"
+      content="Stream Artisan: Premier software house offering innovative digital development, graphic design, digital marketing, and ebook solutions. Transform your ideas into reality with our expert team. Contact us today!"
+    />
+    <meta
+      name="keywords"
+      content="software house, digital development, web development, mobile app development, AI solutions, blockchain development, graphic design, logo design, UI/UX design, digital marketing, SEO optimization, ebook writing, ebook publishing, Stream Artisan"
+    />
     <title>Streamartisan</title>
+    <link rel="canonical" href="https://streamartisan.com/" />
+
     <link rel="stylesheet" href="styles/home.css" />
     <script src="/scripts/home.js"></script>
-    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/contact.css" />
     <!-- <link rel="stylesheet" href="styles/about.css" /> -->
     <!-- <script src="/scripts/"></script> -->
   </head>
   <body>
-    <section class="hero" >
+    <section class="hero">
       <header class="navbar">
         <a href="index.html">
           <img src="images/lllogo.png" alt="Logo" class="logo" />
@@ -24,7 +32,7 @@
           <span></span>
         </div>
       </header>
-      <div class="hero-content" >
+      <div class="hero-content">
         <h1>Contact Us</h1>
         <p>Get in touch with us</p>
       </div>
@@ -101,7 +109,7 @@
         </div>
       </div>
     </div>
-    <section class="contact" style="background-color: transparent;">
+    <section class="contact" style="background-color: transparent">
       <div class="contact-container">
         <!-- <img src="/images/logo.png" alt="Logo" class="contact-left-image" /> -->
         <!-- <img src="/images/phone.png" alt="Phone" class="contact-right-image" /> -->
@@ -112,8 +120,9 @@
         <h2 class="contact-title">Let's Talk</h2>
         <p class="contact-description">
           Want to chat with us about your mobile, web, or digital ideas? <br />
-          Call us on <a href="tel:+14092454910" style="color: white;">(409) 245-4910</a> or fill in
-          the contact form below.
+          Call us on
+          <a href="tel:+14092454910" style="color: white">(409) 245-4910</a> or
+          fill in the contact form below.
         </p>
       </div>
 
@@ -142,14 +151,18 @@
           required
           class="form-input"
         ></textarea>
-        <div style="display: flex; gap: 10px;">
+        <div style="display: flex; gap: 10px">
           <button type="submit" class="form-button">Send Message</button>
-          
         </div>
         <div>
-          <button type="button" class="floating-button" onclick="scheduleCall()">Schedule a Call</button>
+          <button
+            type="button"
+            class="floating-button"
+            onclick="scheduleCall()"
+          >
+            Schedule a Call
+          </button>
         </div>
-
       </form>
     </section>
     <script src="https://assets.calendly.com/assets/external/widget.js"></script>
@@ -168,11 +181,10 @@
         </a>
       </div>
     </div> -->
-    
 
     <style>
       .contact-container {
-        background-color: transparent!important;
+        background-color: transparent !important;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -248,35 +260,35 @@
         z-index: 1000;
       }
 
-        /* Floating button styles */
+      /* Floating button styles */
+      .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff; /* Primary color */
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px; /* Rounded for modern look */
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        z-index: 1000; /* Ensure it’s above other elements */
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      .floating-button:hover {
+        background-color: #0056b3; /* Darker on hover */
+        transform: scale(1.05); /* Slight zoom effect */
+      }
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
         .floating-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007BFF; /* Primary color */
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 50px; /* Rounded for modern look */
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            z-index: 1000; /* Ensure it’s above other elements */
-            transition: background-color 0.3s, transform 0.2s;
+          padding: 10px 20px;
+          font-size: 14px;
+          bottom: 15px;
+          right: 15px;
         }
-        .floating-button:hover {
-            background-color: #0056b3; /* Darker on hover */
-            transform: scale(1.05); /* Slight zoom effect */
-        }
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .floating-button {
-                padding: 10px 20px;
-                font-size: 14px;
-                bottom: 15px;
-                right: 15px;
-            }
-        }
+      }
     </style>
     <footer>
       <div class="row">
@@ -300,8 +312,10 @@
               Bedford Road Luton, England LU27QA
             </li>
             <li>USA</li>
-            <li>Stream Artisan Corporation 418 <br>
-              Broadway #5981 Albany, NY, 12207</li>
+            <li>
+              Stream Artisan Corporation 418 <br />
+              Broadway #5981 Albany, NY, 12207
+            </li>
             <!-- <li><img src="/images/semi-logo.png" alt="" width="150px" /></li> -->
           </ul>
           <!-- <p style="color: white">447716487602</p>
@@ -362,48 +376,43 @@
         <div class="col">
           <a
             href="privacy.html"
-          
             style="color: white; text-decoration: underline"
             >Privacy Policy</a
           >
         </div>
         <div class="col">
-          <a
-            href="terms.html"
-       
-            style="color: white; text-decoration: underline"
+          <a href="terms.html" style="color: white; text-decoration: underline"
             >Terms & Conditions</a
           >
         </div>
       </div>
-           <!-- Privacy Policy Popup -->
-    
+      <!-- Privacy Policy Popup -->
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("privacyLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("privacyModal").style.display = "flex";
-    };
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("privacyLink").onclick = function (e) {
+          e.preventDefault();
+          document.getElementById("privacyModal").style.display = "flex";
+        };
 
-    document.getElementById("termsLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("termsModal").style.display = "flex";
-    };
+        document.getElementById("termsLink").onclick = function (e) {
+          e.preventDefault();
+          document.getElementById("termsModal").style.display = "flex";
+        };
 
-    document.querySelectorAll(".close-btn").forEach((btn) => {
-      btn.onclick = function () {
-        const targetId = this.getAttribute("data-target");
-        document.getElementById(targetId).style.display = "none";
-      };
-    });
+        document.querySelectorAll(".close-btn").forEach((btn) => {
+          btn.onclick = function () {
+            const targetId = this.getAttribute("data-target");
+            document.getElementById(targetId).style.display = "none";
+          };
+        });
 
-    window.onclick = function (e) {
-      if (e.target.classList.contains("popup")) {
-        e.target.style.display = "none";
-      }
-    };
-  });
+        window.onclick = function (e) {
+          if (e.target.classList.contains("popup")) {
+            e.target.style.display = "none";
+          }
+        };
+      });
       let lastScrollTop = 0;
       const navbar = document.querySelector(".navbar");
 
@@ -451,32 +460,32 @@
         });
       }
 
-      const form = document.getElementById('contact-form');
-      form.addEventListener('submit', async (e) => {
+      const form = document.getElementById("contact-form");
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const formData = {
           name: form.name.value,
           email: form.email.value,
-          message: form.message.value
+          message: form.message.value,
         };
 
         try {
-          const response = await fetch('http://localhost:5000/send', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
+          const response = await fetch("http://localhost:5000/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
           });
 
           if (response.ok) {
-            alert('Message sent successfully!');
+            alert("Message sent successfully!");
             form.reset();
           } else {
-            alert('Failed to send message.');
+            alert("Failed to send message.");
           }
         } catch (error) {
-          console.error('Error:', error);
-          alert('Error sending message.');
+          console.error("Error:", error);
+          alert("Error sending message.");
         }
       });
 
@@ -486,19 +495,23 @@
       });
 
       function toggleFloatingButtons() {
-        document.querySelector(".floating-buttons").classList.toggle("expanded");
+        document
+          .querySelector(".floating-buttons")
+          .classList.toggle("expanded");
       }
       function scheduleCall() {
         // Calendly.initPopupWidget({
         //     url: 'https://calendly.com/razaoffice0/30min' // Replace with your Calendly event URL
         // });
-        window.open('https://calendly.com/razaoffice0/30min','_blank')
-        }
-    
+        window.open("https://calendly.com/razaoffice0/30min", "_blank");
+      }
     </script>
     <!-- Floating button to scroll to top -->
     <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to Top" />
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+      />
     </div>
   </body>
 </html>
