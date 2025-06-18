@@ -15,9 +15,9 @@
     <link rel="canonical" href="https://streamartisan.com/" />
 
     <link rel="stylesheet" href="styles/home.css" />
-    <script src="/scripts/home.js"></script>
     <link rel="stylesheet" href="styles/contact.css" />
-    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="styles/blog.css" />
+    <script src="./scripts/home.js"></script>
   </head>
   <body>
     <section class="hero">
@@ -42,7 +42,7 @@
       <span class="closebtn" onclick="toggleMenu()">×</span>
       <div class="overlay-content">
         <div class="overlay-left">
-           <ul>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -107,52 +107,50 @@
       </div>
     </div>
 
-  
- <div class="container">
-        <div class="card">
-            <img src="https://img.freepik.com/free-vector/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata_1150-48136.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740" alt="Tech Blog Image">
-            <div class="card-content">
-                <h2>Exploring the Future of AI</h2>
-                <p>Discover how artificial intelligence is shaping industries with innovative solutions and cutting-edge advancements.</p>
-              
-                <a href="#" class="read-more">Read More</a>
-                  <div class="card-meta">
-                    <span>By Streamartisan</span>
-                    <span>June 5, 2025</span>
-                </div>
-            </div>
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://img.freepik.com/free-vector/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata_1150-48136.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
+          alt="Tech Blog Image"
+        />
+        <div class="card-content">
+          <h2>Exploring the Future of AI</h2>
+          <p>
+            Discover how artificial intelligence is shaping industries with
+            innovative solutions and cutting-edge advancements.
+          </p>
+          <a href="#" class="read-more">Read More</a>
         </div>
-        <div class="card">
-            <img src="https://img.freepik.com/premium-photo/web-development-coding-programming-internet-technology-business-concept_628331-833.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740" alt="Web Tech Blog Image">
-            <div class="card-content">
-                <h2>Top Web Technologies in 2025</h2>
-                <p>Explore the latest web technologies shaping the digital landscape in 2025.</p>
-                
-                <a href="#" class="read-more">Read More</a>
-                <div class="card-meta">
-                    <span>By Streamartisan</span>
-                    <span>June 10, 2025</span>
-                </div>
-            </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.freepik.com/premium-photo/web-development-coding-programming-internet-technology-business-concept_628331-833.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
+          alt="Web Tech Blog Image"
+        />
+        <div class="card-content">
+          <h2>Top Web Technologies in 2025</h2>
+          <p>
+            Explore the latest web technologies shaping the digital landscape in
+            2025.
+          </p>
+          <a href="#" class="read-more">Read More</a>
         </div>
-        <div class="card">
-            <img src="https://img.freepik.com/free-photo/metaverse-virtual-love-collage_52683-89576.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740" alt="Digital Blog Image">
-            <div class="card-content">
-                <h2>Digital Existence is the Key</h2>
-                <p>Learn how digital presence is transforming the way we live and interact.</p>
-               
-                <a href="#" class="read-more">Read More</a>
-                 <div class="card-meta">
-                    <span>By Streamartisan</span>
-                    <span>June 15, 2025</span>
-                </div>
-            </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://img.freepik.com/free-photo/metaverse-virtual-love-collage_52683-89576.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
+          alt="Digital Blog Image"
+        />
+        <div class="card-content">
+          <h2>Digital Existence is the Key</h2>
+          <p>
+            Learn how digital presence is transforming the way we live and
+            interact.
+          </p>
+          <a href="#" class="read-more">Read More</a>
         </div>
+      </div>
     </div>
-</body>
-    <style>
-    
-    </style>
 
     <footer>
       <div class="row">
@@ -245,6 +243,14 @@
       </div>
     </footer>
 
+    <!-- Floating button to scroll to top -->
+    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+      />
+    </div>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const privacyLink = document.getElementById("privacyLink");
@@ -327,13 +333,5 @@
         window.open("https://calendly.com/razaoffice0/30min", "_blank");
       }
     </script>
-
-    <!-- Floating button to scroll to top -->
-    <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-      <img
-        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
-        alt="Scroll to Top"
-      />
-    </div>
   </body>
 </html>
