@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/popup.css" />
     <script src="/scripts/home.js" defer></script>
+    <script src="/scripts/scrol.js" defer></script>
+
   </head>
   <body>
     <section class="hero">
@@ -1184,35 +1186,35 @@
         }
       }
       // for scrolling effect
-      let lastScrollTop = 0;
-      const navbar = document.querySelector(".navbar");
+      // let lastScrollTop = 0;
+      // const navbar = document.querySelector(".navbar");
 
-      // Hide navbar on page load if not at the top
-      window.addEventListener("load", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+      // // Hide navbar on page load if not at the top
+      // window.addEventListener("load", () => {
+      //   const scrollTop =
+      //     window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > 0) {
-          navbar.style.top = "-200px";
-        } else {
-          navbar.style.top = "0";
-        }
-      });
+      //   if (scrollTop > 0) {
+      //     navbar.style.top = "-200px";
+      //   } else {
+      //     navbar.style.top = "0";
+      //   }
+      // });
 
-      window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+      // window.addEventListener("scroll", () => {
+      //   const scrollTop =
+      //     window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-          // Scroll down
-          navbar.style.top = "-200px";
-        } else {
-          // Scroll up
-          navbar.style.top = "0";
-        }
+      //   if (scrollTop > lastScrollTop) {
+      //     // Scroll down
+      //     navbar.style.top = "-200px";
+      //   } else {
+      //     // Scroll up
+      //     navbar.style.top = "0";
+      //   }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
+      //   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      // });
       //text-animation function
 
       const questions = [
