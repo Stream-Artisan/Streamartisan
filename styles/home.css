@@ -14,6 +14,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  box-sizing: border-box;
 
   /* Combine gradient with background image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
@@ -786,7 +787,7 @@ footer .col {
 footer .col img.logo {
   width: 150px; /* Increased width for the first logo */
   margin-bottom: 20px; /* Added spacing below logo */
-  
+
 }
 
 footer .col h4 {
