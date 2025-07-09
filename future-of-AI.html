@@ -5,27 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Stream Artisan: Premier software house offering innovative digital development, graphic design, digital marketing, and ebook solutions. Transform your ideas into reality with our expert team. Contact us today!"
+      content="Explore the future of AI with StreamArtisan’s latest blog. Learn about AI trends, innovations, and their impact on industries. Discover our expert digital development, graphic design, and marketing services."
     />
     <meta
       name="keywords"
-      content="software house, digital development, web development, mobile app development, AI solutions, blockchain development, graphic design, logo design, UI/UX design, digital marketing, SEO optimization, ebook writing, ebook publishing, Stream Artisan"
+      content="future of AI, artificial intelligence trends, AI innovations, AI in business, software house, digital development, web development, AI solutions, StreamArtisan"
     />
-    <title>Streamartisan</title>
-    <link rel="canonical" href="https://streamartisan.com/" />
+    <title>StreamArtisan - Blog</title>
+    <link rel="canonical" href="https://streamartisan.com/blog" />
 
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/blog.css" />
     <script src="/scripts/scrol.js" defer></script>
-
     <script src="./scripts/home.js"></script>
+
+    <style>
+      /* Additional styles to address UI/UX and mobile view issues */
+      .blog-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .blog-post {
+        background: transparent;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .blog-post h2 {
+        font-size: 24px;
+        color: #1E90FF;
+        margin-bottom: 15px;
+      }
+      .blog-post p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #f0e2e2;
+        margin-bottom: 20px;
+      }
+      .blog-post .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #FF4500;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .blog-post img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        .blog-section {
+          padding: 20px;
+        }
+        .blog-post h2 {
+          font-size: 20px;
+        }
+        .blog-post p {
+          font-size: 14px;
+        }
+      }
+      /* Optimize footer for mobile and consistency */
+      footer .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+      }
+      footer .col {
+        flex: 1;
+        min-width: 200px;
+      }
+      footer img {
+        max-width: 100%;
+        height: auto;
+      }
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+        display: none;
+      }
+      .scroll-to-top.show {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <section class="hero">
       <header class="navbar">
         <a href="index.html">
-          <img src="images/lllogo.png" alt="Logo" class="logo" />
+          <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
         </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
@@ -34,8 +114,8 @@
         </div>
       </header>
       <div class="hero-content">
-        <h1>Our Blogs</h1>
-        <p>Welcome to Our Blogs</p>
+        <h1>Our Blog</h1>
+        <p>Future of the AI</p>
       </div>
     </section>
 
@@ -109,79 +189,36 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-vector/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata_1150-48136.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
-          alt="Tech Blog Image"
-        />
-        <div class="card-content">
-          <h2>Exploring the Future of AI</h2>
-          <p>
-            Discover how artificial intelligence is shaping industries with
-            innovative solutions and cutting-edge advancements.
-          </p>
-          <a href="future-of-AI.html" class="read-more">Read More</a>
-        </div>
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="blog-post">
+        <h2>The Future of AI: Transforming Industries with StreamArtisan</h2>
+        <!-- <img src="images/ai-future.jpg" alt="Future of AI technology" loading="lazy" width="600" height="400" /> -->
+        <p>Artificial Intelligence (AI) is reshaping the world, driving innovation across industries like healthcare, finance, retail, and more. At StreamArtisan, we’re at the forefront of this revolution, delivering cutting-edge AI/ML solutions to empower businesses. But what does the future of AI hold, and how can it transform your operations?</p>
+        <p><strong>AI-Powered Personalization:</strong> By 2030, AI is expected to contribute $15.7 trillion to the global economy, with personalization at its core. From tailored marketing campaigns to customized user experiences, AI algorithms analyze vast datasets to deliver hyper-relevant content, boosting engagement by up to 30%. StreamArtisan’s AI solutions can help your business implement personalized chatbots and recommendation systems.</p>
+        <p><strong>Automation and Efficiency:</strong> AI-driven automation is streamlining processes, reducing costs, and enhancing productivity. For example, AI-powered supply chain optimization can cut operational costs by 15–20%. Our team at StreamArtisan specializes in developing AI tools like predictive analytics and automated workflows to streamline your operations.</p>
+        <p><strong>Ethical AI and Trust:</strong> As AI adoption grows, ethical considerations are critical. Transparency, fairness, and data privacy are shaping AI’s future. StreamArtisan ensures our AI/ML solutions adhere to ethical standards, building trust with your customers through secure and transparent systems.</p>
+        <p><strong>Emerging Trends:</strong> The future of AI includes advancements in generative AI, quantum computing integration, and edge AI for real-time processing. These innovations will enable smarter IoT devices, faster blockchain transactions, and more efficient mobile apps—areas where StreamArtisan excels.</p>
+        <p>Ready to leverage AI for your business? Partner with StreamArtisan to explore custom AI/ML solutions, from chatbots to predictive analytics.<br><br> <a href="contact.html" class="cta-button">Get Your Free AI Consultation Today</a></p>
       </div>
-      <div class="card">
-        <img
-          src="https://img.freepik.com/premium-photo/web-development-coding-programming-internet-technology-business-concept_628331-833.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
-          alt="Web Tech Blog Image"
-        />
-        <div class="card-content">
-          <h2>Top Web Technologies in 2025</h2>
-          <p>
-            Explore the latest web technologies shaping the digital landscape in
-            2025.
-          </p>
-          <a href="top-web.html" class="read-more">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://img.freepik.com/free-photo/metaverse-virtual-love-collage_52683-89576.jpg?ga=GA1.1.860952126.1749829977&semt=ais_hybrid&w=740"
-          alt="Digital Blog Image"
-        />
-        <div class="card-content">
-          <h2>Digital Existence is the Key</h2>
-          <p>
-            Learn how digital presence is transforming the way we live and
-            interact.
-          </p>
-          <a href="digital-existence.html" class="read-more">Read More</a>
-        </div>
-      </div>
-    </div>
+    </section>
 
     <footer>
       <div class="row">
         <div class="col">
           <ul>
             <li>
-              <a href="home.html">
-                <img
-                  src="images/lllogo.png"
-                  alt="Logo"
-                  class="logo"
-                  width="500px"
-                />
+              <a href="index.html">
+                <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
               </a>
             </li>
-            <li>447716487602</li>
-            <li>services@streamartisan.com</li>
+            <li><a href="tel:+447716487602">+447716487602</a></li>
+            <li><a href="mailto:services@streamartisan.com">services@streamartisan.com</a></li>
             <li>UK</li>
-            <li>
-              Office No.50A, 5 The Shires Old <br />
-              Bedford Road Luton, England LU27QA
-            </li>
+            <li>Office No.50A, 5 The Shires Old<br />Bedford Road, Luton, England LU27QA</li>
             <li>USA</li>
-            <li>
-              Stream Artisan Corporation 418 <br />
-              Broadway #5981 Albany, NY, 12207
-            </li>
+            <li>StreamArtisan Corporation 418<br />Broadway #5981, Albany, NY, 12207</li>
           </ul>
-          <br />
         </div>
         <div class="col">
           <h4>Digital Development</h4>
@@ -192,7 +229,7 @@
             <li>Web-app developers</li>
             <li>Intranet/Sharepoint Developers</li>
             <li>IOT Developers</li>
-            <li>BlockChain Developers</li>
+            <li>Blockchain Developers</li>
             <li>AI/ML Solutions</li>
           </ul>
         </div>
@@ -210,47 +247,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <img src="/images/arrival.png" alt="" />
-        </div>
-        <div class="col">
-          <img src="/images/trust.png" alt="" />
-        </div>
-        <div class="col">
-          <img src="/images/reviews.png" alt="" />
-        </div>
-        <div class="col">
-          <img src="/images/B-teck.png" alt="" />
-        </div>
-        <div class="col">
-          <img src="/images/site.png" alt="" />
-        </div>
+        <div class="col"><img src="/images/arrival.png" alt="Arrival Badge" loading="lazy" width="100" /></div>
+        <div class="col"><img src="/images/trust.png" alt="Trust Badge" loading="lazy" width="100" /></div>
+        <div class="col"><img src="/images/reviews.png" alt="Reviews Badge" loading="lazy" width="100" /></div>
+        <div class="col"><img src="/images/B-teck.png" alt="B-Teck Badge" loading="lazy" width="100" /></div>
+        <div class="col"><img src="/images/site.png" alt="Site Badge" loading="lazy" width="100" /></div>
       </div>
       <div class="row">
-        <div class="col">
-          copyright © 2025 Stream Artisan Corporation. All rights reserved.
-        </div>
-        <div class="col">
-          <a
-            href="privacy.html"
-            style="color: white; text-decoration: underline"
-            >Privacy Policy</a
-          >
-        </div>
-        <div class="col">
-          <a href="terms.html" style="color: white; text-decoration: underline"
-            >Terms & Conditions</a
-          >
-        </div>
+        <div class="col">Copyright © 2025 StreamArtisan Corporation. All rights reserved.</div>
+        <div class="col"><a href="privacy.html" style="color: white; text-decoration: underline">Privacy Policy</a></div>
+        <div class="col"><a href="terms.html" style="color: white; text-decoration: underline">Terms & Conditions</a></div>
       </div>
     </footer>
 
     <!-- Floating button to scroll to top -->
     <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-      <img
-        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
-        alt="Scroll to Top"
-      />
+      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to Top" loading="lazy" width="40" />
     </div>
 
     <script>
@@ -297,8 +309,7 @@
       const navbar = document.querySelector(".navbar");
 
       window.addEventListener("load", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > 0) {
           navbar.style.top = "-150px";
         } else {
@@ -307,8 +318,7 @@
       });
 
       window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
           navbar.style.top = "-150px";
         } else {
