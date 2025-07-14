@@ -38,7 +38,7 @@
       }
       .blog-post h2 {
         font-size: 24px;
-        color: #1E90FF;
+        color: #1e90ff;
         margin-bottom: 15px;
       }
       .blog-post p {
@@ -50,7 +50,7 @@
       .blog-post .cta-button {
         display: inline-block;
         padding: 10px 20px;
-        background: #FF4500;
+        background: #ff4500;
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -100,12 +100,54 @@
         display: block;
       }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "4235079426724977");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <section class="hero">
       <header class="navbar">
         <a href="index.html">
-          <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
+          <img
+            src="images/lllogo.png"
+            alt="StreamArtisan Logo"
+            class="logo"
+            width="200"
+            loading="lazy"
+          />
         </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
@@ -194,12 +236,53 @@
       <div class="blog-post">
         <h2>The Future of AI: Transforming Industries with StreamArtisan</h2>
         <!-- <img src="images/ai-future.jpg" alt="Future of AI technology" loading="lazy" width="600" height="400" /> -->
-        <p>Artificial Intelligence (AI) is reshaping the world, driving innovation across industries like healthcare, finance, retail, and more. At StreamArtisan, we’re at the forefront of this revolution, delivering cutting-edge AI/ML solutions to empower businesses. But what does the future of AI hold, and how can it transform your operations?</p>
-        <p><strong>AI-Powered Personalization:</strong> By 2030, AI is expected to contribute $15.7 trillion to the global economy, with personalization at its core. From tailored marketing campaigns to customized user experiences, AI algorithms analyze vast datasets to deliver hyper-relevant content, boosting engagement by up to 30%. StreamArtisan’s AI solutions can help your business implement personalized chatbots and recommendation systems.</p>
-        <p><strong>Automation and Efficiency:</strong> AI-driven automation is streamlining processes, reducing costs, and enhancing productivity. For example, AI-powered supply chain optimization can cut operational costs by 15–20%. Our team at StreamArtisan specializes in developing AI tools like predictive analytics and automated workflows to streamline your operations.</p>
-        <p><strong>Ethical AI and Trust:</strong> As AI adoption grows, ethical considerations are critical. Transparency, fairness, and data privacy are shaping AI’s future. StreamArtisan ensures our AI/ML solutions adhere to ethical standards, building trust with your customers through secure and transparent systems.</p>
-        <p><strong>Emerging Trends:</strong> The future of AI includes advancements in generative AI, quantum computing integration, and edge AI for real-time processing. These innovations will enable smarter IoT devices, faster blockchain transactions, and more efficient mobile apps—areas where StreamArtisan excels.</p>
-        <p>Ready to leverage AI for your business? Partner with StreamArtisan to explore custom AI/ML solutions, from chatbots to predictive analytics.<br><br> <a href="contact.html" class="cta-button">Get Your Free AI Consultation Today</a></p>
+        <p>
+          Artificial Intelligence (AI) is reshaping the world, driving
+          innovation across industries like healthcare, finance, retail, and
+          more. At StreamArtisan, we’re at the forefront of this revolution,
+          delivering cutting-edge AI/ML solutions to empower businesses. But
+          what does the future of AI hold, and how can it transform your
+          operations?
+        </p>
+        <p>
+          <strong>AI-Powered Personalization:</strong> By 2030, AI is expected
+          to contribute $15.7 trillion to the global economy, with
+          personalization at its core. From tailored marketing campaigns to
+          customized user experiences, AI algorithms analyze vast datasets to
+          deliver hyper-relevant content, boosting engagement by up to 30%.
+          StreamArtisan’s AI solutions can help your business implement
+          personalized chatbots and recommendation systems.
+        </p>
+        <p>
+          <strong>Automation and Efficiency:</strong> AI-driven automation is
+          streamlining processes, reducing costs, and enhancing productivity.
+          For example, AI-powered supply chain optimization can cut operational
+          costs by 15–20%. Our team at StreamArtisan specializes in developing
+          AI tools like predictive analytics and automated workflows to
+          streamline your operations.
+        </p>
+        <p>
+          <strong>Ethical AI and Trust:</strong> As AI adoption grows, ethical
+          considerations are critical. Transparency, fairness, and data privacy
+          are shaping AI’s future. StreamArtisan ensures our AI/ML solutions
+          adhere to ethical standards, building trust with your customers
+          through secure and transparent systems.
+        </p>
+        <p>
+          <strong>Emerging Trends:</strong> The future of AI includes
+          advancements in generative AI, quantum computing integration, and edge
+          AI for real-time processing. These innovations will enable smarter IoT
+          devices, faster blockchain transactions, and more efficient mobile
+          apps—areas where StreamArtisan excels.
+        </p>
+        <p>
+          Ready to leverage AI for your business? Partner with StreamArtisan to
+          explore custom AI/ML solutions, from chatbots to predictive
+          analytics.<br /><br />
+          <a href="contact.html" class="cta-button"
+            >Get Your Free AI Consultation Today</a
+          >
+        </p>
       </div>
     </section>
 
@@ -209,15 +292,31 @@
           <ul>
             <li>
               <a href="index.html">
-                <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
+                <img
+                  src="images/lllogo.png"
+                  alt="StreamArtisan Logo"
+                  class="logo"
+                  width="200"
+                  loading="lazy"
+                />
               </a>
             </li>
             <li><a href="tel:+447716487602">+447716487602</a></li>
-            <li><a href="mailto:services@streamartisan.com">services@streamartisan.com</a></li>
+            <li>
+              <a href="mailto:services@streamartisan.com"
+                >services@streamartisan.com</a
+              >
+            </li>
             <li>UK</li>
-            <li>Office No.50A, 5 The Shires Old<br />Bedford Road, Luton, England LU27QA</li>
+            <li>
+              Office No.50A, 5 The Shires Old<br />Bedford Road, Luton, England
+              LU27QA
+            </li>
             <li>USA</li>
-            <li>StreamArtisan Corporation 418<br />Broadway #5981, Albany, NY, 12207</li>
+            <li>
+              StreamArtisan Corporation 418<br />Broadway #5981, Albany, NY,
+              12207
+            </li>
           </ul>
         </div>
         <div class="col">
@@ -247,22 +346,74 @@
         </div>
       </div>
       <div class="row">
-        <div class="col"><img src="/images/arrival.png" alt="Arrival Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/trust.png" alt="Trust Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/reviews.png" alt="Reviews Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/B-teck.png" alt="B-Teck Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/site.png" alt="Site Badge" loading="lazy" width="100" /></div>
+        <div class="col">
+          <img
+            src="/images/arrival.png"
+            alt="Arrival Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/trust.png"
+            alt="Trust Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/reviews.png"
+            alt="Reviews Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/B-teck.png"
+            alt="B-Teck Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/site.png"
+            alt="Site Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
       </div>
       <div class="row">
-        <div class="col">Copyright © 2025 StreamArtisan Corporation. All rights reserved.</div>
-        <div class="col"><a href="privacy.html" style="color: white; text-decoration: underline">Privacy Policy</a></div>
-        <div class="col"><a href="terms.html" style="color: white; text-decoration: underline">Terms & Conditions</a></div>
+        <div class="col">
+          Copyright © 2025 StreamArtisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a
+            href="privacy.html"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </div>
+        <div class="col">
+          <a href="terms.html" style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
+        </div>
       </div>
     </footer>
 
     <!-- Floating button to scroll to top -->
     <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to Top" loading="lazy" width="40" />
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+        loading="lazy"
+        width="40"
+      />
     </div>
 
     <script>
@@ -309,7 +460,8 @@
       const navbar = document.querySelector(".navbar");
 
       window.addEventListener("load", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > 0) {
           navbar.style.top = "-150px";
         } else {
@@ -318,7 +470,8 @@
       });
 
       window.addEventListener("scroll", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
           navbar.style.top = "-150px";
         } else {

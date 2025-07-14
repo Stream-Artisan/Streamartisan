@@ -38,7 +38,7 @@
       }
       .blog-post h2 {
         font-size: 24px;
-        color: #1E90FF;
+        color: #1e90ff;
         margin-bottom: 15px;
       }
       .blog-post p {
@@ -50,7 +50,7 @@
       .blog-post .cta-button {
         display: inline-block;
         padding: 10px 20px;
-        background: #FF4500;
+        background: #ff4500;
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -100,12 +100,54 @@
         display: block;
       }
     </style>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "4235079426724977");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <section class="hero">
       <header class="navbar">
         <a href="index.html">
-          <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
+          <img
+            src="images/lllogo.png"
+            alt="StreamArtisan Logo"
+            class="logo"
+            width="200"
+            loading="lazy"
+          />
         </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
@@ -192,16 +234,75 @@
     <!-- Blog Section -->
     <section class="blog-section">
       <div class="blog-post">
-        <h2>Top Web Technologies in 2025: Powering the Future with StreamArtisan</h2>
+        <h2>
+          Top Web Technologies in 2025: Powering the Future with StreamArtisan
+        </h2>
         <!-- <img src="images/web-tech-2025.jpg" alt="Top web technologies in 2025" loading="lazy" width="600" height="400" /> -->
-        <p>The web development landscape in 2025 is evolving rapidly, driven by innovative technologies that prioritize user experience, performance, and security. At StreamArtisan, we leverage these cutting-edge tools to build high-performing, scalable websites and applications. Here are the top web technologies shaping 2025 and how we can help you stay ahead.</p>
-        <p><strong>1. AI and Machine Learning (ML):</strong> AI is transforming web development by automating tasks and enhancing personalization. Tools like GitHub Copilot and TensorFlow.js enable developers to generate code, debug efficiently, and create personalized user experiences. With 62% of businesses already investing in AI, it’s a game-changer for streamlining workflows and boosting engagement. StreamArtisan’s AI/ML solutions integrate chatbots and predictive analytics to elevate your website’s functionality.</p>
-        <p><strong>2. Progressive Web Apps (PWAs):</strong> PWAs blend the best of web and native apps, offering offline capabilities and fast load times. With features like the Background Sync API, PWAs ensure seamless experiences even on unstable networks. For example, Pinterest saw a 40% increase in user engagement after adopting PWAs. StreamArtisan builds PWAs to enhance cross-platform performance and user retention.</p>
-        <p><strong>3. Headless CMS:</strong> Headless CMS architectures, like Strapi or WordPress with Gutenberg 3.0, decouple content from presentation, enabling flexible, API-driven delivery to any device. This approach improves scalability and content management. StreamArtisan uses headless CMS to create dynamic, omnichannel experiences for your audience.</p>
-        <p><strong>4. WebAssembly (Wasm):</strong> WebAssembly enables high-performance applications in the browser, supporting languages like C++ and Rust. Ideal for complex tasks like 3D games or video editing, Wasm is set to dominate in 2025. Our team at StreamArtisan harnesses WebAssembly for lightning-fast, near-native web experiences.</p>
-        <p><strong>5. React, Next.js, and TypeScript:</strong> React remains a leading front-end library, with Next.js enhancing server-side rendering (SSR) for faster, SEO-friendly sites. TypeScript, used in frameworks like Next.js, adds robust typing for scalable development. StreamArtisan combines these technologies for interactive, maintainable web applications.</p>
-        <p><strong>6. Voice Search Optimization:</strong> With over 50% of searches expected to be voice-based by 2025, optimizing for voice search is critical. Using NLP and AI, StreamArtisan ensures your website is discoverable via smart speakers like Amazon Echo, enhancing accessibility and user engagement.</p>
-        <p>Ready to build a future-proof website with these technologies? Partner with StreamArtisan to leverage AI, PWAs, headless CMS, and more. <br><br> <a href="contact.html" class="cta-button">Get Your Free Web Development Consultation Today</a></p>
+        <p>
+          The web development landscape in 2025 is evolving rapidly, driven by
+          innovative technologies that prioritize user experience, performance,
+          and security. At StreamArtisan, we leverage these cutting-edge tools
+          to build high-performing, scalable websites and applications. Here are
+          the top web technologies shaping 2025 and how we can help you stay
+          ahead.
+        </p>
+        <p>
+          <strong>1. AI and Machine Learning (ML):</strong> AI is transforming
+          web development by automating tasks and enhancing personalization.
+          Tools like GitHub Copilot and TensorFlow.js enable developers to
+          generate code, debug efficiently, and create personalized user
+          experiences. With 62% of businesses already investing in AI, it’s a
+          game-changer for streamlining workflows and boosting engagement.
+          StreamArtisan’s AI/ML solutions integrate chatbots and predictive
+          analytics to elevate your website’s functionality.
+        </p>
+        <p>
+          <strong>2. Progressive Web Apps (PWAs):</strong> PWAs blend the best
+          of web and native apps, offering offline capabilities and fast load
+          times. With features like the Background Sync API, PWAs ensure
+          seamless experiences even on unstable networks. For example, Pinterest
+          saw a 40% increase in user engagement after adopting PWAs.
+          StreamArtisan builds PWAs to enhance cross-platform performance and
+          user retention.
+        </p>
+        <p>
+          <strong>3. Headless CMS:</strong> Headless CMS architectures, like
+          Strapi or WordPress with Gutenberg 3.0, decouple content from
+          presentation, enabling flexible, API-driven delivery to any device.
+          This approach improves scalability and content management.
+          StreamArtisan uses headless CMS to create dynamic, omnichannel
+          experiences for your audience.
+        </p>
+        <p>
+          <strong>4. WebAssembly (Wasm):</strong> WebAssembly enables
+          high-performance applications in the browser, supporting languages
+          like C++ and Rust. Ideal for complex tasks like 3D games or video
+          editing, Wasm is set to dominate in 2025. Our team at StreamArtisan
+          harnesses WebAssembly for lightning-fast, near-native web experiences.
+        </p>
+        <p>
+          <strong>5. React, Next.js, and TypeScript:</strong> React remains a
+          leading front-end library, with Next.js enhancing server-side
+          rendering (SSR) for faster, SEO-friendly sites. TypeScript, used in
+          frameworks like Next.js, adds robust typing for scalable development.
+          StreamArtisan combines these technologies for interactive,
+          maintainable web applications.
+        </p>
+        <p>
+          <strong>6. Voice Search Optimization:</strong> With over 50% of
+          searches expected to be voice-based by 2025, optimizing for voice
+          search is critical. Using NLP and AI, StreamArtisan ensures your
+          website is discoverable via smart speakers like Amazon Echo, enhancing
+          accessibility and user engagement.
+        </p>
+        <p>
+          Ready to build a future-proof website with these technologies? Partner
+          with StreamArtisan to leverage AI, PWAs, headless CMS, and more.
+          <br /><br />
+          <a href="contact.html" class="cta-button"
+            >Get Your Free Web Development Consultation Today</a
+          >
+        </p>
       </div>
     </section>
 
@@ -211,15 +312,31 @@
           <ul>
             <li>
               <a href="index.html">
-                <img src="images/lllogo.png" alt="StreamArtisan Logo" class="logo" width="200" loading="lazy" />
+                <img
+                  src="images/lllogo.png"
+                  alt="StreamArtisan Logo"
+                  class="logo"
+                  width="200"
+                  loading="lazy"
+                />
               </a>
             </li>
             <li><a href="tel:+447716487602">+447716487602</a></li>
-            <li><a href="mailto:services@streamartisan.com">services@streamartisan.com</a></li>
+            <li>
+              <a href="mailto:services@streamartisan.com"
+                >services@streamartisan.com</a
+              >
+            </li>
             <li>UK</li>
-            <li>Office No.50A, 5 The Shires Old<br />Bedford Road, Luton, England LU27QA</li>
+            <li>
+              Office No.50A, 5 The Shires Old<br />Bedford Road, Luton, England
+              LU27QA
+            </li>
             <li>USA</li>
-            <li>StreamArtisan Corporation 418<br />Broadway #5981, Albany, NY, 12207</li>
+            <li>
+              StreamArtisan Corporation 418<br />Broadway #5981, Albany, NY,
+              12207
+            </li>
           </ul>
         </div>
         <div class="col">
@@ -249,22 +366,74 @@
         </div>
       </div>
       <div class="row">
-        <div class="col"><img src="/images/arrival.png" alt="Arrival Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/trust.png" alt="Trust Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/reviews.png" alt="Reviews Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/B-teck.png" alt="B-Teck Badge" loading="lazy" width="100" /></div>
-        <div class="col"><img src="/images/site.png" alt="Site Badge" loading="lazy" width="100" /></div>
+        <div class="col">
+          <img
+            src="/images/arrival.png"
+            alt="Arrival Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/trust.png"
+            alt="Trust Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/reviews.png"
+            alt="Reviews Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/B-teck.png"
+            alt="B-Teck Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="/images/site.png"
+            alt="Site Badge"
+            loading="lazy"
+            width="100"
+          />
+        </div>
       </div>
       <div class="row">
-        <div class="col">Copyright © 2025 StreamArtisan Corporation. All rights reserved.</div>
-        <div class="col"><a href="privacy.html" style="color: white; text-decoration: underline">Privacy Policy</a></div>
-        <div class="col"><a href="terms.html" style="color: white; text-decoration: underline">Terms & Conditions</a></div>
+        <div class="col">
+          Copyright © 2025 StreamArtisan Corporation. All rights reserved.
+        </div>
+        <div class="col">
+          <a
+            href="privacy.html"
+            style="color: white; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </div>
+        <div class="col">
+          <a href="terms.html" style="color: white; text-decoration: underline"
+            >Terms & Conditions</a
+          >
+        </div>
       </div>
     </footer>
 
     <!-- Floating button to scroll to top -->
     <div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
-      <img src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg" alt="Scroll to Top" loading="lazy" width="40" />
+      <img
+        src="https://image.shutterstock.com/image-vector/direction-arrow-icon-isolated-upward-260nw-193782530.jpg"
+        alt="Scroll to Top"
+        loading="lazy"
+        width="40"
+      />
     </div>
 
     <script>
@@ -311,7 +480,8 @@
       const navbar = document.querySelector(".navbar");
 
       window.addEventListener("load", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > 0) {
           navbar.style.top = "-150px";
         } else {
@@ -320,7 +490,8 @@
       });
 
       window.addEventListener("scroll", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
           navbar.style.top = "-150px";
         } else {
