@@ -20,7 +20,9 @@ body {
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
 }
-
+.presence{
+  display: none;
+}
 .navbar {
   display: flex;
   box-sizing: border-box;
