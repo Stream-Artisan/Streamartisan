@@ -890,7 +890,7 @@
         </p>
       </div>
 
-      <form
+       <form
         action="./send_email.php"
         method="post"
         id="contact-form"
@@ -918,9 +918,20 @@
           rows="5"
           placeholder="Your Message"
           required
-          class="form-textarea"
+          class="form-input"
         ></textarea>
-        <button type="submit" class="form-button" >Send</button>
+        <div style="display: flex; gap: 10px">
+          <button type="submit" class="form-button" >Send Message</button>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="floating-button"
+            onclick="scheduleCall()"
+          >
+            Schedule a Call
+          </button>
+        </div>
       </form>
     </section>
     <section class="presence">
