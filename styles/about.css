@@ -1,4 +1,9 @@
 /* Add about-specific styles here */
+*{
+  margin: 0;
+  padding: 0;
+  background-origin: padding-box;
+}
 
 /* Add this to styles/about.css */
 .grid-container {

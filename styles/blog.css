@@ -1,4 +1,9 @@
-/* Overlay Menu Styles */
+*{
+  margin: 0;
+  padding: 0;
+  background-origin: padding-box;
+}
+
 
 body {
   margin: 0;

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-origin: padding-box;
+}
 
 body {
   margin: 0;
@@ -7,13 +12,13 @@ body {
   box-sizing: border-box;
 
   /* Combine gradient with background image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('/images/bg-f.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bg-f.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
-  background-color: #000; 
+  background-position: center;
+  background-color: #000;
 
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
