@@ -1,4 +1,6 @@
 <?php
+session_start(); // Start session for alert message
+
 // Set your email address
 $to = 'services@streamartisan.com';
 
@@ -12,13 +14,17 @@ $package = isset($_POST['package']) ? strip_tags(trim($_POST['package'])) : '';
 
 // Validate email format
 if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo 'Invalid email format.';
+    $_SESSION['form_status'] = 'error';
+    $_SESSION['form_message'] = 'Invalid email format.';
+    header('Location: /index.php');
     exit;
 }
 
 // Prevent header injection
 if (preg_match("/[\r\n]/", $name) || preg_match("/[\r\n]/", $email)) {
-    echo 'Invalid input detected.';
+    $_SESSION['form_status'] = 'error';
+    $_SESSION['form_message'] = 'Invalid input detected.';
+    header('Location: /index.php');
     exit;
 }
 
@@ -32,20 +38,27 @@ if ($package) $email_body .= "Package: $package\n";
 $email_body .= "Message:\n$message\n";
 
 // Set headers (use a fixed From address to avoid DMARC issues)
-$headers = "From: Website Form <noreply@yourdomain.com>\r\n";
+$headers = "From: Website Form <noreply@streamartisan.com>\r\n";
 $headers .= "Reply-To: $name <$email>\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 // Validate required fields
 if ($name && $email && $message) {
     if (mail($to, $email_subject, $email_body, $headers)) {
-        echo 'OK';
+        $_SESSION['form_status'] = 'success';
+        $_SESSION['form_message'] = 'The form has been submitted successfully.';
     } else {
         // Log error for debugging (ensure log file is writable)
         error_log("Failed to send email to $to at " . date('Y-m-d H:i:s'), 3, 'email_errors.log');
-        echo 'Failed to send email. Please try again later.';
+        $_SESSION['form_status'] = 'error';
+        $_SESSION['form_message'] = 'Failed to send email. Please try again later.';
     }
 } else {
-    echo 'Please fill in all required fields.';
+    $_SESSION['form_status'] = 'error';
+    $_SESSION['form_message'] = 'Please fill in all required fields.';
 }
+
+// Redirect to index page
+header('Location: /index.php');
+exit;
 ?>
