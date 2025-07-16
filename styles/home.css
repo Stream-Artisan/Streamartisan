@@ -222,7 +222,7 @@ header,
   max-width: 1200px;
   justify-content: center;
   text-align: center;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 .hero-subtitle {
