@@ -9,7 +9,7 @@ body {
 
   /* Combine gradient with background image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('https://plus.unsplash.com/premium_photo-1661816432228-7637c8b2a0a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk0fHx0ZWNobm9sb2d5JTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+                    url('/images/bg-f.jpg');
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
@@ -20,7 +20,7 @@ body {
   color: white;
 }
 .overlay-menu {
-  background-image: url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHRlY2hub2xvZ3klMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+  background-image: url("/images/bg-overlay.jpg");
   position: fixed;
   top: 0;
   left: 0;

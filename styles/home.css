@@ -10,7 +10,7 @@ body {
 
   /* Combine gradient with background image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('images/bg-f.jpg');
+                    url('/images/bg-f.jpg');
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
@@ -67,7 +67,7 @@ body {
 }
 
 .overlay-menu {
-  background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHRlY2hub2xvZ3klMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+  background-image: url("/images/bg-overlay.jpg");
   background-size: cover;
 
   height: 100%;
@@ -1042,7 +1042,7 @@ footer .col:first-child {
 
   /* Mobile-optimized background setup */
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fHRlY2hub2xvZ3klMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+                    url('images/bg-f.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
