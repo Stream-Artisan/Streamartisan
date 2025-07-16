@@ -31,3 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadElements = document.querySelectorAll(".animate-on-load");
   loadElements.forEach((el) => el.classList.add("loaded"));
 });
+window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);

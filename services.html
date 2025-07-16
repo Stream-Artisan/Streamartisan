@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Stream Artisan: Premier software house offering innovative digital development, graphic design, digital marketing, and ebook solutions. Transform your ideas into reality with our expert team. Contact us today!">
-<meta name="keywords" content="software house, digital development, web development, mobile app development, AI solutions, blockchain development, graphic design, logo design, UI/UX design, digital marketing, SEO optimization, ebook writing, ebook publishing, Stream Artisan">
+    <meta
+      name="description"
+      content="Stream Artisan: Premier software house offering innovative digital development, graphic design, digital marketing, and ebook solutions. Transform your ideas into reality with our expert team. Contact us today!"
+    />
+    <meta
+      name="keywords"
+      content="software house, digital development, web development, mobile app development, AI solutions, blockchain development, graphic design, logo design, UI/UX design, digital marketing, SEO optimization, ebook writing, ebook publishing, Stream Artisan"
+    />
     <title>Streamartisan</title>
-    <link rel="canonical" href="https://streamartisan.com/">
+    <link rel="canonical" href="https://streamartisan.com/" />
 
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/contact.css" />
@@ -15,22 +21,43 @@
     <script src="/scripts/home.js"></script>
     <script src="/scripts/scrol.js" defer></script>
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4235079426724977');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1308878997522047");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1308878997522047&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <section class="hero">
@@ -67,7 +94,7 @@ src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
       <span class="closebtn" onclick="toggleMenu()">&times;</span>
       <div class="overlay-content">
         <div class="overlay-left">
-         <ul>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -278,11 +305,7 @@ src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
     <!-- WHAT WE OFFER SECTION -->
     <div
       class="mobile-app"
-      style="
-        
-        background-size: cover;
-        background-position: center;
-      "
+      style="background-size: cover; background-position: center"
     >
       <h1 class="section-title">What We Offer?</h1>
       <div class="custom-tabs-container">
@@ -889,7 +912,7 @@ src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
             <a href="mailto:services@streamartisan.com">
               <li>services@streamartisan.com</li></a
             >
-            <div style="display: flex; gap: 20px;">
+            <div style="display: flex; gap: 20px">
               <div>
                 <li>UK</li>
                 <li><a href="tel:+44771648760">+447716487602</a></li>
@@ -974,30 +997,30 @@ src="https://www.facebook.com/tr?id=4235079426724977&ev=PageView&noscript=1"
       </div>
     </footer>
     <script>
-         document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("privacyLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("privacyModal").style.display = "flex";
-    };
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("privacyLink").onclick = function (e) {
+          e.preventDefault();
+          document.getElementById("privacyModal").style.display = "flex";
+        };
 
-    document.getElementById("termsLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("termsModal").style.display = "flex";
-    };
+        document.getElementById("termsLink").onclick = function (e) {
+          e.preventDefault();
+          document.getElementById("termsModal").style.display = "flex";
+        };
 
-    document.querySelectorAll(".close-btn").forEach((btn) => {
-      btn.onclick = function () {
-        const targetId = this.getAttribute("data-target");
-        document.getElementById(targetId).style.display = "none";
-      };
-    });
+        document.querySelectorAll(".close-btn").forEach((btn) => {
+          btn.onclick = function () {
+            const targetId = this.getAttribute("data-target");
+            document.getElementById(targetId).style.display = "none";
+          };
+        });
 
-    window.onclick = function (e) {
-      if (e.target.classList.contains("popup")) {
-        e.target.style.display = "none";
-      }
-    };
-  });
+        window.onclick = function (e) {
+          if (e.target.classList.contains("popup")) {
+            e.target.style.display = "none";
+          }
+        };
+      });
       let lastScrollTop = 0;
       const navbar = document.querySelector(".navbar");
 
