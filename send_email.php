@@ -1,49 +1,34 @@
 <?php
-session_start();
+// Set your email address
+$to = 'services@streamartisan.com';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize inputs
-    $name = htmlspecialchars(trim($_POST['name'] ?? ''), ENT_QUOTES, 'UTF-8');
-    $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $message = htmlspecialchars(trim($_POST['message'] ?? ''), ENT_QUOTES, 'UTF-8');
+// Get form data safely
+$name    = isset($_POST['name'])    ? strip_tags(trim($_POST['name']))    : '';
+$email   = isset($_POST['email'])   ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
+$subject = isset($_POST['subject']) ? strip_tags(trim($_POST['subject'])) : '';
+$message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+// $phone   = isset($_POST['phone'])   ? strip_tags(trim($_POST['phone']))   : '';
+// $package = isset($_POST['package']) ? strip_tags(trim($_POST['package'])) : '';
 
-    // Validate inputs
-    if (empty($name) || empty($email) || empty($message)) {
-        $_SESSION['form_message'] = 'Please fill out all fields.';
-        header("Location: index.html");
-        exit;
-    }
+// Build the email content
+$email_subject = $subject ? $subject : 'New Website Inquiry';
+$email_body = "You have received a new message from your website form.\n\n";
+$email_body .= "Name: $name\n";
+$email_body .= "Email: $email\n";
+// if ($phone)   $email_body .= "Phone: $phone\n";
+// if ($package) $email_body .= "Package: $package\n";
+$email_body .= "Message:\n$message\n";
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $_SESSION['form_message'] = 'Invalid email format.';
-        header("Location: index.html");
-        exit;
-    }
+$headers = "From: $name <$email>\r\nReply-To: $email\r\n";
 
-    // Prevent header injection
-    if (preg_match("/[\r\n]/", $name) || preg_match("/[\r\n]/", $email)) {
-        $_SESSION['form_message'] = 'Invalid input detected.';
-        header("Location: index.html");
-        exit;
-    }
-
-    // Prepare email
-    $to = "services@streamartisan.com";
-    $subject = "Contact Form Submission";
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-    $headers = "From: $email\r\nContent-Type: text/plain; charset=UTF-8\r\n";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        $_SESSION['form_message'] = 'Message sent successfully!';
+// Validate required fields
+if ($name && $email && $message) {
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        echo 'OK';
     } else {
-        $_SESSION['form_message'] = 'Failed to send message. Please try again.';
+        echo 'Failed to send email. Please try again.';
     }
-
-    header("Location: index.html");
-    exit;
 } else {
-    header("Location: index.html");
-    exit;
+    echo 'Please fill in all required fields.';
 }
 ?>
