@@ -1346,3 +1346,117 @@ display: none;
     font-size: 20px;
   }
 }
+ .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px; /* Move to the left */
+        display: none;
+        cursor: pointer;
+        background-color: transparent;
+        z-index: 1000;
+      }
+
+      .floating-buttons {
+        position: fixed;
+        background-color: transparent;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+      }
+
+      .floating-button {
+        width: 50px;
+        background: transparent;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .floating-button:hover {
+        transform: scale(1.1);
+      }
+
+      .floating-button img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .tabs-container {
+        display: flex;
+        background-color: transparent;
+        margin-bottom: 55px;
+      }
+
+      .tabs {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      .tab-button {
+        background: none;
+        border: none;
+        color: white;
+        text-align: left;
+        padding: 10px;
+        cursor: pointer;
+        font-family: poppins, sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        transition: background 0.3s;
+      }
+
+      .tab-button:hover,
+      .tab-button.active {
+        background-color: #555;
+      }
+
+      .tab-content {
+        flex: 3;
+        padding: 20px;
+        color: white;
+        font-family: poppins, sans-serif;
+        font-size: 20px;
+        line-height: 27px;
+      }
+
+      .tab-pane {
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+      }
+
+      .explore-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .explore-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
