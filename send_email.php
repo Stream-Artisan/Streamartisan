@@ -1,8 +1,9 @@
 <?php
-session_start(); // Start session for alert message
+session_start();
+require 'vendor/autoload.php'; // Include PHPMailer (install via Composer)
 
-// Set your email address
-$to = 'services@streamartisan.com';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 // Get form data safely
 $name    = isset($_POST['name'])    ? strip_tags(trim($_POST['name']))    : '';
@@ -28,6 +29,14 @@ if (preg_match("/[\r\n]/", $name) || preg_match("/[\r\n]/", $email)) {
     exit;
 }
 
+// Validate required fields
+if (!$name || !$email || !$message) {
+    $_SESSION['form_status'] = 'error';
+    $_SESSION['form_message'] = 'Please fill in all required fields.';
+    header('Location: /index.php');
+    exit;
+}
+
 // Build the email content
 $email_subject = $subject ? $subject : 'New Website Inquiry';
 $email_body = "You have received a new message from your website form.\n\n";
@@ -37,25 +46,35 @@ if ($phone)   $email_body .= "Phone: $phone\n";
 if ($package) $email_body .= "Package: $package\n";
 $email_body .= "Message:\n$message\n";
 
-// Set headers (use a fixed From address to avoid DMARC issues)
-$headers = "From: Website Form <noreply@streamartisan.com>\r\n";
-$headers .= "Reply-To: $name <$email>\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+// Initialize PHPMailer
+$mail = new PHPMailer(true);
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostinger.com'; // Hostinger SMTP server
+    $mail->SMTPAuth = true;
+    $mail->Username = 'services@streamartisan.com'; // Your Hostinger email
+    $mail->Password = 'Altis9290@&$..'; // Your email password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
 
-// Validate required fields
-if ($name && $email && $message) {
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        $_SESSION['form_status'] = 'success';
-        $_SESSION['form_message'] = 'The form has been submitted successfully.';
-    } else {
-        // Log error for debugging (ensure log file is writable)
-        error_log("Failed to send email to $to at " . date('Y-m-d H:i:s'), 3, 'email_errors.log');
-        $_SESSION['form_status'] = 'error';
-        $_SESSION['form_message'] = 'Failed to send email. Please try again later.';
-    }
-} else {
+    // Recipients
+    $mail->setFrom('noreply@streamartisan.com', 'Website Form');
+    $mail->addAddress('services@streamartisan.com');
+    $mail->addReplyTo($email, $name);
+
+    // Content
+    $mail->isHTML(false);
+    $mail->Subject = $email_subject;
+    $mail->Body = $email_body;
+
+    $mail->send();
+    $_SESSION['form_status'] = 'success';
+    $_SESSION['form_message'] = 'The form has been submitted successfully.';
+} catch (Exception $e) {
+    error_log("Failed to send email: {$mail->ErrorInfo} at " . date('Y-m-d H:i:s'), 3, 'email_errors.log');
     $_SESSION['form_status'] = 'error';
-    $_SESSION['form_message'] = 'Please fill in all required fields.';
+    $_SESSION['form_message'] = 'Failed to send email. Please try again later.';
 }
 
 // Redirect to index page
