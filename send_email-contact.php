@@ -59,6 +59,6 @@ if ($name && $email && $message) {
 }
 
 // Redirect to index page
-header('Location: /index.html');
+header('Location: /contact.html');
 exit;
 ?>
