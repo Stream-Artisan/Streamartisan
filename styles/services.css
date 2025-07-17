@@ -177,8 +177,8 @@ body {
 }
 
 .process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  grid-template-columns: repeat(auto-fit, max(250px, 1fr));
   gap: 20px;
 }
 
