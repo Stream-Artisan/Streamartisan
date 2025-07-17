@@ -27,19 +27,7 @@ body {
 .presence{
   display: none;
 }
-.navbar {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 
-  z-index: 1000;
-}
 
 .navbar-hidden {
   transform: translateY(-100%);
@@ -1057,7 +1045,9 @@ footer .col:first-child {
   color: white;
   overflow-x: hidden; /* Prevent horizontal scroll */
   }
-
+  .desktop-navbar{
+    display: none;
+  }
   .navbar {
     padding: 15px;
   }

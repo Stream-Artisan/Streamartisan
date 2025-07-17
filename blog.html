@@ -39,11 +39,228 @@ src="https://www.facebook.com/tr?id=1308878997522047&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
     <!-- End Meta Pixel Code -->
   </head>
+     <style>
+        .logo {
+  width: 100px;
+  margin-right: 20px; /* Adds controlled space after the logo */
+}
+
+.desktop-navbar {
+  background-color: transparent;
+  display: flex;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between; /* Keeps logo on left, nav-items on right */
+  align-items: center;
+  padding: 20px;
+}
+
+.desktop-nav-items {
+  margin-top: -75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end; /* Aligns items to the right */
+  gap: 20px; /* Space between nav items */
+}
+
+.desktop-nav-item a {
+  color: white;
+  text-decoration: none;
+}
+.nav-button {
+  /* Basic button styling */
+  padding: 10px 20px;
+  border: none; /* Remove default border */
+  background: linear-gradient(45deg, rgba(147, 112, 219, 0.8), rgba(255, 255, 255, 0.8), rgba(186, 85, 211, 0.8)); /* Purple-white gradient */
+  color: #fff; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px; /* Slightly rounded edges for crystal effect */
+  box-shadow: 0 0 10px rgba(147, 112, 219, 0.5), 0 0 20px rgba(255, 255, 255, 0.3); /* Glowing shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  position: relative;
+  overflow: hidden; /* For inner shine effect */
+}
+
+/* Pseudo-element for crystalline shine */
+.nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(225, 103, 230, 0.4), transparent); /* Shine effect */
+  transition: all 0.5s ease;
+}
+
+/* Hover effect */
+.nav-button:hover {
+  background: linear-gradient(45deg, rgba(186, 85, 211, 1), rgb(210, 9, 250), rgba(138, 43, 226, 1)); /* Brighter gradient on hover */
+  box-shadow: 0 0 20px rgba(147, 112, 219, 0.8), 0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced glow */
+  transform: translateY(-2px); /* Slight lift for interaction */
+}
+
+/* Move shine effect on hover */
+.nav-button:hover::before {
+  left: 100%;
+}
+  </style>
+      <script>
+    window.addEventListener('scroll', () => {
+  // Calculate scroll progress (optional, kept for potential future use)
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  
+  // Get the navbar element
+  const navbar = document.querySelector('.navbar');
+  
+  // Show navbar only when at the top (scroll position is 0)
+  if (window.pageYOffset === 0) {
+    navbar.style.display = 'block'; // Show navbar
+  } else {
+    navbar.style.display = 'none'; // Hide navbar
+  }
+}, false);
+document.addEventListener("DOMContentLoaded", () => {
+  const desktopNav = document.getElementById("desktop-nav");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  function toggleNavbars() {
+    if (window.innerWidth > 900) {
+      desktopNav.style.display = "flex";
+      mobileNav.style.display = "none";
+    } else {
+      desktopNav.style.display = "none";
+      mobileNav.style.display = "flex";
+    }
+  }
+
+  // Initial toggle
+  toggleNavbars();
+
+  // Toggle on window resize
+  window.addEventListener("resize", toggleNavbars);
+
+  // Navbar Scroll Behavior
+  window.addEventListener("scroll", () => {
+    if (window.innerWidth > 900) {
+      desktopNav.classList.toggle("scrolled", window.pageYOffset > 50);
+    } else {
+      mobileNav.classList.toggle("scrolled", window.pageYOffset > 50);
+    }
+  });
+
+  // Hamburger Menu Toggle (for overlay menu)
+  const hamburger = document.getElementById("hamburger-menu");
+  const mobileOverlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("close-mobile-nav");
+
+  function toggleMenu() {
+    mobileOverlay.classList.toggle("active");
+    hamburger.setAttribute("aria-expanded", mobileOverlay.classList.contains("active"));
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+  closeBtn.addEventListener("click", toggleMenu);
+
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Carousel Functionality
+  window.scrollCarousel = function (direction) {
+    const container = document.querySelector(".carousel-container");
+    const scrollAmount = container.offsetWidth * 0.5;
+    container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+  };
+
+  // Tab Content Switching
+  window.showTabContent = function (tabId) {
+    document.querySelectorAll(".tab-pane").forEach((pane) => {
+      pane.classList.remove("active");
+    });
+    document.querySelectorAll(".tab-button").forEach((button) => {
+      button.classList.remove("active");
+    });
+    document.getElementById(tabId).classList.add("active");
+    document.querySelector(`button[onclick="showTabContent('${tabId}')"]`).classList.add("active");
+  };
+
+  // Scroll to Top
+  window.scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Dynamic Copyright Year
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+});
+  </script>
   <body>
     <section class="hero">
-      <header class="navbar">
+     <header class="desktop-navbar" id="desktop-nav">
         <a href="index.html">
-          <img src="images/lllogo.png" alt="Logo" class="logo" />
+          <img
+            src="images/lllogo.png"
+            alt="Stream Artisan Logo"
+            class="logo"
+            width="100px"
+          />
+        </a>
+                <div class="desktop-nav-items" id="main-nav">   
+          <div class="desktop-nav-item">
+          <a href="index.html">Home</a>
+
+          </div>
+          <div class="desktop-nav-item">
+            <a href="about.html">About</a>
+
+          </div>
+          <div class="desktop-nav-item">
+           <a href="blog.html">Blog</a>
+
+          </div>
+          <div class="desktop-nav-item">
+           <a href="packages.html">Packages</a>
+
+          </div>
+          <div class="desktop-nav-item">
+           <a href="services.html">Services</a>
+
+          </div>
+          <div class="desktop-nav-item">
+            <a href="portfolio.html">Portfolio</a>
+
+          </div>
+          <div class="desktop-nav-item">
+            <a href="contact.html">Contact</a>
+
+          </div> 
+           <div class="desktop-nav-item nav-button" >
+            <a href="contact.html">Connect</a>
+
+          </div> 
+          </div>
+      </header>
+      
+      
+      <header class="navbar" id="mobile-nav">
+        <a href="index.html">
+          <img
+            src="images/lllogo.png"
+            alt="Stream Artisan Logo"
+            class="logo"
+            width="300px"
+          />
         </a>
         <div class="hamburger" onclick="toggleMenu()">
           <span></span>
