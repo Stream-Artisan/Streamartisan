@@ -17,6 +17,20 @@
       rel="stylesheet"
     />
     <script src="/scripts/scrol.js" defer></script>
+    <script > window.showTabContent = function (tabId) {
+    document
+      .querySelectorAll(".custom-tab-pane")
+      .forEach((pane) => pane.classList.remove("active"));
+    document
+      .querySelectorAll(".custom-tab-button")
+      .forEach((button) => button.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+    document
+      .querySelector(
+        `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
+      )
+      .classList.add("active");
+  };</script>
 
     <!-- <link rel="stylesheet" href="styles/about.css" /> -->
     <!-- <script src="/scripts/"></script> -->
