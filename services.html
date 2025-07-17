@@ -58,6 +58,22 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
     <!-- End Meta Pixel Code -->
+     <script>
+        window.showTabContent = function (tabId) {
+    document
+      .querySelectorAll(".custom-tab-pane")
+      .forEach((pane) => pane.classList.remove("active"));
+    document
+      .querySelectorAll(".custom-tab-button")
+      .forEach((button) => button.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+    document
+      .querySelector(
+        `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
+      )
+      .classList.add("active");
+  };
+     </script>
   </head>
   <body>
     <section class="hero">
@@ -639,7 +655,7 @@
         class="process-grid"
         style="
           display: grid;
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 20px;
           margin-top: 20px;
         "
