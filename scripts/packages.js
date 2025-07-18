@@ -1,239 +1,231 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Privacy/Terms modal logic
-  const privacyLink = document.getElementById("privacyLink");
-  const termsLink = document.getElementById("termsLink");
+// Utility function to debounce events
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
+
+// Focus trapping utility for accessibility
+function trapFocus(element) {
+  const focusableElements = element.querySelectorAll(
+    'a[href], button, input, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const firstFocusable = focusableElements[0];
+  const lastFocusable = focusableElements[focusableElements.length - 1];
+
+  element.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey && document.activeElement === firstFocusable) {
+        e.preventDefault();
+        lastFocusable.focus();
+      } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+        e.preventDefault();
+        firstFocusable.focus();
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // DOM Elements
+  const desktopNav = document.getElementById('desktop-nav');
+  const mobileNav = document.getElementById('mobile-nav');
+  const hamburger = document.getElementById('hamburger-menu');
+  const mobileOverlay = document.getElementById('overlay');
+  const closeBtn = document.getElementById('close-mobile-nav');
+  const scrollToTopButton = document.getElementById('scrollToTop');
+  const privacyLink = document.getElementById('privacyLink');
+  const termsLink = document.getElementById('termsLink');
+  const floatingButtons = document.querySelector('.floating-buttons');
+  const carouselContainer = document.querySelector('.carousel-container');
+
+  // Navigation Toggle
+  function toggleNavbars() {
+    if (!desktopNav || !mobileNav) return;
+    const isDesktop = window.innerWidth > 900;
+    desktopNav.style.display = isDesktop ? 'flex' : 'none';
+    mobileNav.style.display = isDesktop ? 'none' : window.pageYOffset === 0 ? 'flex' : 'none';
+  }
+
+  // Hamburger Menu Toggle
+  function toggleMenu() {
+    if (!mobileOverlay || !hamburger) return;
+    mobileOverlay.classList.toggle('active');
+    const isOpen = mobileOverlay.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      trapFocus(mobileOverlay);
+      mobileOverlay.querySelector('a, button')?.focus();
+    }
+  }
+
+  // Modal Handling
   if (privacyLink) {
-    privacyLink.onclick = function (e) {
+    privacyLink.addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById("privacyModal").style.display = "flex";
-    };
+      const modal = document.getElementById('privacyModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        trapFocus(modal);
+        modal.querySelector('button, a')?.focus();
+      }
+    });
   }
+
   if (termsLink) {
-    termsLink.onclick = function (e) {
+    termsLink.addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById("termsModal").style.display = "flex";
-    };
+      const modal = document.getElementById('termsModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        trapFocus(modal);
+        modal.querySelector('button, a')?.focus();
+      }
+    });
   }
-  document.querySelectorAll(".close-btn").forEach((btn) => {
-    btn.onclick = function () {
-      const targetId = this.getAttribute("data-target");
-      document.getElementById(targetId).style.display = "none";
-    };
-  });
-  window.onclick = function (e) {
-    if (e.target.classList.contains("popup")) {
-      e.target.style.display = "none";
-    }
-  };
 
-  // Tab switching logic
+  document.querySelectorAll('.close-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const target = document.getElementById(targetId);
+      if (target) target.style.display = 'none';
+    });
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup')) {
+      e.target.style.display = 'none';
+    }
+  });
+
+  // Tab Switching
   window.showTabContent = function (tabId) {
-    document
-      .querySelectorAll(".custom-tab-pane")
-      .forEach((pane) => pane.classList.remove("active"));
-    document
-      .querySelectorAll(".custom-tab-button")
-      .forEach((button) => button.classList.remove("active"));
-    document.getElementById(tabId).classList.add("active");
-    document
-      .querySelector(
-        `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
-      )
-      .classList.add("active");
+    const panes = document.querySelectorAll('.custom-tab-pane, .tab-content');
+    const buttons = document.querySelectorAll('.custom-tab-button, .tab');
+    panes.forEach((pane) => pane.classList.remove('active'));
+    buttons.forEach((button) => button.classList.remove('active'));
+    const targetPane = document.getElementById(tabId);
+    const targetButton = document.querySelector(`.custom-tab-button[onclick="showTabContent('${tabId}')"], .tab[data-tab="${tabId}"]`);
+    if (targetPane && targetButton) {
+      targetPane.classList.add('active');
+      targetButton.classList.add('active');
+      targetButton.setAttribute('aria-selected', 'true');
+      buttons.forEach((btn) => {
+        if (btn !== targetButton) btn.setAttribute('aria-selected', 'false');
+      });
+    }
   };
 
-  // Navbar scroll effect
-  let lastScrollTop = 0;
-  const navbar = document.querySelector(".navbar");
-  window.addEventListener("load", () => {
-    const scrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 0) {
-      navbar.style.top = "-150px";
-    } else {
-      navbar.style.top = "0";
-    }
-  });
-  window.addEventListener("scroll", () => {
-    const scrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      navbar.style.top = "-150px";
-    } else {
-      navbar.style.top = "0";
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  // Tab Click Handlers
+  document.querySelectorAll('.tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const tabId = tab.dataset.tab;
+      if (tabId) showTabContent(tabId);
+    });
   });
 
-  // Scroll to Top Button Logic
-  const scrollToTopButton = document.getElementById("scrollToTop");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      scrollToTopButton.classList.add("show");
-    } else {
-      scrollToTopButton.classList.remove("show");
-    }
-  });
-  window.scrollToTop = function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  // Floating buttons (if used)
-  const floatingButtons = document.querySelector(".floating-buttons");
-  if (floatingButtons) {
-    floatingButtons.addEventListener("click", () => {
-      floatingButtons.classList.toggle("expanded");
-    });
-    window.toggleFloatingButtons = function () {
-      floatingButtons.classList.toggle("expanded");
-    };
+  // Carousel Auto-Scroll (Vanilla JS replacement for Owl Carousel)
+  let autoScrollInterval;
+  function startAutoScroll() {
+    if (!carouselContainer) return;
+    autoScrollInterval = setInterval(() => {
+      const maxScroll = carouselContainer.scrollWidth - carouselContainer.clientWidth;
+      if (carouselContainer.scrollLeft >= maxScroll) {
+        carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        carouselContainer.scrollBy({ left: carouselContainer.offsetWidth / 2, behavior: 'smooth' });
+      }
+    }, 3000);
   }
-});
-window.addEventListener('scroll', () => {
-  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-}, false);
- document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("privacyLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("privacyModal").style.display = "flex";
-    };
 
-    document.getElementById("termsLink").onclick = function (e) {
-      e.preventDefault();
-      document.getElementById("termsModal").style.display = "flex";
-    };
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
 
-    document.querySelectorAll(".close-btn").forEach((btn) => {
-      btn.onclick = function () {
-        const targetId = this.getAttribute("data-target");
-        document.getElementById(targetId).style.display = "none";
-      };
+  if (carouselContainer) {
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stopAutoScroll);
+      carousel.addEventListener('mouseleave', startAutoScroll);
+    }
+    startAutoScroll();
+  }
+
+  // Floating Buttons
+  if (floatingButtons) {
+    floatingButtons.addEventListener('click', () => {
+      floatingButtons.classList.toggle('expanded');
     });
+  }
 
-    window.onclick = function (e) {
-      if (e.target.classList.contains("popup")) {
-        e.target.style.display = "none";
+  window.toggleFloatingButtons = function () {
+    if (floatingButtons) floatingButtons.classList.toggle('expanded');
+  };
+
+  // Scroll to Top
+  window.scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Scroll Event Handler
+  const handleScroll = debounce(() => {
+    if (!mobileNav || !scrollToTopButton || !desktopNav) return;
+
+    // Mobile navbar visibility and scroll effect
+    if (window.innerWidth <= 900) {
+      mobileNav.style.display = window.pageYOffset === 0 ? 'flex' : 'none';
+      mobileNav.style.top = window.pageYOffset > lastScrollTop ? '-150px' : '0';
+    }
+
+    // Scroll-to-top button visibility
+    scrollToTopButton.classList.toggle('show', window.scrollY > 200);
+
+    // Update scroll progress
+    const scrollProgress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+    document.body.style.setProperty('--scroll', scrollProgress);
+
+    // Add scrolled class for styling
+    const isScrolled = window.pageYOffset > 50;
+    if (window.innerWidth > 900) {
+      desktopNav.classList.toggle('scrolled', isScrolled);
+    } else {
+      mobileNav.classList.toggle('scrolled', isScrolled);
+    }
+
+    lastScrollTop = window.pageYOffset <= 0 ? 0 : window.pageYOffset;
+  }, 50);
+
+  // Event Listeners
+  if (hamburger && closeBtn) {
+    hamburger.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
       }
-    };
+    });
+  }
+
+  window.addEventListener('resize', toggleNavbars);
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', () => {
+    toggleNavbars();
+    if (mobileNav && window.innerWidth <= 900) {
+      mobileNav.style.top = window.pageYOffset > 0 ? '-150px' : '0';
+    }
   });
 
-      function showTabContent(tabId) {
-        document
-          .querySelectorAll(".custom-tab-pane")
-          .forEach((pane) => pane.classList.remove("active"));
-        document
-          .querySelectorAll(".custom-tab-button")
-          .forEach((button) => button.classList.remove("active"));
-        document.getElementById(tabId).classList.add("active");
-        document
-          .querySelector(
-            `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
-          )
-          .classList.add("active");
-      }
-      function openCity(evt, cityName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
+  // Initialize
+  toggleNavbars();
+});
 
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          autoplay: true /* Enable autoplay */,
-          autoplayTimeout: 3000 /* Set autoplay interval */,
-          responsive: {
-            0: { items: 2 },
-            600: { items: 4 },
-            1000: { items: 6 },
-          },
-        });
-      });
-      const tabs = document.querySelectorAll(".tab");
-      const contents = document.querySelectorAll(".tab-content");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((c) => c.classList.remove("active"));
-
-          tab.classList.add("active");
-          document.getElementById(tab.dataset.tab).classList.add("active");
-        });
-      });
-      let lastScrollTop = 0;
-      const navbar = document.querySelector(".navbar");
-
-      // Hide navbar on page load if not at the top
-      window.addEventListener("load", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > 0) {
-          navbar.style.top = "-150px";
-        } else {
-          navbar.style.top = "0";
-        }
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-          // Scroll down
-          navbar.style.top = "-150px";
-        } else {
-          // Scroll up
-          navbar.style.top = "0";
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
-
-      const scrollToTopButton = document.getElementById("scrollToTop");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-          scrollToTopButton.classList.add("show");
-        } else {
-          scrollToTopButton.classList.remove("show");
-        }
-      });
-
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-
-      const floatingButtons = document.querySelector(".floating-buttons");
-      floatingButtons.addEventListener("click", () => {
-        floatingButtons.classList.toggle("expanded");
-      });
-
-      function toggleFloatingButtons() {
-        document
-          .querySelector(".floating-buttons")
-          .classList.toggle("expanded");
-      }
+// Ensure previous scroll listener is not duplicated
+window.removeEventListener('scroll', window.scrollListener); // Clean up any existing listener
+window.scrollListener = debounce(() => {
+  const scrollProgress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  document.body.style.setProperty('--scroll', scrollProgress);
+}, 50);
+window.addEventListener('scroll', window.scrollListener, false);

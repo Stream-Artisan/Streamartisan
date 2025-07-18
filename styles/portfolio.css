@@ -265,6 +265,9 @@ p {
 }
 
 @media (max-width: 768px) {
+  header{
+    margin-top: 50px;
+  }
   .hero {
     height: 30vh;
   }
