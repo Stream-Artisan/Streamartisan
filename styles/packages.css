@@ -13,8 +13,7 @@ body {
   box-sizing: border-box;
 
   /* Combine gradient with background image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('/images/bg-f.jpg');
+  background-image:url('/images/bg-f.jpg');
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
@@ -569,8 +568,7 @@ header,
     width: 100vw;
 
     /* Mobile-optimized background setup */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif");
+    background-image:url("/images/bg-f.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

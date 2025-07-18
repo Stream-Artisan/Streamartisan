@@ -28,12 +28,6 @@ body {
   display: none;
 }
 
-.overlay-menu{
-  display: none;
-}
-.navbar{
-  display:none;
-}
 
 .navbar-hidden {
   transform: translateY(-100%);
@@ -65,7 +59,7 @@ body {
 }
 
 .overlay-menu {
-  background-image: url("/images/bg-overlay.jpg");
+  background-image: url("/images/bg-f.jpg");
   background-size: cover;
 
   height: 100%;
@@ -654,8 +648,7 @@ header,
   width: 100vw;
 
   /* Mobile-optimized background setup */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODh1c2NnZjgzcm1xeGhzYjQ0eHB1cDFxM3R2MmpqaWx0ZHExbXczbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif');
+  background-image:url('/images/bg-f.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -692,9 +685,9 @@ header,
     visibility: visible !important;
     opacity: 1 !important;
   }
-  header{
-    margin-top: 50px;
-  }
+  /* header{
+    margin-top: 10px;
+  } */
   .hero p {
     font-size: 1.1rem !important;
     /* padding: 0 10px !important; */

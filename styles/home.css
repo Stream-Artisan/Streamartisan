@@ -13,8 +13,7 @@ body {
   box-sizing: border-box;
 
   /* Combine gradient with background image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('/images/bg-f.jpg');
+  background-image: url('/images/bg-f.jpg');
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
@@ -146,7 +145,7 @@ body {
 }
 
 .overlay-menu {
-  background-image: url("/images/bg-overlay.jpg");
+  background-image: url("/images/bg-f.jpg");
   background-size: cover;
   height: 100%;
   width: 0;
@@ -1131,8 +1130,7 @@ footer .col:first-child {
   width: 100vw;
 
   /* Mobile-optimized background setup */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('/images/bg-f.jpg');
+  background-image: url('/images/bg-f.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
