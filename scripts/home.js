@@ -274,19 +274,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Scroll event listener (already defined above, included here for completeness)
-window.addEventListener(
-  'scroll',
-  debounce(() => {
-    if (!mobileNav || !scrollToTopButton) return;
-
-    // Mobile navbar visibility (only for mobile view)
-    if (window.innerWidth <= 900) {
-      mobileNav.style.display = window.pageYOffset === 0 ? 'flex' : 'none';
-    }
-
-    // Scroll-to-top button visibility
-    scrollToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
-
-    // Update scroll progress
-    const scrollProgress = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-    document.body.style.setProperty('--scroll', scrollProgress);
+ 

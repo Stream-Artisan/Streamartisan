@@ -34,7 +34,12 @@ body {
   min-height: 25vh;
   font-family: "Josefin Sans", sans-serif;
 }
-
+#desktop-nav{
+  justify-content: space-between;
+  .logo{
+    margin-left: -1600px;
+  }
+}
 .hero-content h1 {
   font-size: 5rem;
   line-height: 1.1;

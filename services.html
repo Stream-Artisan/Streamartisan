@@ -150,112 +150,79 @@
       }
     </style>
     <script>
-      window.addEventListener(
-        "scroll",
-        () => {
-          // Calculate scroll progress (optional, kept for potential future use)
-          document.body.style.setProperty(
-            "--scroll",
-            window.pageYOffset /
-              (document.body.offsetHeight - window.innerHeight)
-          );
-
-          // Get the navbar element
-          const navbar = document.querySelector(".navbar");
-
-          // Show navbar only when at the top (scroll position is 0)
-          if (window.pageYOffset === 0) {
-            navbar.style.display = "block"; // Show navbar
-          } else {
-            navbar.style.display = "none"; // Hide navbar
-          }
-        },
-        false
-      );
-      document.addEventListener("DOMContentLoaded", () => {
-        const desktopNav = document.getElementById("desktop-nav");
-        const mobileNav = document.getElementById("mobile-nav");
+      <!-- mobile view -->
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
+        const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
 
         function toggleNavbars() {
-          if (window.innerWidth > 900) {
-            desktopNav.style.display = "flex";
-            mobileNav.style.display = "none";
+          // Check if window width is less than or equal to 768px (common mobile breakpoint)
+          if (window.innerWidth <= 768) {
+            if (mobileNav) mobileNav.style.display = "block";
+            if (desktopNav) desktopNav.style.display = "none";
           } else {
-            desktopNav.style.display = "none";
-            mobileNav.style.display = "flex";
+            if (mobileNav) mobileNav.style.display = "none";
+            if (desktopNav) desktopNav.style.display = "block";
           }
-        }
-
-        // Initial toggle
-        toggleNavbars();
-
-        // Toggle on window resize
+        } // Run on page load toggleNavbars(); // Run on window resize
         window.addEventListener("resize", toggleNavbars);
+      });
+    </script>
+    <script>
+      const hamburger = document.getElementById("hamburger-menu");
+      const mobileOverlay = document.getElementById("overlay");
+      const closeBtn = document.getElementById("close-mobile-nav");
 
-        // Navbar Scroll Behavior
-        window.addEventListener("scroll", () => {
-          if (window.innerWidth > 900) {
-            desktopNav.classList.toggle("scrolled", window.pageYOffset > 50);
-          } else {
-            mobileNav.classList.toggle("scrolled", window.pageYOffset > 50);
-          }
-        });
+      function toggleMenu() {
+        mobileOverlay.classList.toggle("active");
+        hamburger.setAttribute(
+          "aria-expanded",
+          mobileOverlay.classList.contains("active")
+        );
+      }
 
-        // Hamburger Menu Toggle (for overlay menu)
-        const hamburger = document.getElementById("hamburger-menu");
+      hamburger.addEventListener("click", toggleMenu);
+      closeBtn.addEventListener("click", toggleMenu);
+
+      hamburger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleMenu();
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
         const mobileOverlay = document.getElementById("overlay");
-        const closeBtn = document.getElementById("close-mobile-nav");
+        const hamburger = document.querySelector(".hamburger");
+        const closeButton = document.querySelector(".closebtn");
 
         function toggleMenu() {
+          if (!mobileOverlay || !hamburger) return;
           mobileOverlay.classList.toggle("active");
-          hamburger.setAttribute(
-            "aria-expanded",
-            mobileOverlay.classList.contains("active")
-          );
+          const isOpen = mobileOverlay.classList.contains("active");
+          hamburger.setAttribute("aria-expanded", isOpen);
+          if (isOpen) {
+            const firstFocusable = mobileOverlay.querySelector("a, button");
+            if (firstFocusable) firstFocusable.focus();
+          } else {
+            hamburger.focus();
+          }
         }
 
-        hamburger.addEventListener("click", toggleMenu);
-        closeBtn.addEventListener("click", toggleMenu);
-
-        hamburger.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            toggleMenu();
-          }
+        if (hamburger) {
+          hamburger.addEventListener("click", toggleMenu);
+        }
+        if (closeButton) {
+          closeButton.addEventListener("click", toggleMenu);
+        }
+        mobileOverlay.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileOverlay.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.focus();
+          });
         });
-
-        // Carousel Functionality
-        window.scrollCarousel = function (direction) {
-          const container = document.querySelector(".carousel-container");
-          const scrollAmount = container.offsetWidth * 0.5;
-          container.scrollBy({
-            left: direction * scrollAmount,
-            behavior: "smooth",
-          });
-        };
-
-        // Tab Content Switching
-        window.showTabContent = function (tabId) {
-          document.querySelectorAll(".tab-pane").forEach((pane) => {
-            pane.classList.remove("active");
-          });
-          document.querySelectorAll(".tab-button").forEach((button) => {
-            button.classList.remove("active");
-          });
-          document.getElementById(tabId).classList.add("active");
-          document
-            .querySelector(`button[onclick="showTabContent('${tabId}')"]`)
-            .classList.add("active");
-        };
-
-        // Scroll to Top
-        window.scrollToTop = function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        };
-
-        // Dynamic Copyright Year
-        document.getElementById("copyright-year").textContent =
-          new Date().getFullYear();
       });
     </script>
   </head>

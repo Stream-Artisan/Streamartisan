@@ -2,7 +2,7 @@
 *{
   margin: 0;
   padding: 0;
-  background-origin: padding-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,16 +24,16 @@ body {
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
 }
+#desktop-nav{
+  justify-content: space-between;
+  .logo{
+    margin-left: -1600px;
+  }
+}
 .presence{
   display: none;
 }
 
-.overlay-menu{
-  display: none;
-}
-.navbar{
-  displaly:none;
-}
 
 .navbar-hidden {
   transform: translateY(-100%);
@@ -46,7 +46,10 @@ body {
 }
 
 .logo {
-  width: 230px;
+  width: 100px;
+}
+header{
+  width: 100%;
 }
 
 .hamburger {
@@ -303,8 +306,12 @@ header,
     
     padding: 15px;
   }
+  #mobile-nav{
+    margin-top: -12px;
+  }
 .hamburger{
   margin-top: -60px;
+  margin-left: 50px;
 }
   .logo {
     margin-left: -580px;

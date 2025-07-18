@@ -28,12 +28,7 @@ body {
   display: none;
 }
 
-.overlay-menu{
-  display: none;
-}
-.navbar{
-  displaly:none;
-}
+
 
 .navbar-hidden {
   transform: translateY(-100%);
@@ -62,24 +57,6 @@ body {
   background: white;
   display: block;
   border-radius: 2px;
-}
-
-.overlay-menu {
-  background-image: url("/images/bg-overlay.jpg");
-  background-size: cover;
-
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: #1e1e1e;
-  overflow-x: hidden;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  padding-top: 60px;
 }
 
 .overlay-menu .closebtn {
@@ -637,9 +614,7 @@ header,
     color: white !important;
     text-align: center !important;
   }
-  header{
-    margin-top: 50px;
-  }
+
 }
 @media (max-width: 480px) {
   .hero-content h1 {
