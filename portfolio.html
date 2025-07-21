@@ -158,82 +158,79 @@
       }
     }
     </style>
-    <script>
-      <!-- mobile view -->
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
-        const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
+   <script>
+  window.addEventListener('scroll', () => {
+    // Calculate scroll progress (optional, kept for potential future use)
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 
-        function toggleNavbars() {
-          // Check if window width is less than or equal to 768px (common mobile breakpoint)
-          if (window.innerWidth <= 768) {
-            if (mobileNav) mobileNav.style.display = "block";
-            if (desktopNav) desktopNav.style.display = "none";
-          } else {
-            if (mobileNav) mobileNav.style.display = "none";
-            if (desktopNav) desktopNav.style.display = "block";
-          }
-        } // Run on page load toggleNavbars(); // Run on window resize
-        window.addEventListener("resize", toggleNavbars);
-      });
-    </script>
-    <script>
-      const hamburger = document.getElementById("hamburger-menu");
-      const mobileOverlay = document.getElementById("overlay");
-      const closeBtn = document.getElementById("close-mobile-nav");
+    // Get the navbar element
+    const navbar = document.querySelector('.desktop-navbar');
 
-      function toggleMenu() {
-        mobileOverlay.classList.toggle("active");
-        hamburger.setAttribute(
-          "aria-expanded",
-          mobileOverlay.classList.contains("active")
-        );
-      }
-
-      hamburger.addEventListener("click", toggleMenu);
-      closeBtn.addEventListener("click", toggleMenu);
-
-      hamburger.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleMenu();
+    // Show navbar only when at the top (scroll position is 0)
+    if (window.pageYOffset === 0) {
+      navbar.style.display = 'block'; // Show navbar
+    } else {
+      navbar.style.display = 'none'; // Hide navbar
+    }
+  }, false); </script>
+<script>
+<!-- mobile view -->
+ document.addEventListener('DOMContentLoaded', function() {
+    const mobileNav = document.querySelector('#mobile-nav'); // Replace with your mobile navbar class
+    const desktopNav = document.querySelector('#desktop-nav'); // Replace with your desktop navbar class
+    
+    function toggleNavbars() {
+        // Check if window width is less than or equal to 768px (common mobile breakpoint)
+        if (window.innerWidth <= 768) {
+            if (mobileNav) mobileNav.style.display = 'block';
+            if (desktopNav) desktopNav.style.display = 'none';
+        } else {
+            if (mobileNav) mobileNav.style.display = 'none';
+            if (desktopNav) desktopNav.style.display = 'block';
         }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const mobileOverlay = document.getElementById("overlay");
-        const hamburger = document.querySelector(".hamburger");
-        const closeButton = document.querySelector(".closebtn");
+    }
 
-        function toggleMenu() {
-          if (!mobileOverlay || !hamburger) return;
-          mobileOverlay.classList.toggle("active");
-          const isOpen = mobileOverlay.classList.contains("active");
-          hamburger.setAttribute("aria-expanded", isOpen);
-          if (isOpen) {
-            const firstFocusable = mobileOverlay.querySelector("a, button");
-            if (firstFocusable) firstFocusable.focus();
-          } else {
-            hamburger.focus();
-          }
-        }
+    // Run on page load
+    toggleNavbars();
 
-        if (hamburger) {
-          hamburger.addEventListener("click", toggleMenu);
-        }
-        if (closeButton) {
-          closeButton.addEventListener("click", toggleMenu);
-        }
-        mobileOverlay.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileOverlay.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", "false");
-            hamburger.focus();
-          });
-        });
-      });
-    </script>
+    // Run on window resize
+    window.addEventListener('resize', toggleNavbars);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileOverlay = document.getElementById('overlay');
+  const hamburger = document.querySelector('.hamburger');
+  const closeButton = document.querySelector('.closebtn');
+
+  function toggleMenu() {
+    if (!mobileOverlay || !hamburger) return;
+    mobileOverlay.classList.toggle('active');
+    const isOpen = mobileOverlay.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      const firstFocusable = mobileOverlay.querySelector('a, button');
+      if (firstFocusable) firstFocusable.focus();
+    } else {
+      hamburger.focus();
+    }
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+  }
+  if (closeButton) {
+    closeButton.addEventListener('click', toggleMenu);
+  }
+  mobileOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileOverlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    });
+  });
+});
+</script>
   </head>
   <body>
     <section class="hero animate-fade-in">
