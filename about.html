@@ -150,6 +150,14 @@
     .nav-button:hover::before {
       left: 100%;
     }
+     @media (max-width: 768px) {
+      .desktop-navbar {
+        display: none !important;
+      }
+      #mobile-nav {
+        display: block !important;
+      }
+    }
   </style>
   <script>
     window.addEventListener(

@@ -17,21 +17,8 @@
   <link rel="stylesheet" href="styles/packages.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Raleway:wght@400&display=swap"
     rel="stylesheet" />
-  <script src="/scripts/scrol.js" defer></script>
-  <script> window.showTabContent = function (tabId) {
-      document
-        .querySelectorAll(".custom-tab-pane")
-        .forEach((pane) => pane.classList.remove("active"));
-      document
-        .querySelectorAll(".custom-tab-button")
-        .forEach((button) => button.classList.remove("active"));
-      document.getElementById(tabId).classList.add("active");
-      document
-        .querySelector(
-          `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
-        )
-        .classList.add("active");
-    };</script>
+  <script src="scripts/scrol.js" defer></script>
+  <!-- Removed duplicate showTabContent definition -->
 
   <!-- <link rel="stylesheet" href="styles/about.css" /> -->
   <!-- <script src="/scripts/"></script> -->
@@ -41,7 +28,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -145,6 +132,16 @@
     .nav-button:hover::before {
       left: 100%;
     }
+
+    @media (max-width: 768px) {
+      .desktop-navbar {
+        display: none !important;
+      }
+
+      #mobile-nav {
+        display: block !important;
+      }
+    }
   </style>
   <script>
     window.addEventListener('scroll', () => {
@@ -161,6 +158,28 @@
         navbar.style.display = 'none'; // Hide navbar
       }
     }, false); </script>
+  <script>
+    window.showTabContent = function (tabId) {
+      // Remove active from all tabs and panes
+      const tabs = document.querySelectorAll('.custom-tab-button');
+      const panes = document.querySelectorAll('.custom-tab-pane');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      panes.forEach(pane => pane.classList.remove('active'));
+
+      // Find the tab by matching its onclick attribute (robust for whitespace)
+      let targetTab = null;
+      tabs.forEach(tab => {
+        const attr = tab.getAttribute('onclick');
+        if (attr && attr.replace(/\s/g, '') === `showTabContent('${tabId}')`.replace(/\s/g, '')) {
+          targetTab = tab;
+        }
+      });
+      const targetPane = document.getElementById(tabId);
+      if (targetTab) targetTab.classList.add('active');
+      if (targetPane) targetPane.classList.add('active');
+    };
+
+  </script>
   <script>
     <!-- mobile view -->
     document.addEventListener('DOMContentLoaded', function () {
@@ -180,62 +199,62 @@
       window.addEventListener('resize', toggleNavbars);
     }); </script>
     <script>
-          const hamburger = document.getElementById("hamburger-menu");
-        const mobileOverlay = document.getElementById("overlay");
-        const closeBtn = document.getElementById("close-mobile-nav");
+      const hamburger = document.getElementById("hamburger-menu");
+      const mobileOverlay = document.getElementById("overlay");
+      const closeBtn = document.getElementById("close-mobile-nav");
 
-        function toggleMenu() {
-          mobileOverlay.classList.toggle("active");
-          hamburger.setAttribute(
-            "aria-expanded",
-            mobileOverlay.classList.contains("active")
-          );
+      function toggleMenu() {
+        mobileOverlay.classList.toggle("active");
+        hamburger.setAttribute(
+          "aria-expanded",
+          mobileOverlay.classList.contains("active")
+        );
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+      closeBtn.addEventListener("click", toggleMenu);
+
+      hamburger.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleMenu();
         }
-
-        hamburger.addEventListener("click", toggleMenu);
-        closeBtn.addEventListener("click", toggleMenu);
-
-        hamburger.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            toggleMenu();
-          }
-        });
+      });
     </script>
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileOverlay = document.getElementById('overlay');
-  const hamburger = document.querySelector('.hamburger');
-  const closeButton = document.querySelector('.closebtn');
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileOverlay = document.getElementById('overlay');
+        const hamburger = document.querySelector('.hamburger');
+        const closeButton = document.querySelector('.closebtn');
 
-  function toggleMenu() {
-    if (!mobileOverlay || !hamburger) return;
-    mobileOverlay.classList.toggle('active');
-    const isOpen = mobileOverlay.classList.contains('active');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    if (isOpen) {
-      const firstFocusable = mobileOverlay.querySelector('a, button');
-      if (firstFocusable) firstFocusable.focus();
-    } else {
-      hamburger.focus();
-    }
-  }
+        function toggleMenu() {
+          if (!mobileOverlay || !hamburger) return;
+          mobileOverlay.classList.toggle('active');
+          const isOpen = mobileOverlay.classList.contains('active');
+          hamburger.setAttribute('aria-expanded', isOpen);
+          if (isOpen) {
+            const firstFocusable = mobileOverlay.querySelector('a, button');
+            if (firstFocusable) firstFocusable.focus();
+          } else {
+            hamburger.focus();
+          }
+        }
 
-  if (hamburger) {
-    hamburger.addEventListener('click', toggleMenu);
-  }
-  if (closeButton) {
-    closeButton.addEventListener('click', toggleMenu);
-  }
-  mobileOverlay.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileOverlay.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.focus();
-    });
-  });
-});
-</script>
+        if (hamburger) {
+          hamburger.addEventListener('click', toggleMenu);
+        }
+        if (closeButton) {
+          closeButton.addEventListener('click', toggleMenu);
+        }
+        mobileOverlay.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileOverlay.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.focus();
+          });
+        });
+      });
+    </script>
 </head>
 
 <body>
