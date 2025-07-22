@@ -187,15 +187,14 @@ body {
   gap: 8px;
   padding: 0;
   font-size: 18px;
+
 }
 
 .service-category ul li::before {
   content: "➤ ";
   color: #ff0055;
 }
-.carousel{
-  margin-top: -600px!important;
-}
+
 header,
 .hero {
 
