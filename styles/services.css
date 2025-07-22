@@ -193,7 +193,9 @@ body {
   content: "➤ ";
   color: #ff0055;
 }
-
+.carousel{
+  margin-top: -600px!important;
+}
 header,
 .hero {
 

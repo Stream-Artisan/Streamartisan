@@ -231,7 +231,7 @@ header,
 }
 
 .custom-tabs-container {
-  margin-top: 50px;
+  margin-top: -800px!important;
   background-color: transparent; /* Fallback background color */
   /* background-image: transparent; */
   background-size: cover;

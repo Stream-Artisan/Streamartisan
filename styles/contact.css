@@ -43,7 +43,8 @@ body {
   font-size: 5rem;
   line-height: 1.1;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin-top: -400px!important;
+  /* margin: 0 0 10px 0; */
   animation: fadeIn 2s ease-in-out;
   color: white;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
@@ -59,6 +60,7 @@ body {
 }
 .contact-header {
   margin-bottom: 0;
+  margin-top: -800px!important;
 }
 .form-input {
   background-color: transparent !important;
