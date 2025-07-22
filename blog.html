@@ -61,8 +61,7 @@
   <style>
     .logo {
       width: 100px;
-      margin-right: 40px;
-      /* Adds controlled space after the logo */
+      margin-right: 20px; /* Adds controlled space after the logo */
     }
 
     .desktop-navbar {
@@ -74,13 +73,12 @@
       left: 0;
       width: 100%;
       box-sizing: border-box;
-      justify-content: space-between;
-      /* Keeps logo on left, nav-items on right */
+      justify-content: space-between; /* Keeps logo on left, nav-items on right */
       align-items: center;
       padding: 20px;
     }
 
-     .desktop-nav-items {
+   .desktop-nav-items {
     margin-top: -75px!important;
     display: flex!important;
     margin-left: 15px!important;
@@ -91,7 +89,6 @@
     /* gap: 20px!important; */
     /* Space between nav items */
   }
-
     .desktop-nav-item a {
       color: white;
       margin-left: 40px !important;
@@ -104,35 +101,27 @@
       border-radius: 8px !important;
       /* Slightly rounded edges for crystal effect */
     }
-
     .nav-button {
       /* Basic button styling */
       padding: 10px 20px;
-      border: none;
-      /* Remove default border */
+      border: none; /* Remove default border */
       background: linear-gradient(
         45deg,
         rgba(147, 112, 219, 0.8),
         rgba(255, 255, 255, 0.8),
         rgba(186, 85, 211, 0.8)
-      );
-      /* Purple-white gradient */
-      color: #fff;
-      /* Text color */
+      ); /* Purple-white gradient */
+      color: #fff; /* Text color */
       font-size: 16px;
       font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
-      border-radius: 8px;
-      /* Slightly rounded edges for crystal effect */
+      border-radius: 8px; /* Slightly rounded edges for crystal effect */
       box-shadow: 0 0 10px rgba(147, 112, 219, 0.5),
-        0 0 20px rgba(255, 255, 255, 0.3);
-      /* Glowing shadow */
-      transition: all 0.3s ease;
-      /* Smooth transition for hover */
+        0 0 20px rgba(255, 255, 255, 0.3); /* Glowing shadow */
+      transition: all 0.3s ease; /* Smooth transition for hover */
       position: relative;
-      overflow: hidden;
-      /* For inner shine effect */
+      overflow: hidden; /* For inner shine effect */
     }
 
     /* Pseudo-element for crystalline shine */
@@ -148,8 +137,7 @@
         transparent,
         rgba(225, 103, 230, 0.4),
         transparent
-      );
-      /* Shine effect */
+      ); /* Shine effect */
       transition: all 0.5s ease;
     }
 
@@ -160,13 +148,10 @@
         rgba(186, 85, 211, 1),
         rgb(210, 9, 250),
         rgba(138, 43, 226, 1)
-      );
-      /* Brighter gradient on hover */
+      ); /* Brighter gradient on hover */
       box-shadow: 0 0 20px rgba(147, 112, 219, 0.8),
-        0 0 30px rgba(255, 255, 255, 0.5);
-      /* Enhanced glow */
-      transform: translateY(-2px);
-      /* Slight lift for interaction */
+        0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced glow */
+      transform: translateY(-2px); /* Slight lift for interaction */
     }
 
     /* Move shine effect on hover */
@@ -264,7 +249,7 @@
   </script>
   <body>
     <section class="hero">
-      <header class="desktop-navbar" id="desktop-nav">
+     <header class="desktop-navbar" id="desktop-nav">
         <a href="index.html">
           <img
             src="images/lllogo.png"

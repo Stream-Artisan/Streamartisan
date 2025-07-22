@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
-*{
+* {
   margin: 0;
   padding: 0;
   background-origin: padding-box;
@@ -13,36 +13,42 @@ body {
   box-sizing: border-box;
 
   /* Animated gradient overlay with background image */
-  background-image: 
-    linear-gradient(45deg, 
-      rgba(220, 20, 60, 0.3), 
-      rgba(255, 105, 180, 0.3), 
-      rgba(255, 182, 193, 0.3), 
-      rgba(199, 21, 133, 0.3)
-    ), 
-    url('/images/bg-f.jpg');
+  background-image: linear-gradient(
+      45deg,
+      rgba(202, 184, 238, 0.3),
+      rgba(238, 177, 209, 0.3),
+      rgba(165, 212, 228, 0.3),
+      rgba(210, 238, 210, 0.3)
+    ),
+    url("https://cdn.pixabay.com/photo/2017/08/06/03/03/laptop-2588148_640.jpg");
   background-size: 400% 400%, cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color: #000;
-  
+
   animation: gradientShift 11s ease-in-out infinite;
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%, center; }
-  33% { background-position: 50% 0%, center; }
-  66% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
+  0% {
+    background-position: 0% 50%, center;
+  }
+  33% {
+    background-position: 50% 0%, center;
+  }
+  66% {
+    background-position: 100% 50%, center;
+  }
+  100% {
+    background-position: 0% 50%, center;
+  }
 }
-.presence{
+.presence {
   display: none;
 }
-
-
 
 .navbar-hidden {
   transform: translateY(-100%);
@@ -118,7 +124,7 @@ body {
 .overlay-left a:hover {
   color: #ff0055;
 }
-.overlay-right{
+.overlay-right {
   display: none;
 }
 /* .overlay-right {
@@ -178,7 +184,7 @@ body {
 }
 
 .service-category ul {
-  list-style: none; 
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 8px;
@@ -193,7 +199,6 @@ body {
 
 header,
 .hero {
-
   color: white;
   justify-content: center;
 }
@@ -206,7 +211,6 @@ header,
   height: 100vh;
   overflow: hidden;
 }
-
 
 .hero-content h1 {
   font-size: 5rem !important;
@@ -246,7 +250,7 @@ header,
 }
 
 .custom-tabs-container {
-  margin-top: -700px!important;
+  margin-top: -700px !important;
   background-color: transparent; /* Fallback background color */
   /* background-image: transparent; */
   background-size: cover;
@@ -583,11 +587,18 @@ header,
     width: 100vw;
 
     /* Mobile-optimized background setup */
-    background-image:url("/images/bg-f.jpg");
+    background-image: linear-gradient(
+        45deg,
+        rgba(202, 184, 238, 0.3),
+        rgba(238, 177, 209, 0.3),
+        rgba(165, 212, 228, 0.3),
+        rgba(210, 238, 210, 0.3)
+      ),
+      url("https://cdn.pixabay.com/photo/2017/08/06/03/03/laptop-2588148_640.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* Prevent jank on mobile scroll */
+    background-attachment: fixed!important; /* Prevent jank on mobile scroll */
     background-color: #000; /* Fallback */
 
     font-family: "Josefin Sans", Arial, sans-serif;
@@ -627,7 +638,6 @@ header,
     color: white !important;
     text-align: center !important;
   }
-
 }
 @media (max-width: 480px) {
   .hero-content h1 {
