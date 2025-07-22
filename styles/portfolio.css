@@ -11,19 +11,66 @@ body {
   width: 100vw;
   box-sizing: border-box;
 
-  /* Combine gradient with background image */
-  background-image:url('/images/bg-f.jpg');
-  background-size: cover;
+  /* Animated gradient overlay with background image */
+  background-image: 
+    linear-gradient(45deg, 
+      rgba(34, 139, 34, 0.3), 
+      rgba(50, 205, 50, 0.3), 
+      rgba(124, 252, 0, 0.3), 
+      rgba(0, 255, 127, 0.3)
+    ), 
+    url('/images/bg-f.jpg');
+  background-size: 400% 400%, cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color: #000;
-
+  
+  animation: gradientShift 7s ease-in-out infinite;
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
 }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 100%, center; }
+  100% { background-position: 0% 50%, center; }
+}
 .hero {
-  height: 40vh;
+  height: 20vh; /* Change from 40vh to full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Add hero content styling for desktop */
+.hero-content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.hero-content h1,
+.hero-content .title {
+  display: block !important;
+  font-size: 5rem !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  line-height: 1.1 !important;
+  z-index: 2 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  padding: 0 20px !important;
+  position: relative !important;
+  background: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .video-call {

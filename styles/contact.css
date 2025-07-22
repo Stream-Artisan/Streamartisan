@@ -12,16 +12,32 @@ body {
   width: 100vw;
   box-sizing: border-box;
 
-  /* Combine gradient with background image */
-   background-image:url('/images/bg-f.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  /* Animated gradient overlay with background image */
+  background-image: 
+    linear-gradient(45deg, 
+      rgba(255, 165, 0, 0.3), 
+      rgba(255, 69, 0, 0.3), 
+      rgba(255, 99, 71, 0.3), 
+      rgba(255, 140, 0, 0.3)
+    ), 
+    url('/images/bg-f.jpg');
+  background-size: 400% 400%, cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
-  background-color: #000; 
-
+  background-position: center;
+  background-color: #000;
+  
+  animation: gradientShift 13s ease-in-out infinite;
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%, center; }
+  25% { background-position: 100% 25%, center; }
+  50% { background-position: 50% 100%, center; }
+  75% { background-position: 0% 75%, center; }
+  100% { background-position: 0% 50%, center; }
 }
 .hero {
   display: flex;

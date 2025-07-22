@@ -12,17 +12,31 @@ body {
   width: 100vw;
   box-sizing: border-box;
 
-  /* Combine gradient with background image */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('/images/bg-f.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  /* Animated gradient overlay with background image */
+  background-image: 
+    linear-gradient(45deg, 
+      rgba(255, 69, 0, 0.3), 
+      rgba(255, 140, 0, 0.3), 
+      rgba(255, 215, 0, 0.3), 
+      rgba(255, 20, 147, 0.3)
+    ), 
+    url('/images/bg-f.jpg');
+  background-size: 400% 400%, cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center; 
-  background-color: #000; 
-
+  background-position: center;
+  background-color: #000;
+  
+  animation: gradientShift 10s ease-in-out infinite;
   font-family: "Josefin Sans", Arial, sans-serif;
   color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%, center; }
+  33% { background-position: 100% 50%, center; }
+  66% { background-position: 50% 100%, center; }
+  100% { background-position: 0% 50%, center; }
 }
 .presence{
   display: none;
@@ -187,7 +201,6 @@ body {
   gap: 8px;
   padding: 0;
   font-size: 18px;
-
 }
 
 .service-category ul li::before {
@@ -204,30 +217,54 @@ header,
 
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center!important;
+  align-items: center!important;
   padding: 100px 60px;
   height: 100vh;
   overflow: hidden;
+  text-align: center;
+  position: relative;
 }
 
-
-.hero h1 {
-  font-size: 5rem!important;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.hero-content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  text-align: center;
+  z-index: 10;
+  position: relative;
   max-width: 800px;
 }
 
+.hero-content h1 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 5rem !important;
+  color: white !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
+  line-height: 1.1 !important;
+}
+
+.hero-content p {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 30px !important;
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8) !important;
+}
+
 .hero .btn {
-  display: flex;
-  gap: 15px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
 }
 
 .hero-button {
@@ -247,7 +284,9 @@ header,
 .hero-button:hover {
   background-color: #0f0f0f;
 }
-
+.carousel{
+  margin-top: -350px;
+}
 .custom-tabs-container {
   margin-top: 50px;
   background-color: transparent; /* Fallback background color */
