@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const maxScroll = container.scrollWidth - container.clientWidth;
       if (container.scrollLeft >= maxScroll) {
         container.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
+        } else {
         container.scrollBy({ left: container.offsetWidth / 2, behavior: 'smooth' });
       }
     }, 3000);
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Text Animation for Questions
-  const questions = [
+      const questions = [
     'How do I get more people to use my app?',
     'Should I build a native app or a hybrid app?',
     'How to integrate payment methods in my app?',
@@ -91,24 +91,24 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   let currentQuestion = 0;
 
-  function showQuestion(text, callback) {
+      function showQuestion(text, callback) {
     if (!questionEl) return;
     questionEl.innerHTML = '';
     text.split('').forEach((char, index) => {
       const span = document.createElement('span');
-      span.textContent = char;
-      span.style.animationDelay = `${index * 0.03}s`;
-      questionEl.appendChild(span);
-    });
+          span.textContent = char;
+          span.style.animationDelay = `${index * 0.03}s`;
+          questionEl.appendChild(span);
+        });
     setTimeout(callback, text.length * 30 + 2000);
-  }
+      }
 
-  function cycleQuestions() {
+      function cycleQuestions() {
     showQuestion(questions[currentQuestion], () => {
       currentQuestion = (currentQuestion + 1) % questions.length;
-      cycleQuestions();
-    });
-  }
+          cycleQuestions();
+        });
+      }
 
   // Scroll Event Handler
   const handleScroll = debounce(() => {
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isScrolled = window.pageYOffset > 50;
     if (window.innerWidth > 900) {
       desktopNav?.classList.toggle('scrolled', isScrolled);
-    } else {
+        } else {
       mobileNav?.classList.toggle('scrolled', isScrolled);
     }
   }, 50);
@@ -161,26 +161,26 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData = {
+        const formData = {
         name: contactForm.name.value,
         email: contactForm.email.value,
         message: contactForm.message.value,
-      };
+        };
 
-      try {
+        try {
         const response = await fetch('http://localhost:5000/send', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        });
+            body: JSON.stringify(formData),
+          });
         const responseData = await response.json();
-        if (response.ok) {
+          if (response.ok) {
           alert('Message sent successfully!');
           contactForm.reset();
-        } else {
+          } else {
           alert(`Failed to send message: ${responseData.error || 'Unknown error'}`);
-        }
-      } catch (error) {
+          }
+        } catch (error) {
         console.error('Error:', error);
         alert('Error sending message.');
       }
