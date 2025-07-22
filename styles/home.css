@@ -1141,9 +1141,9 @@ footer .col:first-child {
   color: white;
   overflow-x: hidden; /* Prevent horizontal scroll */
   }
-#mobile-nav{
+/* #mobile-nav{
   display: no;
-}
+} */
   .desktop-navbar{
     display: none;
   }

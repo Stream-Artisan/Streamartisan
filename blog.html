@@ -61,7 +61,7 @@
   <style>
     .logo {
       width: 100px;
-      margin-right: 20px;
+      margin-right: 40px;
       /* Adds controlled space after the logo */
     }
 
@@ -83,9 +83,10 @@
     .desktop-nav-items {
       margin-top: -75px;
       display: flex;
+      margin-left: 80px!important;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-around!important;
       /* Aligns items to the right */
       gap: 20px;
       /* Space between nav items */
@@ -164,7 +165,7 @@
     .nav-button:hover::before {
       left: 100%;
     }
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       .desktop-navbar {
         display: none !important;
       }

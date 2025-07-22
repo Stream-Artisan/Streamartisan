@@ -80,15 +80,17 @@
       padding: 20px;
     }
 
-    .desktop-nav-items {
+   .desktop-nav-items {
       margin-top: -75px;
       display: flex;
+      margin-left: 80px!important;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-end; /* Aligns items to the right */
-      gap: 20px; /* Space between nav items */
+      justify-content: space-around!important;
+      /* Aligns items to the right */
+      gap: 20px;
+      /* Space between nav items */
     }
-
     .desktop-nav-item a {
       color: white;
       text-decoration: none;
@@ -150,7 +152,7 @@
     .nav-button:hover::before {
       left: 100%;
     }
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       .desktop-navbar {
         display: none !important;
       }
@@ -506,11 +508,11 @@
           <p>People</p>
         </div>
         <div class="col">
-          <h4><span id="products-counter">0</span></h4>
+          <h4><span id="products-counter">11</span></h4>
           <p>Products Launched</p>
         </div>
         <div class="col">
-          <h4><span id="downloads-counter">0</span></h4>
+          <h4><span id="downloads-counter">350</span></h4>
           <p>Client App Downloads</p>
         </div>
         <div class="col">

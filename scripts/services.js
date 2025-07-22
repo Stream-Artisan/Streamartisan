@@ -30,13 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
   window.addEventListener("load", () => {
-    const scrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     navbar.style.top = scrollTop > 0 ? "-150px" : "0";
   });
   window.addEventListener("scroll", () => {
-    const scrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     navbar.style.top = scrollTop > lastScrollTop ? "-150px" : "0";
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
@@ -99,108 +97,121 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach((button) => button.classList.remove("active"));
     document.getElementById(tabId).classList.add("active");
     document
-      .querySelector(
-        `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
-      )
+      .querySelector(`.custom-tab-button[onclick="showTabContent('${tabId}')"]`)
       .classList.add("active");
   };
 });
-window.addEventListener('scroll', () => {
-  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-}, false);
- document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("privacyLink").onclick = function (e) {
-          e.preventDefault();
-          document.getElementById("privacyModal").style.display = "flex";
-        };
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("privacyLink").onclick = function (e) {
+    e.preventDefault();
+    document.getElementById("privacyModal").style.display = "flex";
+  };
 
-        document.getElementById("termsLink").onclick = function (e) {
-          e.preventDefault();
-          document.getElementById("termsModal").style.display = "flex";
-        };
+  document.getElementById("termsLink").onclick = function (e) {
+    e.preventDefault();
+    document.getElementById("termsModal").style.display = "flex";
+  };
 
-        document.querySelectorAll(".close-btn").forEach((btn) => {
-          btn.onclick = function () {
-            const targetId = this.getAttribute("data-target");
-            document.getElementById(targetId).style.display = "none";
-          };
-        });
+  document.querySelectorAll(".close-btn").forEach((btn) => {
+    btn.onclick = function () {
+      const targetId = this.getAttribute("data-target");
+      document.getElementById(targetId).style.display = "none";
+    };
+  });
 
-        window.onclick = function (e) {
-          if (e.target.classList.contains("popup")) {
-            e.target.style.display = "none";
-          }
-        };
+  window.onclick = function (e) {
+    if (e.target.classList.contains("popup")) {
+      e.target.style.display = "none";
+    }
+  };
+});
+let lastScrollTop = 0;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("load", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  navbar.style.top = scrollTop > 0 ? "-150px" : "0";
+});
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  navbar.style.top = scrollTop > lastScrollTop ? "-150px" : "0";
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+const scrollToTopButton = document.getElementById("scrollToTop");
+window.addEventListener("scroll", () => {
+  scrollToTopButton.classList.toggle("show", window.scrollY > 200);
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+const form = document.getElementById("contact-form");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  try {
+    const response = await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
+
+const floatingButtons = document.querySelector(".floating-buttons");
+floatingButtons.addEventListener("click", () => {
+  floatingButtons.classList.toggle("expanded");
+});
+
+ window.showTabContent = function (tabId) {
+    const panes = document.querySelectorAll('.custom-tab-pane, .tab-content');
+    const buttons = document.querySelectorAll('.custom-tab-button, .tab');
+    panes.forEach((pane) => pane.classList.remove('active'));
+    buttons.forEach((button) => button.classList.remove('active'));
+    const targetPane = document.getElementById(tabId);
+    const targetButton = document.querySelector(`.custom-tab-button[onclick="showTabContent('${tabId}')"], .tab[data-tab="${tabId}"]`);
+    if (targetPane && targetButton) {
+      targetPane.classList.add('active');
+      targetButton.classList.add('active');
+      targetButton.setAttribute('aria-selected', 'true');
+      buttons.forEach((btn) => {
+        if (btn !== targetButton) btn.setAttribute('aria-selected', 'false');
       });
-      let lastScrollTop = 0;
-      const navbar = document.querySelector(".navbar");
+    }
+  };
 
-      window.addEventListener("load", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        navbar.style.top = scrollTop > 0 ? "-150px" : "0";
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        navbar.style.top = scrollTop > lastScrollTop ? "-150px" : "0";
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      });
-
-      const scrollToTopButton = document.getElementById("scrollToTop");
-      window.addEventListener("scroll", () => {
-        scrollToTopButton.classList.toggle("show", window.scrollY > 200);
-      });
-
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      const form = document.getElementById("contact-form");
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const formData = {
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
-        };
-
-        try {
-          const response = await fetch("http://localhost:5000/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-          });
-
-          if (response.ok) {
-            alert("Message sent successfully!");
-            form.reset();
-          } else {
-            alert("Failed to send message.");
-          }
-        } catch (error) {
-          console.error("Error:", error);
-        }
-      });
-
-      const floatingButtons = document.querySelector(".floating-buttons");
-      floatingButtons.addEventListener("click", () => {
-        floatingButtons.classList.toggle("expanded");
-      });
-
-      function showTabContent(tabId) {
-        document
-          .querySelectorAll(".custom-tab-pane")
-          .forEach((pane) => pane.classList.remove("active"));
-        document
-          .querySelectorAll(".custom-tab-button")
-          .forEach((button) => button.classList.remove("active"));
-        document.getElementById(tabId).classList.add("active");
-        document
-          .querySelector(
-            `.custom-tab-button[onclick="showTabContent('${tabId}')"]`
-          )
-          .classList.add("active");
-      }
+  // Tab Click Handlers
+  document.querySelectorAll('.tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const tabId = tab.dataset.tab;
+      if (tabId) showTabContent(tabId);
+    });
+  });
