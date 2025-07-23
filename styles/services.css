@@ -706,8 +706,19 @@ header,
   color: white;
   overflow-x: hidden; /* Prevent horizontal scroll */
   }
+  #mobile-nav{
+    margin-top: 80px;
+  }
+  #desktop-nav{
+    display: none;
+  }
+  .hero-content{
+    margin-top: 500px;
+    margin-bottom: 200px;
+  }
   .hero {
     min-height: 30vh !important;
+    /* margin-top: 300px; */
     height: auto !important;
     padding: 20px 5px !important;
     flex-direction: column !important;

@@ -128,8 +128,6 @@ body {
   display: none;
 }
 
-
-
 header,
 .hero {
   color: white;
@@ -242,7 +240,6 @@ header,
   margin-bottom: 20px;
   color: white;
 }
-
 
 .card {
   background: transparent;
@@ -391,7 +388,7 @@ header,
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed!important; /* Prevent jank on mobile scroll */
+    background-attachment: fixed !important; /* Prevent jank on mobile scroll */
     background-color: #000; /* Fallback */
 
     font-family: "Josefin Sans", Arial, sans-serif;
@@ -432,66 +429,67 @@ header,
     text-align: center !important;
   }
   .custom-tabs-container {
-  margin-top: 150px !important;
-  background-color: transparent; /* Fallback background color */
-  /* background-image: transparent; */
-  background-size: cover;
-  background-position: center;
-}
+    margin-top: 150px !important;
+    background-color: transparent; /* Fallback background color */
+    /* background-image: transparent; */
+    background-size: cover;
+    background-position: center;
+  }
+  #mobile-nav {
+    margin-top: -300px;
+  }
+  .custom-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
 
-.custom-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
+  .custom-tab-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-.custom-tab-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 30px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+  .custom-tab-button.active,
+  .custom-tab-button:hover {
+    background-color: white;
+    color: #d84676;
+  }
 
-.custom-tab-button.active,
-.custom-tab-button:hover {
-  background-color: white;
-  color: #d84676;
-}
+  .custom-tab-content {
+    margin-top: 30px;
+  }
 
-.custom-tab-content {
-  margin-top: 30px;
-}
+  .custom-tab-pane {
+    display: none;
+  }
 
-.custom-tab-pane {
-  display: none;
-}
+  .custom-tab-pane.active {
+    display: block;
+  }
 
-.custom-tab-pane.active {
-  display: block;
-}
+  .custom-tab-pane h2 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
 
-.custom-tab-pane h2 {
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.custom-tab-pane p {
-  font-size: 2rem;
-  text-align: center;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: white;
-}
-
+  .custom-tab-pane p {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;
+  }
 }
 @media (max-width: 480px) {
   .hero-content h1 {

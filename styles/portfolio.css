@@ -22,7 +22,7 @@ body {
     url("https://cdn.pixabay.com/photo/2017/08/06/03/03/laptop-2588148_640.jpg");
   background-size: 400% 400%, cover;
   background-repeat: no-repeat;
-  background-attachment: fixed!important;
+  background-attachment: fixed !important;
   background-position: center;
   background-color: #000;
 
@@ -43,7 +43,7 @@ body {
   }
 }
 .hero {
-  height: 20vh; /* Change from 40vh to full height */
+  height: 5vh; /* Change from 40vh to full height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,9 +317,78 @@ p {
 }
 
 @media (max-width: 768px) {
-  header {
-    margin-top: 50px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+
+    /* Animated gradient overlay with background image */
+    background-image: linear-gradient(
+        45deg,
+        rgba(202, 184, 238, 0.3),
+        rgba(238, 177, 209, 0.3),
+        rgba(165, 212, 228, 0.3),
+        rgba(210, 238, 210, 0.3)
+      ),
+      url("https://cdn.pixabay.com/photo/2017/08/06/03/03/laptop-2588148_640.jpg");
+    background-size: 400% 400%, cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-position: center;
+    background-color: #000;
+
+    animation: gradientShift 7s ease-in-out infinite;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    color: white;
+  }
+  #mobile-nav {
+    margin-top: -450px;
+  }
+  .hero {
+    /* height: 40vh;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Add hero content styling for desktop */
+  .hero-content {
+    /* display: block !important; */
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-align: center;
+    z-index: 10;
+    /* position: relative; */
+  }
+
+  .hero-content h1,
+  .hero-content .title {
+    display: block !important;
+    font-size: 5rem !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    line-height: 1.1 !important;
+    z-index: 2 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+    padding: 0 20px !important;
+    position: relative !important;
+    background: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   .hero {
     height: 30vh;
   }
@@ -357,11 +426,12 @@ p {
   }
 
   .side-image {
-    width: 100%;
+    width: 25%;
   }
 
   .hero-content h1 {
     display: block !important;
+    margin-top: 300px;
     font-size: 2.5rem !important;
     color: white !important;
     font-weight: bold !important;
@@ -379,10 +449,39 @@ p {
 }
 
 @media (max-width: 480px) {
-  .hero {
-    height: 25vh;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+
+    /* Animated gradient overlay with background image */
+    background-image: linear-gradient(
+        45deg,
+        rgba(202, 184, 238, 0.3),
+        rgba(238, 177, 209, 0.3),
+        rgba(165, 212, 228, 0.3),
+        rgba(210, 238, 210, 0.3)
+      ),
+      url("https://cdn.pixabay.com/photo/2017/08/06/03/03/laptop-2588148_640.jpg");
+    background-size: 400% 400%, cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-position: center;
+    background-color: #000;
+
+    animation: gradientShift 7s ease-in-out infinite;
+    font-family: "Josefin Sans", Arial, sans-serif;
+    color: white;
+  }
+  
   .video-call,
   .fitness,
   .Fieldwire,
@@ -416,7 +515,7 @@ p {
   }
 
   .side-image {
-    width: 100%;
+    width: 25%;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -424,6 +523,7 @@ p {
     align-items: center;
     text-align: center;
     color: white;
+    margin-bottom: -150px;
   }
   .title {
     display: block !important;

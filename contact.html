@@ -15,9 +15,10 @@
     <link rel="canonical" href="https://streamartisan.com/" />
 
     <link rel="stylesheet" href="styles/home.css" />
-    <script src="scripts/home.js"></script>
+    <script src="scripts/home.js" defer></script>
     <link rel="stylesheet" href="styles/contact.css" />
-    <script src="scripts/scrol.js" defer></script>
+    <!-- <script src="scripts/scrol.js" defer></script> -->
+    <!-- <script src="scripts/contact.js" defer></script> -->
     <!-- Meta Pixel Code -->
     <!-- Meta Pixel Code -->
     <script>
@@ -82,7 +83,7 @@
     <!-- <link rel="stylesheet" href="styles/about.css" /> -->
     <!-- <script src="/scripts/"></script> -->
   </head>
- <style>
+  <style>
     .logo {
       width: 100px;
       margin-right: 20px; /* Adds controlled space after the logo */
@@ -102,17 +103,17 @@
       padding: 20px;
     }
 
-   .desktop-nav-items {
-    margin-top: -75px!important;
-    display: flex!important;
-    margin-left: 15px!important;
-    flex-direction: row!important;
-    align-items: center!important;
-    justify-content: space-evenly!important;
-    /* Aligns items to the right */
-    /* gap: 20px!important; */
-    /* Space between nav items */
-  }
+    .desktop-nav-items {
+      margin-top: -75px !important;
+      display: flex !important;
+      margin-left: 15px !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-evenly !important;
+      /* Aligns items to the right */
+      /* gap: 20px!important; */
+      /* Space between nav items */
+    }
     .desktop-nav-item a {
       color: white;
       margin-left: 40px !important;
@@ -229,12 +230,7 @@
           if (mobileNav) mobileNav.style.display = "none";
           if (desktopNav) desktopNav.style.display = "block";
         }
-      }
-
-      // Run on page load
-      toggleNavbars();
-
-      // Run on window resize
+      } // Run on page load toggleNavbars(); // Run on window resize
       window.addEventListener("resize", toggleNavbars);
     });
   </script>
