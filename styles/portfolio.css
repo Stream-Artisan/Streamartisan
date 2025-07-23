@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-origin: padding-box;
+  box-sizing: border-box;
 }
 
 body {
