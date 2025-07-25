@@ -68,32 +68,31 @@
         height: auto;
       }
 
-    .desktop-navbar {
-      background-color: transparent;
-      display: flex;
-      height: fit-content;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-      justify-content: space-between;
-      /* Keeps logo on left, nav-items on right */
-      align-items: center;
-      padding: 20px;
-    }
+ .desktop-navbar {
+        background-color: transparent;
+        display: flex;
+        height: fit-content;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between!important; /* Keeps logo on left, nav-items on right */
+        align-items: center;
+        padding: 20px;
+      }
 
-    .desktop-nav-items {
-      margin-top: -75px;
-      display: flex;
-      margin-left: 90px !important;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly !important;
-      /* Aligns items to the right */
-      gap: 20px;
-      /* Space between nav items */
-    }
+      .desktop-nav-items {
+        margin-top: -75px;
+        display: flex;
+        margin-left: 90px !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around !important;
+        /* Aligns items to the right */
+        gap: 20px;
+        /* Space between nav items */
+      }
 
     .desktop-nav-item a {
       color: white;

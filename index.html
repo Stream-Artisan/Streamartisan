@@ -18,234 +18,234 @@
   <!-- Meta Pixel Code -->
   <!-- Meta Pixel Code -->
 
- <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "1308878997522047");
-      fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1308878997522047&ev=PageView&noscript=1"
-    /></noscript>
-     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        window.showTabContent = function (tabId) {
-          // Remove active class from all panes and buttons
-    document
-      .querySelectorAll(".custom-tab-pane")
-      .forEach((pane) => pane.classList.remove("active"));
-    document
-      .querySelectorAll(".custom-tab-button")
-      .forEach((button) => button.classList.remove("active"));
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1308878997522047");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=1308878997522047&ev=PageView&noscript=1" /></noscript>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.showTabContent = function (tabId) {
+        // Remove active class from all panes and buttons
+        document
+          .querySelectorAll(".custom-tab-pane")
+          .forEach((pane) => pane.classList.remove("active"));
+        document
+          .querySelectorAll(".custom-tab-button")
+          .forEach((button) => button.classList.remove("active"));
 
-          // Add active class to target elements
-          const targetPane = document.getElementById(tabId);
-          const targetButton = document.querySelector(
-            `button[onclick="showTabContent('${tabId}')"]`
-          );
+        // Add active class to target elements
+        const targetPane = document.getElementById(tabId);
+        const targetButton = document.querySelector(
+          `button[onclick="showTabContent('${tabId}')"]`
+        );
 
-          if (targetPane) targetPane.classList.add("active");
-          if (targetButton) targetButton.classList.add("active");
-        };
+        if (targetPane) targetPane.classList.add("active");
+        if (targetButton) targetButton.classList.add("active");
+      };
 
-        // Also add click event listeners as backup
-        document.querySelectorAll(".custom-tab-button").forEach((button) => {
-          button.addEventListener("click", function () {
-            const onclick = this.getAttribute("onclick");
-            if (onclick) {
-              const tabId = onclick.match(/showTabContent\('([^']+)'\)/)?.[1];
-              if (tabId) showTabContent(tabId);
-            }
-          });
+      // Also add click event listeners as backup
+      document.querySelectorAll(".custom-tab-button").forEach((button) => {
+        button.addEventListener("click", function () {
+          const onclick = this.getAttribute("onclick");
+          if (onclick) {
+            const tabId = onclick.match(/showTabContent\('([^']+)'\)/)?.[1];
+            if (tabId) showTabContent(tabId);
+          }
         });
       });
-    </script>
-    <style>
-      .logo {
-        width: 100px;
-        margin-right: 20px; 
-      }
- .logo img {
-        max-width: 100%;
-        height: auto;
-      }
+    });
+  </script>
+  <style>
+    .logo {
+      width: 100px;
+      margin-right: 20px;
+    }
 
-      .desktop-navbar {
-        background-color: transparent;
-        display: flex;
-        height: fit-content;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        justify-content: space-between; /* Keeps logo on left, nav-items on right */
-        align-items: center;
-        padding: 20px;
-      }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
 
-      .desktop-nav-items {
-        margin-top: -75px;
-        display: flex;
-        margin-left: 90px !important;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around !important;
-        /* Aligns items to the right */
-        gap: 20px;
-        /* Space between nav items */
-      }
-      .desktop-nav-item a {
-        color: white;
-        margin-left: 40px !important;
+    .desktop-navbar {
+      background-color: transparent;
+      display: flex;
+      height: fit-content;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: space-between !important;
+      /* Keeps logo on left, nav-items on right */
+      align-items: center;
+      padding: 20px;
+    }
 
-        text-decoration: none;
-        font-size: 16px !important;
-        font-weight: bold !important;
-        text-transform: uppercase !important;
-        cursor: pointer !important;
-        border-radius: 8px !important;
-        /* Slightly rounded edges for crystal effect */
-      }
-      .nav-button {
-        /* Basic button styling */
-        padding: 10px 20px;
-        border: none; /* Remove default border */
-        background: linear-gradient(
-          45deg,
+    .desktop-nav-items {
+      margin-top: -75px;
+      display: flex;
+      margin-left: 90px !important;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around !important;
+      /* Aligns items to the right */
+      gap: 20px;
+      /* Space between nav items */
+    }
+
+    .desktop-nav-item a {
+      color: white;
+      margin-left: 40px !important;
+
+      text-decoration: none;
+      font-size: 16px !important;
+      font-weight: bold !important;
+      text-transform: uppercase !important;
+      cursor: pointer !important;
+      border-radius: 8px !important;
+      /* Slightly rounded edges for crystal effect */
+    }
+
+    .nav-button {
+      /* Basic button styling */
+      padding: 10px 20px;
+      border: none;
+      /* Remove default border */
+      background: linear-gradient(45deg,
           rgba(147, 112, 219, 0.8),
           rgba(255, 255, 255, 0.8),
-          rgba(186, 85, 211, 0.8)
-        ); /* Purple-white gradient */
-        color: #fff; /* Text color */
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 8px; /* Slightly rounded edges for crystal effect */
-        box-shadow: 0 0 10px rgba(147, 112, 219, 0.5),
-          0 0 20px rgba(255, 255, 255, 0.3); /* Glowing shadow */
-        transition: all 0.3s ease; /* Smooth transition for hover */
-        position: relative;
-        overflow: hidden; /* For inner shine effect */
-      }
+          rgba(186, 85, 211, 0.8));
+      /* Purple-white gradient */
+      color: #fff;
+      /* Text color */
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 8px;
+      /* Slightly rounded edges for crystal effect */
+      box-shadow: 0 0 10px rgba(147, 112, 219, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3);
+      /* Glowing shadow */
+      transition: all 0.3s ease;
+      /* Smooth transition for hover */
+      position: relative;
+      overflow: hidden;
+      /* For inner shine effect */
+    }
 
-      /* Pseudo-element for crystalline shine */
-      .nav-button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          90deg,
+    /* Pseudo-element for crystalline shine */
+    .nav-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
           transparent,
           rgba(225, 103, 230, 0.4),
-          transparent
-        ); /* Shine effect */
-        transition: all 0.5s ease;
-      }
+          transparent);
+      /* Shine effect */
+      transition: all 0.5s ease;
+    }
 
-      /* Hover effect */
-      .nav-button:hover {
-        background: linear-gradient(
-          45deg,
+    /* Hover effect */
+    .nav-button:hover {
+      background: linear-gradient(45deg,
           rgba(186, 85, 211, 1),
           rgb(210, 9, 250),
-          rgba(138, 43, 226, 1)
-        ); /* Brighter gradient on hover */
-        box-shadow: 0 0 20px rgba(147, 112, 219, 0.8),
-          0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced glow */
-        transform: translateY(-2px); /* Slight lift for interaction */
+          rgba(138, 43, 226, 1));
+      /* Brighter gradient on hover */
+      box-shadow: 0 0 20px rgba(147, 112, 219, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.5);
+      /* Enhanced glow */
+      transform: translateY(-2px);
+      /* Slight lift for interaction */
+    }
+
+    /* Move shine effect on hover */
+    .nav-button:hover::before {
+      left: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-navbar {
+        display: none !important;
       }
 
-      /* Move shine effect on hover */
-      .nav-button:hover::before {
-        left: 100%;
+      #mobile-nav {
+        display: block !important;
       }
-      @media (max-width: 768px) {
-        .desktop-navbar {
-          display: none !important;
+    }
+  </style>
+  <script>
+    window.addEventListener(
+      "scroll",
+      () => {
+        // Calculate scroll progress (optional, kept for potential future use)
+        document.body.style.setProperty(
+          "--scroll",
+          window.pageYOffset /
+          (document.body.offsetHeight - window.innerHeight)
+        );
+
+        // Get the navbar element
+        const navbar = document.querySelector(".desktop-navbar");
+
+        // Show navbar only when at the top (scroll position is 0)
+        if (window.pageYOffset === 0) {
+          navbar.style.display = "block"; // Show navbar
+        } else {
+          navbar.style.display = "none"; // Hide navbar
         }
-        #mobile-nav {
-          display: block !important;
+      },
+      false
+    );
+  </script>
+  <script>
+    <!-- mobile view -->
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
+      const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
+
+      function toggleNavbars() {
+        // Check if window width is less than or equal to 768px (common mobile breakpoint)
+        if (window.innerWidth <= 768) {
+          if (mobileNav) mobileNav.style.display = "block"; if (desktopNav)
+            desktopNav.style.display = "none";
+        } else {
+          if (mobileNav) mobileNav.style.display = "none"; if (desktopNav)
+            desktopNav.style.display = "block";
         }
-      }
-    </style>
-    <script>
-      window.addEventListener(
-        "scroll",
-        () => {
-          // Calculate scroll progress (optional, kept for potential future use)
-          document.body.style.setProperty(
-            "--scroll",
-            window.pageYOffset /
-              (document.body.offsetHeight - window.innerHeight)
-          );
-
-          // Get the navbar element
-          const navbar = document.querySelector(".desktop-navbar");
-
-          // Show navbar only when at the top (scroll position is 0)
-          if (window.pageYOffset === 0) {
-            navbar.style.display = "block"; // Show navbar
-          } else {
-            navbar.style.display = "none"; // Hide navbar
-          }
-        },
-        false
-      );
-    </script>
-    <script>
-      <!-- mobile view -->
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
-        const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
-
-        function toggleNavbars() {
-          // Check if window width is less than or equal to 768px (common mobile breakpoint)
-          if (window.innerWidth <= 768) {
-            if (mobileNav) mobileNav.style.display = "block";
-            if (desktopNav) desktopNav.style.display = "none";
-          } else {
-            if (mobileNav) mobileNav.style.display = "none";
-            if (desktopNav) desktopNav.style.display = "block";
-          }
-        }
-
-        // Run on page load
-        toggleNavbars();
-
-        // Run on window resize
-        window.addEventListener("resize", toggleNavbars);
-      });
-    </script>
+      } // Run on page load toggleNavbars(); // Run on window resize
+      window.addEventListener("resize", toggleNavbars);
+    }); </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const mobileOverlay = document.getElementById("overlay");
@@ -279,7 +279,7 @@
           });
         });
       });
-     </script>
+    </script>
 </head>
 
 <body>
