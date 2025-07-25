@@ -82,192 +82,194 @@
     <!-- End Meta Pixel Code -->
     <!-- <link rel="stylesheet" href="styles/about.css" /> -->
     <!-- <script src="/scripts/"></script> -->
-  </head>
-  <style>
-    .logo {
-      width: 100px;
-      margin-right: 20px; /* Adds controlled space after the logo */
-    }
+    <style>
+      .logo {
+        width: 100px;
+        margin-right: 20px; /* Adds controlled space after the logo */
+      }
 
-    .desktop-navbar {
-      background-color: transparent;
-      display: flex;
-      height: fit-content;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
-      justify-content: space-between; /* Keeps logo on left, nav-items on right */
-      align-items: center;
-      padding: 20px;
-    }
-
-    .desktop-nav-items {
-      margin-top: -75px !important;
-      display: flex !important;
-      margin-left: 15px !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-evenly !important;
-      /* Aligns items to the right */
-      /* gap: 20px!important; */
-      /* Space between nav items */
-    }
-    .desktop-nav-item a {
-      color: white;
-      margin-left: 40px !important;
-
-      text-decoration: none;
-      font-size: 16px !important;
-      font-weight: bold !important;
-      text-transform: uppercase !important;
-      cursor: pointer !important;
-      border-radius: 8px !important;
-      /* Slightly rounded edges for crystal effect */
-    }
-    .nav-button {
-      /* Basic button styling */
-      padding: 10px 20px;
-      border: none; /* Remove default border */
-      background: linear-gradient(
-        45deg,
-        rgba(147, 112, 219, 0.8),
-        rgba(255, 255, 255, 0.8),
-        rgba(186, 85, 211, 0.8)
-      ); /* Purple-white gradient */
-      color: #fff; /* Text color */
-      font-size: 16px;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: 8px; /* Slightly rounded edges for crystal effect */
-      box-shadow: 0 0 10px rgba(147, 112, 219, 0.5),
-        0 0 20px rgba(255, 255, 255, 0.3); /* Glowing shadow */
-      transition: all 0.3s ease; /* Smooth transition for hover */
-      position: relative;
-      overflow: hidden; /* For inner shine effect */
-    }
-
-    /* Pseudo-element for crystalline shine */
-    .nav-button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(225, 103, 230, 0.4),
-        transparent
-      ); /* Shine effect */
-      transition: all 0.5s ease;
-    }
-
-    /* Hover effect */
-    .nav-button:hover {
-      background: linear-gradient(
-        45deg,
-        rgba(186, 85, 211, 1),
-        rgb(210, 9, 250),
-        rgba(138, 43, 226, 1)
-      ); /* Brighter gradient on hover */
-      box-shadow: 0 0 20px rgba(147, 112, 219, 0.8),
-        0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced glow */
-      transform: translateY(-2px); /* Slight lift for interaction */
-    }
-
-    /* Move shine effect on hover */
-    .nav-button:hover::before {
-      left: 100%;
-    }
-    @media (max-width: 768px) {
       .desktop-navbar {
-        display: none !important;
+        background-color: transparent;
+        display: flex;
+        height: fit-content;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between; /* Keeps logo on left, nav-items on right */
+        align-items: center;
+        padding: 20px;
       }
-      #mobile-nav {
-        display: block !important;
+
+      .desktop-nav-items {
+        margin-top: -75px !important;
+        display: flex !important;
+        margin-left: 15px !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        /* Aligns items to the right */
+        /* gap: 20px!important; */
+        /* Space between nav items */
       }
-    }
-  </style>
-  <script>
-    window.addEventListener(
-      "scroll",
-      () => {
-        // Calculate scroll progress (optional, kept for potential future use)
-        document.body.style.setProperty(
-          "--scroll",
-          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-        );
+      .desktop-nav-item a {
+        color: white;
+        margin-left: 40px !important;
 
-        // Get the navbar element
-        const navbar = document.querySelector(".desktop-navbar");
+        text-decoration: none;
+        font-size: 16px !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        cursor: pointer !important;
+        border-radius: 8px !important;
+        /* Slightly rounded edges for crystal effect */
+      }
+      .nav-button {
+        /* Basic button styling */
+        padding: 10px 20px;
+        border: none; /* Remove default border */
+        background: linear-gradient(
+          45deg,
+          rgba(147, 112, 219, 0.8),
+          rgba(255, 255, 255, 0.8),
+          rgba(186, 85, 211, 0.8)
+        ); /* Purple-white gradient */
+        color: #fff; /* Text color */
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 8px; /* Slightly rounded edges for crystal effect */
+        box-shadow: 0 0 10px rgba(147, 112, 219, 0.5),
+          0 0 20px rgba(255, 255, 255, 0.3); /* Glowing shadow */
+        transition: all 0.3s ease; /* Smooth transition for hover */
+        position: relative;
+        overflow: hidden; /* For inner shine effect */
+      }
 
-        // Show navbar only when at the top (scroll position is 0)
-        if (window.pageYOffset === 0) {
-          navbar.style.display = "block"; // Show navbar
-        } else {
-          navbar.style.display = "none"; // Hide navbar
+      /* Pseudo-element for crystalline shine */
+      .nav-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(225, 103, 230, 0.4),
+          transparent
+        ); /* Shine effect */
+        transition: all 0.5s ease;
+      }
+
+      /* Hover effect */
+      .nav-button:hover {
+        background: linear-gradient(
+          45deg,
+          rgba(186, 85, 211, 1),
+          rgb(210, 9, 250),
+          rgba(138, 43, 226, 1)
+        ); /* Brighter gradient on hover */
+        box-shadow: 0 0 20px rgba(147, 112, 219, 0.8),
+          0 0 30px rgba(255, 255, 255, 0.5); /* Enhanced glow */
+        transform: translateY(-2px); /* Slight lift for interaction */
+      }
+
+      /* Move shine effect on hover */
+      .nav-button:hover::before {
+        left: 100%;
+      }
+      @media (max-width: 768px) {
+        .desktop-navbar {
+          display: none !important;
         }
-      },
-      false
-    );
-  </script>
-  <script>
-    <!-- mobile view -->
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
-      const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
-
-      function toggleNavbars() {
-        // Check if window width is less than or equal to 768px (common mobile breakpoint)
-        if (window.innerWidth <= 768) {
-          if (mobileNav) mobileNav.style.display = "block";
-          if (desktopNav) desktopNav.style.display = "none";
-        } else {
-          if (mobileNav) mobileNav.style.display = "none";
-          if (desktopNav) desktopNav.style.display = "block";
-        }
-      } // Run on page load toggleNavbars(); // Run on window resize
-      window.addEventListener("resize", toggleNavbars);
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const mobileOverlay = document.getElementById("overlay");
-      const hamburger = document.querySelector(".hamburger");
-      const closeButton = document.querySelector(".closebtn");
-
-      function toggleMenu() {
-        if (!mobileOverlay || !hamburger) return;
-        mobileOverlay.classList.toggle("active");
-        const isOpen = mobileOverlay.classList.contains("active");
-        hamburger.setAttribute("aria-expanded", isOpen);
-        if (isOpen) {
-          const firstFocusable = mobileOverlay.querySelector("a, button");
-          if (firstFocusable) firstFocusable.focus();
-        } else {
-          hamburger.focus();
+        #mobile-nav {
+          display: block !important;
         }
       }
+    </style>
+    <script>
+      window.addEventListener(
+        "scroll",
+        () => {
+          // Calculate scroll progress (optional, kept for potential future use)
+          document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset /
+              (document.body.offsetHeight - window.innerHeight)
+          );
 
-      if (hamburger) {
-        hamburger.addEventListener("click", toggleMenu);
-      }
-      if (closeButton) {
-        closeButton.addEventListener("click", toggleMenu);
-      }
-      mobileOverlay.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileOverlay.classList.remove("active");
-          hamburger.setAttribute("aria-expanded", "false");
-          hamburger.focus();
+          // Get the navbar element
+          const navbar = document.querySelector(".desktop-navbar");
+
+          // Show navbar only when at the top (scroll position is 0)
+          if (window.pageYOffset === 0) {
+            navbar.style.display = "block"; // Show navbar
+          } else {
+            navbar.style.display = "none"; // Hide navbar
+          }
+        },
+        false
+      );
+    </script>
+    <script>
+      <!-- mobile view -->
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileNav = document.querySelector("#mobile-nav"); // Replace with your mobile navbar class
+        const desktopNav = document.querySelector("#desktop-nav"); // Replace with your desktop navbar class
+
+        function toggleNavbars() {
+          // Check if window width is less than or equal to 768px (common mobile breakpoint)
+          if (window.innerWidth <= 768) {
+            if (mobileNav) mobileNav.style.display = "block";
+            if (desktopNav) desktopNav.style.display = "none";
+          } else {
+            if (mobileNav) mobileNav.style.display = "none";
+            if (desktopNav) desktopNav.style.display = "block";
+          }
+        } // Run on page load toggleNavbars(); // Run on window resize
+        window.addEventListener("resize", toggleNavbars);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileOverlay = document.getElementById("overlay");
+        const hamburger = document.querySelector(".hamburger");
+        const closeButton = document.querySelector(".closebtn");
+
+        function toggleMenu() {
+          if (!mobileOverlay || !hamburger) return;
+          mobileOverlay.classList.toggle("active");
+          const isOpen = mobileOverlay.classList.contains("active");
+          hamburger.setAttribute("aria-expanded", isOpen);
+          if (isOpen) {
+            const firstFocusable = mobileOverlay.querySelector("a, button");
+            if (firstFocusable) firstFocusable.focus();
+          } else {
+            hamburger.focus();
+          }
+        }
+
+        if (hamburger) {
+          hamburger.addEventListener("click", toggleMenu);
+        }
+        if (closeButton) {
+          closeButton.addEventListener("click", toggleMenu);
+        }
+        mobileOverlay.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileOverlay.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.focus();
+          });
         });
       });
-    });
-  </script>
+    </script>
+  </head>
+
   <body>
     <section class="hero">
       <header class="desktop-navbar" id="desktop-nav">
