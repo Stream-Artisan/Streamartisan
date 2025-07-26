@@ -258,62 +258,83 @@
   </head>
   <body>
     <section class="hero animate-fade-in">
-     <header class="desktop-navbar" id="desktop-nav">
-        <a href="index.html">
-          <img
-            src="images/lllogo.png"
-            alt="Stream Artisan Logo"
-            class="logo"
-            width="100px"
-          />
+      <header class="desktop-navbar" id="desktop-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="130" height="auto" />
         </a>
-        <div class="desktop-nav-items" id="main-nav">
+        <nav class="desktop-nav-items" id="main-nav" role="navigation">
           <div class="desktop-nav-item">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="about.html">About</a>
+            <a href="about.html" class="nav-link">About</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="blog.html">Blog</a>
+            <a href="blog.html" class="nav-link">Blog</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="packages.html">Packages</a>
+            <a href="packages.html" class="nav-link">Packages</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="services.html">Services</a>
+            <a href="services.html" class="nav-link">Services</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
           </div>
           <div class="desktop-nav-item">
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
           </div>
           <div class="desktop-nav-item nav-button">
-            <a href="contact.html">Connect</a>
+            <a href="contact.html" class="nav-link">Connect</a>
           </div>
-        </div>
+        </nav>
       </header>
 
-      <header class="navbar" id="mobile-nav">
-        <a href="index.html">
-          <img
-            src="images/lllogo.png"
-            alt="Stream Artisan Logo"
-            class="logo"
-            width="300px"
-          />
+      <header class="mobile-navbar" id="mobile-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="240" height="auto" />
         </a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </header>
+
       <div class="hero-content">
         <h1 class="title">Portfolio</h1>
       </div>
     </section>
+
+    <!-- Add mobile overlay -->
+    <div id="mobile-overlay" class="mobile-overlay" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title">
+      <div class="mobile-overlay-content">
+        <div class="mobile-overlay-header">
+          <h2 id="mobile-nav-title" class="sr-only">Navigation Menu</h2>
+          <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close navigation menu">
+            <span>&times;</span>
+          </button>
+        </div>
+        <nav class="mobile-nav-menu" role="navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+            <li><a href="packages.html" class="mobile-nav-link">Packages</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portfolio</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+          </ul>
+          <div class="mobile-nav-cta">
+            <a href="contact.html" class="mobile-cta-btn">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Add proper scripts -->
+    <link rel="stylesheet" href="styles/navigation.css">
+    <script src="scripts/navigation-fixed.js"></script>
 
     <!-- Overlay Navigation -->
     <div id="overlay" class="overlay-menu animate-slide-in">
