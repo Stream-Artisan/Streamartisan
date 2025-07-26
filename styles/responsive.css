@@ -1,0 +1,59 @@
+/* Mobile-First Responsive Framework */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  flex: 1;
+  padding: 0 15px;
+  min-width: 0; /* Prevents overflow */
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .container { padding: 0 15px; }
+  .row { margin: 0 -10px; }
+  .col { 
+    padding: 0 10px; 
+    flex: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Prevent text overflow */
+  h1, h2, h3, h4, h5, h6, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Form improvements */
+  input, textarea, select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .col {
+    flex: 0 0 50%;
+  }
+}

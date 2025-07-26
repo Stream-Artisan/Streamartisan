@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/navigation.css">
     <script src="/scripts/scrol.js" defer></script>
     <script src="./scripts/home.js"></script>
+    <script src="scripts/navigation-fixed.js" defer></script>
 
     <style>
       /* Additional styles to address UI/UX and mobile view issues */
@@ -141,95 +143,80 @@
   </head>
   <body>
     <section class="hero">
-      <header class="navbar">
-        <a href="index.html">
-          <img
-            src="images/lllogo.png"
-            alt="StreamArtisan Logo"
-            class="logo"
-            width="200"
-            loading="lazy"
-          />
+      <!-- Desktop Navigation -->
+      <header class="desktop-navbar" id="desktop-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="120" height="auto" />
         </a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <nav class="desktop-nav-items" id="main-nav" role="navigation">
+          <div class="desktop-nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="packages.html" class="nav-link">Packages</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+          <div class="desktop-nav-item nav-button">
+            <a href="contact.html" class="nav-link">Connect</a>
+          </div>
+        </nav>
       </header>
+
+      <!-- Mobile Navigation -->
+      <header class="mobile-navbar" id="mobile-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="220" height="auto" />
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </header>
+
       <div class="hero-content">
         <h1>Our Blog</h1>
         <p>Top web Technologies in 2025</p>
       </div>
     </section>
 
-    <!-- Overlay Navigation -->
-    <div id="overlay" class="overlay-menu">
-      <span class="closebtn" onclick="toggleMenu()">×</span>
-      <div class="overlay-content">
-        <div class="overlay-left">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <!-- Mobile Overlay Menu -->
+    <div id="mobile-overlay" class="mobile-overlay" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title">
+      <div class="mobile-overlay-content">
+        <div class="mobile-overlay-header">
+          <h2 id="mobile-nav-title" class="sr-only">Navigation Menu</h2>
+          <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close navigation menu">
+            <span>&times;</span>
+          </button>
+        </div>
+        <nav class="mobile-nav-menu" role="navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+            <li><a href="packages.html" class="mobile-nav-link">Packages</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="mobile-nav-link">Portfolio</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
           </ul>
-        </div>
-        <div class="overlay-right">
-          <h2 class="services-title">Services</h2>
-          <div class="service-category">
-            <h3>Digital Development</h3>
-            <ul>
-              <li>Mobile app developers</li>
-              <li>Chatbots</li>
-              <li>Web developers</li>
-              <li>Web-app developers</li>
-              <li>Intranet/sharepoints developers</li>
-              <li>IOT developers</li>
-              <li>Blockchain developers</li>
-              <li>AI/ML solutions</li>
-            </ul>
+          <div class="mobile-nav-cta">
+            <a href="contact.html" class="mobile-cta-btn">Get Started</a>
           </div>
-          <div class="service-category">
-            <h3>Graphic Designing</h3>
-            <ul>
-              <li>Logo design</li>
-              <li>Brand identity</li>
-              <li>UI/UX design</li>
-              <li>Illustrations</li>
-              <li>3D modeling</li>
-              <li>Motion graphics</li>
-              <li>Print design</li>
-            </ul>
-          </div>
-          <div class="service-category">
-            <h3>Digital Marketing</h3>
-            <ul>
-              <li>SEO optimization</li>
-              <li>Social media marketing</li>
-              <li>Email campaigns</li>
-              <li>Content creation</li>
-              <li>Pay-per-click advertising</li>
-              <li>Analytics and reporting</li>
-              <li>Influencer marketing</li>
-            </ul>
-          </div>
-          <div class="service-category">
-            <h3>Ebook</h3>
-            <ul>
-              <li>Ebook writing</li>
-              <li>Ebook editing</li>
-              <li>Ebook formatting</li>
-              <li>Cover design</li>
-              <li>Publishing assistance</li>
-              <li>Marketing for ebooks</li>
-              <li>Distribution strategies</li>
-            </ul>
-          </div>
-        </div>
+        </nav>
       </div>
     </div>
 
@@ -420,8 +407,10 @@
       />
     </div>
 
+    <script src="scripts/navigation-fixed.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Keep existing modal handlers
         const privacyLink = document.getElementById("privacyLink");
         if (privacyLink) {
           privacyLink.onclick = function (e) {
@@ -455,42 +444,7 @@
         };
       });
 
-      function toggleMenu() {
-        const overlay = document.getElementById("overlay");
-        overlay.classList.toggle("open");
-      }
-
-      let lastScrollTop = 0;
-      const navbar = document.querySelector(".navbar");
-
-      window.addEventListener("load", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > 0) {
-          navbar.style.top = "-150px";
-        } else {
-          navbar.style.top = "0";
-        }
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-          navbar.style.top = "-150px";
-        } else {
-          navbar.style.top = "0";
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-
-        const scrollToTopButton = document.getElementById("scrollToTop");
-        if (window.scrollY > 200) {
-          scrollToTopButton.classList.add("show");
-        } else {
-          scrollToTopButton.classList.remove("show");
-        }
-      });
-
+      // Scroll to top functionality
       function scrollToTop() {
         window.scrollTo({
           top: 0,
@@ -501,6 +455,16 @@
       function scheduleCall() {
         window.open("https://calendly.com/razaoffice0/30min", "_blank");
       }
+
+      // Scroll to top button visibility
+      window.addEventListener("scroll", () => {
+        const scrollToTopButton = document.getElementById("scrollToTop");
+        if (window.scrollY > 200) {
+          scrollToTopButton.classList.add("show");
+        } else {
+          scrollToTopButton.classList.remove("show");
+        }
+      });
     </script>
   </body>
 </html>
