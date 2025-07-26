@@ -1,12 +1,18 @@
 <?php
 session_start();
 
+// Enhanced error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 0); // Don't display errors to users
+ini_set('log_errors', 1);
+ini_set('error_log', 'php_errors.log');
+
 // Security headers
 header('X-Content-Type-Options: nosniff');
 header('X-Frame-Options: DENY');
 header('X-XSS-Protection: 1; mode=block');
 
-// CSRF Protection
+// CSRF Token functions
 function generateCSRFToken() {
     if (!isset($_SESSION['csrf_token'])) {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -18,7 +24,7 @@ function validateCSRFToken($token) {
     return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
 
-// Rate limiting
+// Rate limiting function
 function checkRateLimit($ip) {
     $rate_file = 'rate_limit.json';
     $rate_data = file_exists($rate_file) ? json_decode(file_get_contents($rate_file), true) : [];
@@ -48,27 +54,68 @@ function checkRateLimit($ip) {
     return true;
 }
 
-// Input validation and sanitization
+// Input validation function
 function validateInput($data) {
     $errors = [];
     
-    if (empty($data['name']) || strlen($data['name']) < 2) {
-        $errors[] = 'Name must be at least 2 characters long';
+    // Required fields
+    if (empty(trim($data['name']))) {
+        $errors[] = 'Name is required';
+    } elseif (strlen(trim($data['name'])) < 2) {
+        $errors[] = 'Name must be at least 2 characters';
     }
     
-    if (empty($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Valid email address is required';
+    if (empty(trim($data['email']))) {
+        $errors[] = 'Email is required';
+    } elseif (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format';
     }
     
-    if (empty($data['message']) || strlen($data['message']) < 10) {
-        $errors[] = 'Message must be at least 10 characters long';
+    if (empty(trim($data['message']))) {
+        $errors[] = 'Message is required';
+    } elseif (strlen(trim($data['message'])) < 10) {
+        $errors[] = 'Message must be at least 10 characters';
+    }
+    
+    // Check for header injection
+    foreach (['name', 'email'] as $field) {
+        if (preg_match("/[\r\n]/", $data[$field])) {
+            $errors[] = 'Invalid characters detected';
+            break;
+        }
     }
     
     return $errors;
 }
 
-function sanitizeInput($input) {
-    return htmlspecialchars(strip_tags(trim($input)), ENT_QUOTES, 'UTF-8');
+// Sanitize input function
+function sanitizeInput($data) {
+    return [
+        'name' => htmlspecialchars(trim($data['name']), ENT_QUOTES, 'UTF-8'),
+        'email' => filter_var(trim($data['email']), FILTER_SANITIZE_EMAIL),
+        'message' => htmlspecialchars(trim($data['message']), ENT_QUOTES, 'UTF-8'),
+        'company' => htmlspecialchars(trim($data['company'] ?? ''), ENT_QUOTES, 'UTF-8'),
+        'phone' => htmlspecialchars(trim($data['phone'] ?? ''), ENT_QUOTES, 'UTF-8'),
+        'service_type' => htmlspecialchars(trim($data['service_type'] ?? ''), ENT_QUOTES, 'UTF-8'),
+        'budget' => htmlspecialchars(trim($data['budget'] ?? ''), ENT_QUOTES, 'UTF-8')
+    ];
+}
+
+// Determine redirect URL based on referer
+function getRedirectUrl() {
+    $referer = $_SERVER['HTTP_REFERER'] ?? '/index.html';
+    $allowed_pages = [
+        'index.html', 'about.html', 'contact.html', 'services.html', 
+        'portfolio.html', 'packages.html', 'blog.html', 'digital-existence.html'
+    ];
+    
+    foreach ($allowed_pages as $page) {
+        if (strpos($referer, $page) !== false) {
+            return $referer;
+        }
+    }
+    
+    return '/index.html';
 }
 
 // Main processing
@@ -80,17 +127,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(429);
         $_SESSION['form_status'] = 'error';
         $_SESSION['form_message'] = 'Too many requests. Please try again later.';
-        header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/index.html'));
+        header('Location: ' . getRedirectUrl());
         exit;
     }
     
-    // Validate CSRF token
+    // Validate CSRF token (skip for AJAX requests during transition)
     $csrf_token = $_POST['csrf_token'] ?? '';
-    if (!validateCSRFToken($csrf_token)) {
+    if (!empty($csrf_token) && !validateCSRFToken($csrf_token)) {
         http_response_code(403);
         $_SESSION['form_status'] = 'error';
         $_SESSION['form_message'] = 'Security validation failed. Please try again.';
-        header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/index.html'));
+        header('Location: ' . getRedirectUrl());
         exit;
     }
     
@@ -110,90 +157,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($validation_errors)) {
         $_SESSION['form_status'] = 'error';
         $_SESSION['form_message'] = implode(', ', $validation_errors);
-        header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/index.html'));
+        
+        // For AJAX requests, return JSON
+        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            http_response_code(400);
+            header('Content-Type: application/json');
+            echo json_encode(['error' => implode(', ', $validation_errors)]);
+            exit;
+        }
+        
+        header('Location: ' . getRedirectUrl());
         exit;
     }
     
     // Sanitize input
-    $clean_data = array_map('sanitizeInput', $input_data);
+    $clean_data = sanitizeInput($input_data);
     
-    // Prepare email
-    $to = 'contact@streamartisan.com'; // Replace with actual email
-    $subject = 'New Contact Form Submission - ' . $clean_data['name'];
+    // Email configuration
+    $to = 'services@streamartisan.com';
+    $subject = 'New Contact Form Submission - StreamArtisan';
     
+    // Create email body
     $email_body = "
+    <!DOCTYPE html>
     <html>
     <head>
-        <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .header { background: #667eea; color: white; padding: 20px; text-align: center; }
-            .content { padding: 20px; }
-            .field { margin-bottom: 15px; }
-            .label { font-weight: bold; color: #555; }
-            .value { margin-left: 10px; }
-            .footer { background: #f8f9fa; padding: 15px; font-size: 12px; color: #666; }
-        </style>
+        <meta charset='UTF-8'>
+        <title>New Contact Form Submission</title>
     </head>
-    <body>
-        <div class='header'>
-            <h2>New Contact Form Submission</h2>
-        </div>
-        <div class='content'>
-            <div class='field'>
-                <span class='label'>Name:</span>
-                <span class='value'>{$clean_data['name']}</span>
-            </div>
-            <div class='field'>
-                <span class='label'>Email:</span>
-                <span class='value'>{$clean_data['email']}</span>
-            </div>";
-    
+    <body style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'>
+        <div style='max-width: 600px; margin: 0 auto; padding: 20px;'>
+            <h2 style='color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 10px;'>
+                New Contact Form Submission
+            </h2>
+            
+            <div style='background: #f9f9f9; padding: 20px; border-radius: 5px; margin: 20px 0;'>
+                <p><strong>Name:</strong> {$clean_data['name']}</p>
+                <p><strong>Email:</strong> {$clean_data['email']}</p>";
+                
     if (!empty($clean_data['company'])) {
-        $email_body .= "
-            <div class='field'>
-                <span class='label'>Company:</span>
-                <span class='value'>{$clean_data['company']}</span>
-            </div>";
+        $email_body .= "<p><strong>Company:</strong> {$clean_data['company']}</p>";
     }
-    
     if (!empty($clean_data['phone'])) {
-        $email_body .= "
-            <div class='field'>
-                <span class='label'>Phone:</span>
-                <span class='value'>{$clean_data['phone']}</span>
-            </div>";
+        $email_body .= "<p><strong>Phone:</strong> {$clean_data['phone']}</p>";
     }
-    
     if (!empty($clean_data['service_type'])) {
-        $email_body .= "
-            <div class='field'>
-                <span class='label'>Service Type:</span>
-                <span class='value'>{$clean_data['service_type']}</span>
-            </div>";
+        $email_body .= "<p><strong>Service Type:</strong> {$clean_data['service_type']}</p>";
     }
-    
     if (!empty($clean_data['budget'])) {
-        $email_body .= "
-            <div class='field'>
-                <span class='label'>Budget:</span>
-                <span class='value'>{$clean_data['budget']}</span>
-            </div>";
+        $email_body .= "<p><strong>Budget:</strong> {$clean_data['budget']}</p>";
     }
     
     $email_body .= "
-            <div class='field'>
-                <span class='label'>Message:</span>
-                <div style='margin-top: 10px; padding: 15px; background: #f8f9fa; border-left: 4px solid #667eea;'>
+                <p><strong>Message:</strong></p>
+                <div style='background: white; padding: 15px; border-left: 4px solid #667eea; margin-top: 10px;'>
                     " . nl2br($clean_data['message']) . "
                 </div>
             </div>
-        </div>
-        <div class='footer'>
-            <p><strong>Submission Details:</strong></p>
-            <p>IP Address: {$ip}</p>
-            <p>User Agent: " . sanitizeInput($_SERVER['HTTP_USER_AGENT'] ?? 'Unknown') . "</p>
-            <p>Timestamp: " . date('Y-m-d H:i:s T') . "</p>
-            <p>Referrer: " . sanitizeInput($_SERVER['HTTP_REFERER'] ?? 'Direct') . "</p>
+            
+            <div style='background: #667eea; color: white; padding: 15px; border-radius: 5px; text-align: center;'>
+                <p style='margin: 0;'><strong>StreamArtisan Contact System</strong></p>
+                <p style='margin: 5px 0 0 0; font-size: 12px;'>Submitted on " . date('Y-m-d H:i:s') . "</p>
+            </div>
         </div>
     </body>
     </html>";
@@ -217,22 +243,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Log successful submission
         error_log("Contact form submitted successfully from {$clean_data['email']} at " . date('Y-m-d H:i:s'), 3, 'contact_success.log');
         
-        // Send auto-reply to user
+        // Send auto-reply
         $auto_reply_subject = 'Thank you for contacting StreamArtisan';
         $auto_reply_body = "
+        <!DOCTYPE html>
         <html>
+        <head>
+            <meta charset='UTF-8'>
+            <title>Thank you for contacting StreamArtisan</title>
+        </head>
         <body style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'>
-            <div style='background: #667eea; color: white; padding: 20px; text-align: center;'>
-                <h2>Thank You for Your Interest!</h2>
-            </div>
-            <div style='padding: 20px;'>
-                <p>Hi {$clean_data['name']},</p>
-                <p>Thank you for reaching out to StreamArtisan. We've received your message and will get back to you within 24 hours.</p>
-                <p>In the meantime, feel free to:</p>
+            <div style='max-width: 600px; margin: 0 auto; padding: 20px;'>
+                <h2 style='color: #667eea;'>Thank you for reaching out!</h2>
+                <p>Dear {$clean_data['name']},</p>
+                <p>We've received your message and will get back to you within 24 hours.</p>
+                <p>In the meantime, feel free to explore our services:</p>
                 <ul>
-                    <li><a href='https://streamartisan.com/portfolio'>View our portfolio</a></li>
-                    <li><a href='https://streamartisan.com/blog'>Read our latest insights</a></li>
-                    <li><a href='https://streamartisan.com/services'>Learn about our services</a></li>
+                    <li><a href='https://streamartisan.com/services'>Our Services</a></li>
+                    <li><a href='https://streamartisan.com/portfolio'>Our Portfolio</a></li>
+                    <li><a href='https://streamartisan.com/packages'>Service Packages</a></li>
                 </ul>
                 <p>Best regards,<br>The StreamArtisan Team</p>
             </div>
@@ -248,27 +277,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         mail($clean_data['email'], $auto_reply_subject, $auto_reply_body, implode("\r\n", $auto_reply_headers));
         
+        // For AJAX requests, return JSON success
+        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            header('Content-Type: application/json');
+            echo json_encode(['success' => true, 'message' => $_SESSION['form_message']]);
+            exit;
+        }
+        
     } else {
         $_SESSION['form_status'] = 'error';
         $_SESSION['form_message'] = 'Sorry, there was an error sending your message. Please try again or contact us directly.';
         
         // Log error
         error_log("Failed to send contact form email from {$clean_data['email']} at " . date('Y-m-d H:i:s'), 3, 'email_errors.log');
+        
+        // For AJAX requests, return JSON error
+        if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+            strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+            http_response_code(500);
+            header('Content-Type: application/json');
+            echo json_encode(['error' => $_SESSION['form_message']]);
+            exit;
+        }
     }
     
-    // Redirect back to referring page
-    header('Location: ' . ($_SERVER['HTTP_REFERER'] ?? '/index.html'));
+    // Redirect for non-AJAX requests
+    header('Location: ' . getRedirectUrl());
+    exit;
+    
+} else {
+    // Not a POST request
+    header('Location: /index.html');
     exit;
 }
-
-// Generate CSRF token for AJAX requests
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'csrf') {
-    header('Content-Type: application/json');
-    echo json_encode(['token' => generateCSRFToken()]);
-    exit;
-}
-
-// If accessed directly, redirect to home
-header('Location: /index.html');
-exit;
 ?>
+

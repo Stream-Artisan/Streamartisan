@@ -59,40 +59,33 @@
   <!-- End Meta Pixel Code -->
   <style>
     .logo {
-      width: 100px;
-      margin-right: 20px;
-      /* Adds controlled space after the logo */
+      width: 130px;
+      height: auto;
     }
- .logo img {
-        max-width: 100%;
-        height: auto;
-      }
 
- .desktop-navbar {
-        background-color: transparent;
-        display: flex;
-        height: fit-content;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        justify-content: space-between!important; /* Keeps logo on left, nav-items on right */
-        align-items: center;
-        padding: 20px;
-      }
+    .desktop-navbar {
+      background-color: transparent;
+      display: flex;
+      height: fit-content;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: space-between !important;
+      align-items: center;
+      padding: 20px;
+      z-index: 1000;
+    }
 
-      .desktop-nav-items {
-        margin-top: -75px;
-        display: flex;
-        margin-left: 90px !important;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around !important;
-        /* Aligns items to the right */
-        gap: 20px;
-        /* Space between nav items */
-      }
+    .desktop-nav-items {
+      display: flex;
+      margin-left: 90px !important;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around !important;
+      gap: 20px;
+    }
 
     .desktop-nav-item a {
       color: white;
@@ -239,6 +232,7 @@
 
 <body>
   <section class="hero">
+    <!-- Desktop Navigation -->
     <header class="desktop-navbar" id="desktop-nav">
       <a href="index.html" class="logo-link">
         <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="130" height="auto" />

@@ -21,6 +21,7 @@
     <script src="/scripts/scrol.js" defer></script>
     <script src="./scripts/home.js"></script>
     <script src="scripts/navigation-fixed.js"></script>
+    <script src="scripts/navigation-unified.js" defer></script>
 
     <style>
       /* Additional styles to address UI/UX and mobile view issues */
@@ -143,22 +144,51 @@
   </head>
   <body>
     <section class="hero">
-      <header class="navbar">
-        <a href="index.html">
-          <img
-            src="images/lllogo.png"
-            alt="StreamArtisan Logo"
-            class="logo"
-            width="200"
-            loading="lazy"
-          />
+      <!-- Desktop Navigation -->
+      <header class="desktop-navbar" id="desktop-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="130" height="auto" />
         </a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <nav class="desktop-nav-items" id="main-nav" role="navigation">
+          <div class="desktop-nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="blog.html" class="nav-link">Blog</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="packages.html" class="nav-link">Packages</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+          </div>
+          <div class="desktop-nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+          <div class="desktop-nav-item nav-button">
+            <a href="contact.html" class="nav-link">Connect</a>
+          </div>
+        </nav>
       </header>
+
+      <!-- Mobile Navigation -->
+      <header class="mobile-navbar" id="mobile-nav">
+        <a href="index.html" class="logo-link">
+          <img src="images/lllogo.png" alt="Stream Artisan Logo" class="logo" width="240" height="auto" />
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </header>
+
       <div class="hero-content">
         <h1>Our Blog</h1>
         <p>Future of the AI</p>
@@ -167,7 +197,7 @@
 
     <!-- Overlay Navigation -->
     <div id="overlay" class="overlay-menu">
-      <span class="closebtn" onclick="toggleMenu()">×</span>
+      <span class="closebtn" onclick="toggleMenu()">&times;</span>
       <div class="overlay-content">
         <div class="overlay-left">
           <ul>

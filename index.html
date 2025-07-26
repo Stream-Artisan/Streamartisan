@@ -35,7 +35,8 @@
   <link rel="stylesheet" href="styles/home.css" />
   <link rel="stylesheet" href="styles/popup.css" />
   <link rel="stylesheet" href="styles/navigation.css" />
-  <script src="scripts/navigation-fixed.js" defer></script>
+  <script src="scripts/scroll-fix.js"></script>
+  <script src="scripts/navigation-unified.js" defer></script>
   <script src="scripts/home.js" defer></script>
   <!-- Meta Pixel Code -->
   <!-- Meta Pixel Code -->
@@ -104,12 +105,7 @@
   </script>
   <style>
     .logo {
-      width: 100px;
-      margin-right: 20px;
-    }
-
-    .logo img {
-      max-width: 100%;
+      width: 130px;
       height: auto;
     }
 
@@ -123,21 +119,18 @@
       width: 100%;
       box-sizing: border-box;
       justify-content: space-between !important;
-      /* Keeps logo on left, nav-items on right */
       align-items: center;
       padding: 20px;
+      z-index: 1000;
     }
 
     .desktop-nav-items {
-      margin-top: -75px;
       display: flex;
       margin-left: 90px !important;
       flex-direction: row;
       align-items: center;
       justify-content: space-around !important;
-      /* Aligns items to the right */
       gap: 20px;
-      /* Space between nav items */
     }
 
     .desktop-nav-item a {

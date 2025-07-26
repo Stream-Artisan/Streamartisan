@@ -161,28 +161,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-        const formData = {
-        name: contactForm.name.value,
-        email: contactForm.email.value,
-        message: contactForm.message.value,
-        };
-
-        try {
-        const response = await fetch('http://localhost:5000/send', {
+      const submitBtn = contactForm.querySelector('[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      try {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        const formData = new FormData(contactForm);
+        
+        const response = await fetch('/send_email.php', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
-          });
-        const responseData = await response.json();
-          if (response.ok) {
-          alert('Message sent successfully!');
-          contactForm.reset();
-          } else {
-          alert(`Failed to send message: ${responseData.error || 'Unknown error'}`);
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
           }
-        } catch (error) {
+        });
+        
+        if (response.ok) {
+          showNotification('Message sent successfully!', 'success');
+          contactForm.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (error) {
         console.error('Error:', error);
-        alert('Error sending message.');
+        showNotification('Error sending message. Please try again.', 'error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
       }
     });
   }
